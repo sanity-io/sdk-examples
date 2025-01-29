@@ -1,27 +1,32 @@
 import { DocumentHandle } from '@sanity/sdk'
 import { useDocuments, usePreview } from '@sanity/sdk-react/hooks'
 import { Button, Card, Flex, Inline, Spinner, Stack, Text } from '@sanity/ui'
+import { Suspense, useRef } from 'react'
 import ExampleLayout from '../../ExampleLayout'
 
+function Loading() {
+  return (
+    <Card padding={4}>
+      <Flex align='center' justify='center'>
+        <Spinner />
+      </Flex>
+    </Card>
+  )
+}
+
 function DocumentPreview({ document }: { document: DocumentHandle }) {
+  const ref = useRef(null)
   const {
     results: { title, subtitle, media },
     isPending,
-  } = usePreview({ document, ref: null })
-
-  if (isPending)
-    return (
-      <Card padding={4}>
-        <Flex align='center' justify='center'>
-          <Spinner />
-        </Flex>
-      </Card>
-    )
+  } = usePreview({ document, ref })
 
   return (
     <Button
+      ref={ref}
       mode='bleed'
       onClick={() => alert(`Good choice! ${title} is an excellent book.`)}
+      style={{ opacity: isPending ? 0.5 : 1 }}
     >
       <Inline space={4}>
         {media?.type === 'image-asset' && (
@@ -60,13 +65,15 @@ function PreviewList() {
   return (
     <ExampleLayout
       title='Preview list'
-      codeUrl='https://github.com/sanity-io/sdk-examples'
+      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx'
       hooks={['useDocuments', 'usePreview']}
       styling='Sanity UI'
     >
       <Stack space={4}>
         {books.map((book) => (
-          <DocumentPreview key={book._id} document={book} />
+          <Suspense key={book._id} fallback={<Loading />}>
+            <DocumentPreview key={book._id} document={book} />
+          </Suspense>
         ))}
       </Stack>
     </ExampleLayout>

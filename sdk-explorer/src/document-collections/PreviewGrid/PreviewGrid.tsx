@@ -1,20 +1,21 @@
 import { DocumentHandle } from '@sanity/sdk'
 import { useDocuments, usePreview } from '@sanity/sdk-react/hooks'
+import { Spinner } from '@sanity/ui'
+import { Suspense, useRef } from 'react'
 import ExampleLayout from '../../ExampleLayout'
 import './styles.css'
 
 function DocumentPreview({ document }: { document: DocumentHandle }) {
+  const ref = useRef(null)
   const {
     results: { title, subtitle, media },
     isPending,
-  } = usePreview({ document, ref: null })
-
-  if (isPending)
-    return <div className='p-4 flex items-center content-center'>Loading…</div>
+  } = usePreview({ document, ref })
 
   return (
     <button
-      className='group appearance-none text-start p-3 rounded-md border-1 border-gray-100 shadow-xl'
+      ref={ref}
+      className={`group appearance-none text-start p-3 rounded-md border-1 border-gray-100 shadow-xl ${isPending ? 'opacity-50' : 'opacity-100'}`}
       onClick={() => alert(`Great pick! ${title} is an excellent book.`)}
     >
       <img
@@ -45,13 +46,15 @@ function PreviewGrid() {
   return (
     <ExampleLayout
       title='Preview grid'
-      codeUrl='https://github.com/sanity-io/sdk-examples'
+      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx'
       hooks={['useDocuments', 'usePreview']}
       styling='Tailwind'
     >
       <div className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
         {books.map((book) => (
-          <DocumentPreview key={book._id} document={book} />
+          <Suspense key={book._id} fallback={<Spinner />}>
+            <DocumentPreview key={book._id} document={book} />
+          </Suspense>
         ))}
       </div>
     </ExampleLayout>
