@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { SanityMonogram } from '@sanity/logos'
+import { AuthBoundary } from '@sanity/sdk-react/components'
+import { useAuthState, useLogOut } from '@sanity/sdk-react/hooks'
+import { Button, Card, Flex, Text } from '@sanity/ui'
+import { BrowserRouter, Link, Route, Routes } from 'react-router'
+import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
+import PreviewList from './document-collections/PreviewList/PreviewList'
+import Home from './Home'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const authState = useAuthState()
+  const logOut = useLogOut()
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Card style={{ position: 'relative' }}>
+        <Card
+          tone='transparent'
+          shadow={3}
+          marginTop={2}
+          marginX={2}
+          marginBottom={5}
+          paddingX={4}
+          radius={3}
+          style={{
+            position: 'sticky',
+            top: 8,
+            zIndex: 3,
+            backgroundColor: 'hsl(0deg 0% 100% / 0.5',
+            backdropFilter: 'blur(15px) brightness(110%)',
+          }}
+        >
+          <Flex align='center' justify='space-between' style={{ height: 48 }}>
+            <Text as='h1' size={2} weight='medium'>
+              <Link to='/' style={{ color: 'inherit' }}>
+                <Flex align='center' gap={3}>
+                  <SanityMonogram />
+                  SDK Explorer
+                </Flex>
+              </Link>
+            </Text>
+            {authState?.type === 'logged-in' && (
+              <Button mode='ghost' text='Log out' onClick={logOut} />
+            )}
+          </Flex>
+        </Card>
+        <AuthBoundary>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route
+              path='/document-collections/preview-list'
+              element={<PreviewList />}
+            />
+            <Route
+              path='/document-collections/preview-grid'
+              element={<PreviewGrid />}
+            />
+          </Routes>
+        </AuthBoundary>
+      </Card>
+    </BrowserRouter>
   )
 }
-
-export default App
