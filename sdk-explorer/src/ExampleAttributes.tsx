@@ -7,6 +7,9 @@ interface ExampleAttributeProps {
   styling: string
 }
 
+/**
+ * Lists the hooks and styling choices for a given example
+ */
 export default function ExampleAttributes({
   hooks,
   styling,

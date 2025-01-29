@@ -11,6 +11,9 @@ interface ExampleCardProps {
   to: string
 }
 
+/**
+ * Shows a summary of an example on the Home page
+ */
 export default function ExampleCard({
   title,
   description,

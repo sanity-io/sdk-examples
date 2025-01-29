@@ -10,6 +10,9 @@ interface ExampleLayoutProps {
   styling: string
 }
 
+/**
+ * Layout for example pages
+ */
 export default function ExampleLayout({
   children,
   title,

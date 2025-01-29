@@ -1,6 +1,9 @@
 import { LaunchIcon } from '@sanity/icons'
 import { Button } from '@sanity/ui'
 
+/**
+ * CTA for viewing example code on example pages
+ */
 export default function ViewCode({ url }: { url: string }) {
   return (
     <Button
