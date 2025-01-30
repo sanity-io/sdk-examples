@@ -47,6 +47,24 @@ export default function Home() {
             </Stack>
           </Stack>
         </Card>
+
+        <Card padding={4} radius={2} shadow={3}>
+          <Stack space={4}>
+            <Text as='h2' size={4} weight='medium'>
+              Users
+            </Text>
+
+            <Stack space={3}>
+              <ExampleCard
+                to='/users/user-profile'
+                title='User profile'
+                description='Information about the currently authenticated user'
+                hooks={['useAuthState', 'useCurrentUser']}
+                styling='Sanity UI'
+              />
+            </Stack>
+          </Stack>
+        </Card>
       </Stack>
     </Container>
   )
