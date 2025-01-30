@@ -1,85 +1,53 @@
-import { Box, Card, Container, Flex, Heading, Stack, Text } from "@sanity/ui";
-import type { JSX } from "react";
-import { Link } from "react-router";
+import { Card, Container, Heading, Stack, Text } from '@sanity/ui'
+import ExampleCard from './ExampleCard'
 
-const styles = {
-  card: {
-    transition: "all 0.2s ease-in-out",
-    cursor: "pointer",
-  },
-  cardHover: {
-    transform: "translateY(-2px)",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  },
-};
-
-const menuItems = [
-  {
-    title: "Project Auth",
-    path: "/project-auth",
-    icon: "🔐",
-  },
-  {
-    title: "Unauthenticated",
-    path: "/unauthenticated",
-    icon: "🌐",
-  },
-  {
-    title: "Org Auth",
-    path: "/org-auth",
-    icon: "👷",
-  },
-  {
-    title: "Cosui Simulator",
-    path: "/cosui-simulator",
-    icon: "🛠️",
-  },
-];
-
-const Home = (): JSX.Element => {
+export default function Home() {
   return (
-    <Container width={2} padding={7}>
-      <Card padding={5} radius={3} shadow={1}>
-        <Stack space={5}>
-          <Box>
-            <Heading as="h1" size={4} align="center">
-              Sanity SDK Explorer
-            </Heading>
-            <Box marginTop={3}>
-              <Text align="center" size={2} style={{ color: "#6e7683" }}>
-                Explore different authentication and functionality examples
-              </Text>
-            </Box>
-          </Box>
+    <Container padding={4}>
+      <Stack space={5} paddingY={4}>
+        <Heading
+          as='h1'
+          style={{
+            fontSize: '4rem',
+            fontWeight: 400,
+            letterSpacing: '-0.025em',
+          }}
+        >
+          SDK Explorer
+        </Heading>
+        <Text size={3} muted>
+          The Sanity SDK Explorer contains an assortment of examples for each
+          component available in the SDK. This copywriting should be more
+          exciting!
+        </Text>
+      </Stack>
 
-          <Flex direction="column" gap={3}>
-            {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                style={{ textDecoration: "none" }}
-              >
-                <Card
-                  padding={4}
-                  radius={3}
-                  tone="default"
-                  style={styles.card}
-                  className="hover-card"
-                >
-                  <Flex align="center" gap={3}>
-                    <Text size={3}>{item.icon}</Text>
-                    <Text size={2} style={{ color: "#f46b60" }}>
-                      {item.title} <span className="arrow">→</span>
-                    </Text>
-                  </Flex>
-                </Card>
-              </Link>
-            ))}
-          </Flex>
-        </Stack>
-      </Card>
+      <Stack space={5} paddingY={4}>
+        <Card padding={4} radius={2} shadow={3}>
+          <Stack space={4}>
+            <Text as='h2' size={4} weight='medium'>
+              Document collections
+            </Text>
+
+            <Stack space={3}>
+              <ExampleCard
+                to='/document-collections/preview-list'
+                title='Preview list'
+                description='A list of document previews'
+                hooks={['useDocuments', 'usePreview']}
+                styling='Sanity UI'
+              />
+              <ExampleCard
+                to='/document-collections/preview-grid'
+                title='Preview grid'
+                description='A grid of document previews'
+                hooks={['useDocuments', 'usePreview']}
+                styling='Tailwind'
+              />
+            </Stack>
+          </Stack>
+        </Card>
+      </Stack>
     </Container>
-  );
-};
-
-export default Home;
+  )
+}
