@@ -1,11 +1,12 @@
 import { SanityMonogram } from '@sanity/logos'
 import { AuthBoundary } from '@sanity/sdk-react/components'
 import { useAuthState, useLogOut } from '@sanity/sdk-react/hooks'
-import { Button, Card, Flex, Text } from '@sanity/ui'
+import { Button, Card, Flex, Inline, Text } from '@sanity/ui'
 import { BrowserRouter, Link, Route, Routes } from 'react-router'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import Home from './Home'
+import UserProfile from './users/UserProfile/UserProfile'
 
 export default function App() {
   const authState = useAuthState()
@@ -39,9 +40,16 @@ export default function App() {
                 </Flex>
               </Link>
             </Text>
-            {authState?.type === 'logged-in' && (
-              <Button mode='ghost' text='Log out' onClick={logOut} />
-            )}
+            <Inline space={4}>
+              <Link to='/'>
+                <Text weight='medium' size={1}>
+                  Home
+                </Text>
+              </Link>
+              {authState?.type === 'logged-in' && (
+                <Button mode='ghost' text='Log out' onClick={logOut} />
+              )}
+            </Inline>
           </Flex>
         </Card>
         <AuthBoundary>
@@ -55,6 +63,7 @@ export default function App() {
               path='/document-collections/preview-grid'
               element={<PreviewGrid />}
             />
+            <Route path='/users/user-profile' element={<UserProfile />} />
           </Routes>
         </AuthBoundary>
       </Card>
