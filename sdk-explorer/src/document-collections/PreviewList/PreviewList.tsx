@@ -14,8 +14,14 @@ function Loading() {
   )
 }
 
+// The DocumentPreview component uses the `usePreview` hook to render a document preview interface
 function DocumentPreview({ document }: { document: DocumentHandle }) {
+  // Generate a ref for the outer element
+  // This keeps the usePreview hook from resolving if the preview is not currently displayed in the viewport
   const ref = useRef(null)
+
+  // Get the preview's title, subtitle, and media fields,
+  // plus an `isPending` flag to indicate if preview value resolutions are pending
   const {
     results: { title, subtitle, media },
     isPending,
@@ -23,9 +29,11 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
 
   return (
     <Button
+      // Assign the ref to the outer element
       ref={ref}
       mode='bleed'
       onClick={() => alert(`Good choice! ${title} is an excellent book.`)}
+      // When preview values are resolving, we’ll lower the opacity to indicate this state visually
       style={{ opacity: isPending ? 0.5 : 1 }}
     >
       <Inline space={4}>
@@ -46,6 +54,8 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
 }
 
 function PreviewList() {
+  // Use the `useDocuments` hook to return an index of document handles for all of our 'book' type documents
+  // Sort the documents by the author's last name, then the release date
   const { results: books, isPending } = useDocuments({
     filter: '_type == "book"',
     sort: [
