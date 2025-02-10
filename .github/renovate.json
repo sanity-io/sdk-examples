@@ -24,7 +24,7 @@
     },
     {
       "description": "Group sdk related deps in a single PR, as they often have to update together",
-      "groupName": "storybook-tooling",
+      "groupName": "sdk-tooling",
       "matchPackageNames": ["@sanity/sdk", "@sanity/sdk-*"]
     },
     {
