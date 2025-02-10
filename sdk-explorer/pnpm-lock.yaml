@@ -18,11 +18,11 @@ importers:
         specifier: ^2.1.13
         version: 2.1.13(@sanity/color@3.0.6)(react@19.0.0)
       '@sanity/sdk':
-        specifier: 0.0.0-alpha.5
-        version: 0.0.0-alpha.5(@types/react@19.0.7)(react@19.0.0)
+        specifier: 0.0.0-alpha.8
+        version: 0.0.0-alpha.8(@types/react@19.0.7)(react@19.0.0)
       '@sanity/sdk-react':
-        specifier: 0.0.0-alpha.5
-        version: 0.0.0-alpha.5(@emotion/is-prop-valid@1.2.2)(@sanity/color@3.0.6)(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react-is@19.0.0)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+        specifier: 0.0.0-alpha.8
+        version: 0.0.0-alpha.8(@emotion/is-prop-valid@1.2.2)(@sanity/color@3.0.6)(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react-is@19.0.0)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       '@sanity/types':
         specifier: ^3.72.1
         version: 3.72.1(@types/react@19.0.7)
@@ -555,18 +555,23 @@ packages:
       '@sanity/color': ^2.0 || ^3.0 || ^3.0.0-beta
       react: ^18.3 || >=19.0.0-rc
 
+  '@sanity/os@0.2.0':
+    resolution: {integrity: sha512-wh/YackZYRtm/UWK73Wx7E4uDxqeet5eDPBdiMrMTdaxwA6S+kS/wO2PAgU5i+hUXNmIACaUoQxqd85H4UhJ4A==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
   '@sanity/schema@3.72.1':
     resolution: {integrity: sha512-HUeWCAe5NZGfHsbRZLf0rcDrP8Zsj62IK1AblW+YOICDVP3L1pWwokFFL56dupeWONa+pRk+Nxx8lsFmYULbFw==}
 
-  '@sanity/sdk-react@0.0.0-alpha.5':
-    resolution: {integrity: sha512-4kV8VnrQsdRWlqOqh15k7wZUBDtsDYgXOpsN0+meHLkLwcXhFtAf+c14HzpzU4xY9dDVWCMOhT9pYWNPKuX2KQ==}
+  '@sanity/sdk-react@0.0.0-alpha.8':
+    resolution: {integrity: sha512-iLuO/IE3z2QA+AoAsOjgIs93uOV8p99Pt4vxS3enzSYy+e9j7l+ER7DaKl01vp6OPxCaFpbLnvdNLzhDlPE+pw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@sanity/sdk@0.0.0-alpha.5':
-    resolution: {integrity: sha512-rJbTdecKZwdumOSNXyvB8w9a5kjuMO9Ja05Bgy3PwLq9PBD1ffuN9NBBx03dNOC5yDTcekJSxEt+mAW0jiO1RQ==}
+  '@sanity/sdk@0.0.0-alpha.8':
+    resolution: {integrity: sha512-j2CFTDxwFX9HKXDAjj6NHdXxGs8XdqAzXVBRoRcOdBxJZVTBPVxRRJfpkq/r4UtWiY3AHm7PImL/k/r1t2BBqA==}
     engines: {node: '>=20.0.0'}
 
   '@sanity/types@3.72.1':
@@ -2065,6 +2070,14 @@ snapshots:
       '@sanity/color': 3.0.6
       react: 19.0.0
 
+  '@sanity/os@0.2.0':
+    dependencies:
+      '@sanity/comlink': 2.0.5
+      debug: 4.4.0
+      lodash-es: 4.17.21
+    transitivePeerDependencies:
+      - supports-color
+
   '@sanity/schema@3.72.1(@types/react@19.0.7)':
     dependencies:
       '@sanity/generate-help-url': 3.0.0
@@ -2080,10 +2093,11 @@ snapshots:
       - debug
       - supports-color
 
-  '@sanity/sdk-react@0.0.0-alpha.5(@emotion/is-prop-valid@1.2.2)(@sanity/color@3.0.6)(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react-is@19.0.0)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
+  '@sanity/sdk-react@0.0.0-alpha.8(@emotion/is-prop-valid@1.2.2)(@sanity/color@3.0.6)(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react-is@19.0.0)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
     dependencies:
       '@sanity/logos': 2.1.13(@sanity/color@3.0.6)(react@19.0.0)
-      '@sanity/sdk': 0.0.0-alpha.5(@types/react@19.0.7)(react@19.0.0)
+      '@sanity/os': 0.2.0
+      '@sanity/sdk': 0.0.0-alpha.8(@types/react@19.0.7)(react@19.0.0)
       '@sanity/ui': 2.11.4(@emotion/is-prop-valid@1.2.2)(react-dom@19.0.0(react@19.0.0))(react-is@19.0.0)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
@@ -2100,7 +2114,7 @@ snapshots:
       - supports-color
       - use-sync-external-store
 
-  '@sanity/sdk@0.0.0-alpha.5(@types/react@19.0.7)(react@19.0.0)':
+  '@sanity/sdk@0.0.0-alpha.8(@types/react@19.0.7)(react@19.0.0)':
     dependencies:
       '@sanity/client': 6.27.2
       '@sanity/comlink': 2.0.5
