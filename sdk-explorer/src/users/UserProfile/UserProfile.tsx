@@ -3,9 +3,14 @@ import { useAuthState, useCurrentUser } from '@sanity/sdk-react/hooks'
 import { Avatar, Card, Container, Flex, Grid, Stack, Text } from '@sanity/ui'
 
 export default function UserProfile() {
+  // Use the `useAuthState` hook to ensure there's currently a logged in user
   const { type } = useAuthState()
+
+  // Use the `useCurrentUser` hook to get the current user.
+  // The returned object contains fields like the user's name, profile image, email address, roles, and authentication provider
   const user = useCurrentUser()
 
+  // Render a user profile if the authentication state indicated a logged in user and a user object is available
   return type === AuthStateType.LOGGED_IN && user ? (
     <Container width={1}>
       <Card padding={4} margin={2} radius={3} shadow={3}>
@@ -36,6 +41,7 @@ export default function UserProfile() {
       </Card>
     </Container>
   ) : (
+    // Render a placeholder if there's no user currently logged in
     <Container padding={5}>
       <Text as='h2' size={4} align='center'>
         Nobody home! Try logging in?

@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# SDK Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Sanity App SDK Explorer contains an assortment of example interfaces built with our React SDK’s hooks.
+The purpose of the Explorer is to demonstrate how these hooks can be used to build out interfaces powered
+by Sanity, with a variety of approaches to styling.
 
-Currently, two official plugins are available:
+Each example contains an interface rendered in the browser as well as a link to the example’s code on
+GitHub to demonstrate how the example is built. Example code is enriched with comments and may freely
+be used in your own applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running the SDK Explorer
 
-## Expanding the ESLint configuration
+We'll have a deployed version of the SDK Explorer available soon.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+For now, you can run the SDK Explorer locally:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the SDK Examples Git repo: `git clone git@github.com:sanity-io/sdk-examples.git`
+1. Switch to the SDK Explorer app: `cd ./sdk-examples/sdk-explorer`
+1. Install dependencies: `pnpm install`
+1. Run the application’s dev server: `pnpm dev`
+1. Open the URL displayed by the dev server (usually `localhost:5173`)
