@@ -4,8 +4,17 @@ import {
   usePreview,
   UsePreviewResults,
   useDocument,
+  useEditDocument,
 } from "@sanity/sdk-react/hooks";
-import { Card, Flex, Spinner, Stack, Text } from "@sanity/ui";
+import {
+  Button,
+  Card,
+  Flex,
+  Spinner,
+  Stack,
+  Text,
+  TextInput,
+} from "@sanity/ui";
 import { useMemo, useState } from "react";
 import {
   createColumnHelper,
@@ -14,8 +23,18 @@ import {
   flexRender,
   getSortedRowModel,
   SortingState,
+  SortDirection,
 } from "@tanstack/react-table";
 import ExampleLayout from "../../ExampleLayout";
+import { DotIcon, ChevronDownIcon, ChevronUpIcon } from "@sanity/icons";
+
+function getIcon(isSorted: false | SortDirection) {
+  return isSorted === "asc"
+    ? ChevronUpIcon
+    : isSorted === "desc"
+    ? ChevronDownIcon
+    : DotIcon;
+}
 
 function PreviewCell({
   document,
@@ -67,11 +86,27 @@ function AuthorsCell({ doc }: { doc: DocumentHandle }) {
   return <Text size={1}>{JSON.stringify(data.authors)}</Text>;
 }
 
+function ReleaseDateCell({ doc }: { doc: DocumentHandle }) {
+  const data = useDocument(doc._id);
+  const editDocument = useEditDocument(doc._id, "releaseDate");
+
+  if (!data) {
+    return { isLoading: true };
+  }
+
+  return (
+    <TextInput
+      value={data.releaseDate as string}
+      onChange={(e) => editDocument(e.currentTarget.value)}
+    />
+  );
+}
+
 function PreviewTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [previewCache, setPreviewCache] = useState<PreviewCache>({});
   const { results: books, isPending } = useDocuments({
-    filter: '_type == "book"',
+    filter: '_type == "book" && defined(releaseDate)',
     sort: [
       { field: "authors[0]->lastName", direction: "asc" },
       { field: "releaseDate", direction: "asc" },
@@ -84,7 +119,7 @@ function PreviewTable() {
     () => [
       columnHelper.accessor((row) => row, {
         id: "cover",
-        header: "Cover",
+        header: () => <Button text="Cover" disabled mode="bleed" />,
         enableSorting: false,
         cell: (info) => {
           const document = info.getValue();
@@ -109,27 +144,12 @@ function PreviewTable() {
       columnHelper.accessor((row) => row, {
         id: "title",
         header: ({ column }) => (
-          <button
+          <Button
             onClick={() => column.toggleSorting()}
-            style={{
-              background: "none",
-              border: "none",
-              padding: 0,
-              font: "inherit",
-              color: "inherit",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              gap: "4px",
-            }}
-          >
-            Title
-            <Text muted>
-              {!column.getIsSorted() && " •"}
-              {column.getIsSorted() === "asc" && " ↑"}
-              {column.getIsSorted() === "desc" && " ↓"}
-            </Text>
-          </button>
+            mode={column.getIsSorted() ? "ghost" : "bleed"}
+            iconRight={getIcon(column.getIsSorted())}
+            text="Title"
+          />
         ),
         cell: (info) => {
           const document = info.getValue();
@@ -163,27 +183,12 @@ function PreviewTable() {
       columnHelper.accessor((row) => row, {
         id: "subtitle",
         header: ({ column }) => (
-          <button
+          <Button
             onClick={() => column.toggleSorting()}
-            style={{
-              background: "none",
-              border: "none",
-              padding: 0,
-              font: "inherit",
-              color: "inherit",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              gap: "4px",
-            }}
-          >
-            Subtitle
-            <Text muted>
-              {!column.getIsSorted() && " •"}
-              {column.getIsSorted() === "asc" && " ↑"}
-              {column.getIsSorted() === "desc" && " ↓"}
-            </Text>
-          </button>
+            mode={column.getIsSorted() ? "ghost" : "bleed"}
+            iconRight={getIcon(column.getIsSorted())}
+            text="Subtitle"
+          />
         ),
         cell: (info) => {
           const document = info.getValue();
@@ -219,30 +224,33 @@ function PreviewTable() {
       columnHelper.accessor((row) => row, {
         id: "authors",
         header: ({ column }) => (
-          <button
+          <Button
             onClick={() => column.toggleSorting()}
-            style={{
-              background: "none",
-              border: "none",
-              padding: 0,
-              font: "inherit",
-              color: "inherit",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              gap: "4px",
-            }}
-          >
-            Authors
-            <Text muted>
-              {!column.getIsSorted() && " •"}
-              {column.getIsSorted() === "asc" && " ↑"}
-              {column.getIsSorted() === "desc" && " ↓"}
-            </Text>
-          </button>
+            mode={column.getIsSorted() ? "ghost" : "bleed"}
+            iconRight={getIcon(column.getIsSorted())}
+            text="Authors"
+          />
         ),
         cell: (info) => {
           const result = <AuthorsCell doc={info.getValue()} />;
+          if ("isLoading" in result) {
+            return <Spinner />;
+          }
+          return result;
+        },
+      }),
+      columnHelper.accessor((row) => row, {
+        id: "releaseDate",
+        header: ({ column }) => (
+          <Button
+            onClick={() => column.toggleSorting()}
+            mode={column.getIsSorted() ? "ghost" : "bleed"}
+            iconRight={getIcon(column.getIsSorted())}
+            text="Release date"
+          />
+        ),
+        cell: (info) => {
+          const result = <ReleaseDateCell doc={info.getValue()} />;
           // Handle both Element and {isLoading} return types
           if ("isLoading" in result) {
             return <Spinner />;
