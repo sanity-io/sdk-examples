@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'sdk-examples',
 
-  projectId: 'flahoy03',
+  projectId: 'sxsy4puj',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],

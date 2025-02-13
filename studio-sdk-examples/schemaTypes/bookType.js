@@ -11,6 +11,19 @@ export const bookType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'status',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Featured', value: 'featured'},
+          {title: 'New', value: 'new'},
+          {title: 'Bestseller', value: 'bestseller'},
+          {title: 'Coming Soon', value: 'coming-soon'},
+        ],
+        layout: 'radio',
+      },
+    }),
+    defineField({
       name: 'authors',
       type: 'array',
       of: [
@@ -46,6 +59,8 @@ export const bookType = defineType({
       author2FirstName: 'authors.1.firstName',
       author2LastName: 'authors.1.lastName',
       cover: 'cover',
+      status: 'status',
+      releaseDate: 'releaseDate',
     },
     prepare: ({
       title,
@@ -54,11 +69,21 @@ export const bookType = defineType({
       author2FirstName,
       author2LastName,
       cover,
+      status,
+      releaseDate,
     }) => {
       const author1 = `${author1FirstName} ${author1LastName}`
       const author2 = `${author2FirstName} ${author2LastName}`
-      return {
+      const titleCombined = [
         title,
+        status ? `(${status})` : '',
+        releaseDate ? ' • ' + new Date(releaseDate).toLocaleDateString() : '',
+      ]
+        .filter(Boolean)
+        .join(' ')
+
+      return {
+        title: titleCombined,
         subtitle: author2FirstName ? [author1, author2].join(', ') : author1,
         media: cover,
       }

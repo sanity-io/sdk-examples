@@ -1,0 +1,18 @@
+{"_id": "author-1", "_type": "author", "firstName": "Neal", "lastName": "Stephenson"}
+{"_id": "author-2", "_type": "author", "firstName": "William", "lastName": "Gibson"}
+{"_id": "author-3", "_type": "author", "firstName": "Ursula K.", "lastName": "Le Guin"}
+{"_id": "author-4", "_type": "author", "firstName": "Andy", "lastName": "Weir"}
+{"_id": "author-5", "_type": "author", "firstName": "Martha", "lastName": "Wells"}
+{"_id": "publisher-1", "_type": "publisher", "name": "Harper Voyager"}
+{"_id": "publisher-2", "_type": "publisher", "name": "Tor Books"}
+{"_id": "publisher-3", "_type": "publisher", "name": "Penguin Random House"}
+{"_id": "book-1", "_type": "book", "title": "Snow Crash", "authors": [{"_type": "reference", "_ref": "author-1"}], "publisher": {"_type": "reference", "_ref": "publisher-1"}, "releaseDate": "1992-06-01", "status": "featured"}
+{"_id": "book-2", "_type": "book", "title": "Neuromancer", "authors": [{"_type": "reference", "_ref": "author-2"}], "publisher": {"_type": "reference", "_ref": "publisher-2"}, "releaseDate": "1984-07-01", "status": "bestseller"}
+{"_id": "book-3", "_type": "book", "title": "The Left Hand of Darkness", "authors": [{"_type": "reference", "_ref": "author-3"}], "publisher": {"_type": "reference", "_ref": "publisher-3"}, "releaseDate": "1969-03-01", "status": "featured"}
+{"_id": "book-4", "_type": "book", "title": "Project Hail Mary", "authors": [{"_type": "reference", "_ref": "author-4"}], "publisher": {"_type": "reference", "_ref": "publisher-1"}, "releaseDate": "2021-05-04", "status": "bestseller"}
+{"_id": "book-5", "_type": "book", "title": "All Systems Red", "authors": [{"_type": "reference", "_ref": "author-5"}], "publisher": {"_type": "reference", "_ref": "publisher-2"}, "releaseDate": "2017-05-02", "status": "featured"}
+{"_id": "book-6", "_type": "book", "title": "Anathem", "authors": [{"_type": "reference", "_ref": "author-1"}], "publisher": {"_type": "reference", "_ref": "publisher-1"}, "releaseDate": "2008-09-09", "status": "bestseller"}
+{"_id": "book-7", "_type": "book", "title": "Pattern Recognition", "authors": [{"_type": "reference", "_ref": "author-2"}], "publisher": {"_type": "reference", "_ref": "publisher-3"}, "releaseDate": "2003-02-03", "status": "featured"}
+{"_id": "book-8", "_type": "book", "title": "The Dispossessed", "authors": [{"_type": "reference", "_ref": "author-3"}], "publisher": {"_type": "reference", "_ref": "publisher-2"}, "releaseDate": "1974-05-01", "status": "bestseller"}
+{"_id": "book-9", "_type": "book", "title": "The Martian", "authors": [{"_type": "reference", "_ref": "author-4"}], "publisher": {"_type": "reference", "_ref": "publisher-3"}, "releaseDate": "2014-02-11", "status": "featured"}
+{"_id": "book-10", "_type": "book", "title": "Network Effect", "authors": [{"_type": "reference", "_ref": "author-5"}], "publisher": {"_type": "reference", "_ref": "publisher-2"}, "releaseDate": "2020-05-05", "status": "new"} 
