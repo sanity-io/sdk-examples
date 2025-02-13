@@ -20,7 +20,14 @@ import {
   TextInput,
   Radio,
 } from "@sanity/ui";
-import { useMemo, useState, ReactElement } from "react";
+import {
+  useMemo,
+  useState,
+  ReactElement,
+  useEffect,
+  createContext,
+  useContext,
+} from "react";
 import {
   createColumnHelper,
   useReactTable,
@@ -29,6 +36,11 @@ import {
   getSortedRowModel,
   SortingState,
   SortDirection,
+  RowSelectionState,
+  Header,
+  HeaderGroup,
+  Row,
+  Cell,
 } from "@tanstack/react-table";
 import ExampleLayout from "../../ExampleLayout";
 import {
@@ -37,6 +49,7 @@ import {
   ChevronUpIcon,
   PublishIcon,
 } from "@sanity/icons";
+import type { SanityDocument as BaseSanityDocument } from "@sanity/types";
 
 function getIcon(isSorted: false | SortDirection) {
   return isSorted === "asc"
@@ -64,8 +77,45 @@ type PreviewCache = {
   [key: string]: UsePreviewResults["results"] | { isLoading: true };
 };
 
+interface SanityDocument extends BaseSanityDocument {
+  status?: string;
+  releaseDate?: string;
+  authors?: Array<{ _ref: string }>;
+  firstName?: string;
+  lastName?: string;
+}
+
+type DocumentCache = {
+  [key: string]: SanityDocument | null;
+};
+
+type TableMeta = {
+  documentCache: DocumentCache;
+};
+
+type TableContextType = ReturnType<typeof useReactTable<BookDocument>> | null;
+const TableContext = createContext<TableContextType>(null);
+
+function useTable() {
+  const context = useContext(TableContext);
+  if (!context) {
+    throw new Error("useTable must be used within a TableContext.Provider");
+  }
+  return context;
+}
+
 function AuthorCell({ docId }: { docId: string }) {
+  const table = useTable();
   const data = useDocument(docId);
+
+  useEffect(() => {
+    if (data) {
+      const cache = (table.options.meta as TableMeta)?.documentCache;
+      if (cache) {
+        cache[docId] = data;
+      }
+    }
+  }, [data, docId, table.options.meta]);
 
   if (!data) {
     return <Spinner />;
@@ -79,7 +129,8 @@ function AuthorCell({ docId }: { docId: string }) {
 }
 
 function AuthorsCell({ doc }: { doc: DocumentHandle }): ReactElement | null {
-  const data = useDocument(doc._id);
+  const table = useTable();
+  const data = (table.options.meta as TableMeta)?.documentCache[doc._id];
 
   if (!data) {
     return <Spinner />;
@@ -99,31 +150,29 @@ function AuthorsCell({ doc }: { doc: DocumentHandle }): ReactElement | null {
 }
 
 function ReleaseDateCell({ doc }: { doc: DocumentHandle }): ReactElement {
-  const data = useDocument(doc._id);
+  const table = useTable();
   const editDocument = useEditDocument(doc._id, "releaseDate");
+  const data = (table.options.meta as TableMeta)?.documentCache[doc._id];
 
   if (!data) {
     return <Spinner />;
   }
 
   return (
-    <TextInput
-      value={data.releaseDate as string}
-      onChange={(e) => editDocument(e.currentTarget.value)}
-    />
+    <Card tone="default">
+      <TextInput
+        value={data.releaseDate as string}
+        onChange={(e) => editDocument(e.currentTarget.value)}
+      />
+    </Card>
   );
 }
 
-function StatusCell({
-  doc,
-  selectedIds,
-}: {
-  doc: DocumentHandle;
-  selectedIds: string[];
-}): ReactElement | null {
-  const data = useDocument(doc._id);
+function StatusCell({ doc }: { doc: DocumentHandle }): ReactElement | null {
+  const table = useTable();
   const editDocument = useEditDocument(doc._id, "status");
   const applyActions = useApplyActions();
+  const data = (table.options.meta as TableMeta)?.documentCache[doc._id];
 
   if (!data) {
     return <Spinner />;
@@ -137,6 +186,8 @@ function StatusCell({
   };
 
   const status = data.status as string;
+  const selectedRows = table.getSelectedRowModel().rows;
+  const selectedIds = selectedRows.map((row) => row.original._id);
 
   const handleStatusChange = (newStatus: string) => {
     // If this document is selected, update all selected documents
@@ -169,15 +220,12 @@ function StatusCell({
   );
 }
 
-function DocumentActions({
-  doc,
-  selectedIds,
-}: {
-  doc: DocumentHandle;
-  selectedIds: string[];
-}): ReactElement {
-  const data = useDocument(doc._id);
+function DocumentActions({ doc }: { doc: DocumentHandle }): ReactElement {
+  const table = useTable();
+  const data = (table.options.meta as TableMeta)?.documentCache[doc._id];
   const isDraft = data?._id.startsWith("drafts.");
+  const selectedRows = table.getSelectedRowModel().rows;
+  const selectedIds = selectedRows.map((row) => row.original._id);
   const actionIds = selectedIds.length ? selectedIds : [doc._id];
   const publishedActionIds = actionIds.map((id) => id.replace("drafts.", ""));
 
@@ -201,11 +249,34 @@ function DocumentActions({
   );
 }
 
+function DocumentFetcherCell({ doc }: { doc: DocumentHandle }) {
+  const data = useDocument(doc._id);
+  const table = useTable();
+
+  useEffect(() => {
+    if (data) {
+      const cache = (table.options.meta as TableMeta)?.documentCache;
+      if (cache) {
+        cache[doc._id] = data;
+      }
+    }
+  }, [data, doc._id, table.options.meta]);
+
+  return null;
+}
+
+type BookDocument = DocumentHandle & {
+  status?: string;
+  authors?: Array<{ _ref: string }>;
+  releaseDate?: string;
+};
+
 function PreviewTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [previewCache, setPreviewCache] = useState<PreviewCache>({});
-  const [selected, setSelected] = useState<string[]>([]);
+  const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
   const [statusFilter, setStatusFilter] = useState<string>("");
+  const documentCache = useMemo<DocumentCache>(() => ({}), []);
 
   const { results: books, isPending } = useDocuments({
     filter: [
@@ -220,57 +291,37 @@ function PreviewTable() {
     ],
   });
 
-  const columnHelper = createColumnHelper<DocumentHandle>();
+  const columnHelper = createColumnHelper<BookDocument>();
 
   const columns = useMemo(
     () => [
       columnHelper.accessor((row) => row, {
-        id: "_select",
-        header: ({ table }) => {
-          const currentRows = table.getRowModel().rows;
-          const allSelected = currentRows.every((row) =>
-            selected.includes(row.original._id)
-          );
-
-          return (
-            <Button
-              text="Select"
-              mode="bleed"
-              onClick={() => {
-                if (allSelected) {
-                  // If all are selected, clear selection
-                  setSelected([]);
-                } else {
-                  // Otherwise select all visible rows
-                  const newSelected = currentRows.map(
-                    (row) => row.original._id
-                  );
-                  setSelected(newSelected);
-                }
-              }}
-            />
-          );
-        },
+        id: "_documentFetcher",
+        header: () => null,
+        cell: (info) => <DocumentFetcherCell doc={info.getValue()} />,
+        size: 0,
         enableSorting: false,
-        cell: (info) => {
-          const document = info.getValue();
-          return (
-            <Flex justify="center">
-              <Checkbox
-                checked={selected.includes(document._id)}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                  if (e.target.checked) {
-                    setSelected((prev) => [...prev, document._id]);
-                  } else {
-                    setSelected((prev) =>
-                      prev.filter((id) => id !== document._id)
-                    );
-                  }
-                }}
-              />
-            </Flex>
-          );
-        },
+      }),
+      columnHelper.display({
+        id: "select",
+        header: ({ table }) => (
+          <Flex justify="center">
+            <Checkbox
+              checked={table.getIsAllRowsSelected()}
+              indeterminate={table.getIsSomeRowsSelected()}
+              onChange={table.getToggleAllRowsSelectedHandler()}
+            />
+          </Flex>
+        ),
+        cell: ({ row }) => (
+          <Flex justify="center">
+            <Checkbox
+              checked={row.getIsSelected()}
+              indeterminate={row.getIsSomeSelected()}
+              onChange={row.getToggleSelectedHandler()}
+            />
+          </Flex>
+        ),
       }),
       columnHelper.accessor((row) => row, {
         id: "cover",
@@ -279,7 +330,6 @@ function PreviewTable() {
         cell: (info) => {
           const document = info.getValue();
           const preview = PreviewCell({ document });
-          // Update cache with latest preview
           if (!(document._id in previewCache)) {
             setPreviewCache((prev) => ({ ...prev, [document._id]: preview }));
           }
@@ -309,7 +359,6 @@ function PreviewTable() {
         cell: (info) => {
           const document = info.getValue();
           const preview = PreviewCell({ document });
-          // Update cache with latest preview
           if (!(document._id in previewCache)) {
             setPreviewCache((prev) => ({ ...prev, [document._id]: preview }));
           }
@@ -337,11 +386,29 @@ function PreviewTable() {
       }),
       columnHelper.accessor((row) => row, {
         id: "status",
-        header: () => <Button text="Status" disabled mode="bleed" />,
-        enableSorting: false,
-        cell: (info) => (
-          <StatusCell doc={info.getValue()} selectedIds={selected} />
+        header: ({ column }) => (
+          <Button
+            onClick={() => column.toggleSorting()}
+            mode={column.getIsSorted() ? "ghost" : "bleed"}
+            tone={column.getIsSorted() ? "primary" : "default"}
+            iconRight={getIcon(column.getIsSorted())}
+            text="Status"
+          />
         ),
+        cell: (info) => <StatusCell doc={info.getValue()} />,
+        enableSorting: true,
+        sortingFn: (rowA, rowB) => {
+          const rowAId = rowA.original._id;
+          const rowBId = rowB.original._id;
+          const rowAStatus = documentCache[rowAId]?.status;
+          const rowBStatus = documentCache[rowBId]?.status;
+
+          if (!rowAStatus || !rowBStatus) {
+            return 0;
+          }
+
+          return rowAStatus.localeCompare(rowBStatus);
+        },
       }),
       columnHelper.accessor((row) => row, {
         id: "authors",
@@ -366,34 +433,39 @@ function PreviewTable() {
           />
         ),
         cell: (info) => <ReleaseDateCell doc={info.getValue()} />,
-        sortingFn: () => 0,
       }),
       columnHelper.accessor((row) => row, {
         id: "_action",
-        header: () => <Button disabled mode="bleed" text="Action" />,
-        cell: (info) => (
-          <DocumentActions doc={info.getValue()} selectedIds={selected} />
+        header: () => (
+          <Flex justify="center">
+            <Button disabled mode="bleed" text="Action" />
+          </Flex>
         ),
+        cell: (info) => <DocumentActions doc={info.getValue()} />,
         sortingFn: () => 0,
       }),
     ],
-    [columnHelper, previewCache, selected]
+    [columnHelper, previewCache, documentCache]
   );
 
-  const data = useMemo(() => books, [books]);
-
-  const table = useReactTable({
-    data,
+  const table = useReactTable<BookDocument>({
+    data: books || [],
     columns,
     state: {
       sorting,
+      rowSelection,
     },
+    enableRowSelection: true,
+    onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    meta: {
+      documentCache,
+    } as TableMeta,
   });
 
-  if (isPending && !data) {
+  if (isPending && !books) {
     return (
       <Flex align="center" justify="center" padding={5}>
         <Spinner />
@@ -402,112 +474,137 @@ function PreviewTable() {
   }
 
   return (
-    <ExampleLayout
-      title="Preview Table"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewTable/PreviewTable.tsx"
-      hooks={["useDocuments", "usePreview"]}
-      styling="Sanity UI"
-    >
-      <Stack space={4}>
-        <Card padding={3}>
-          <Stack space={3}>
-            <Text weight="medium">Status:</Text>
-            <Flex gap={3} wrap="wrap" align="center">
-              <Radio
-                id="status-all"
-                checked={statusFilter === ""}
-                name="status"
-                value=""
-                onChange={(e) => setStatusFilter(e.currentTarget.value)}
-              />
-              <label htmlFor="status-all">All statuses</label>
+    <TableContext.Provider value={table}>
+      <ExampleLayout
+        title="Preview Table"
+        codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewTable/PreviewTable.tsx"
+        hooks={["useDocuments", "usePreview"]}
+        styling="Sanity UI"
+      >
+        <Stack space={4}>
+          <Card padding={3}>
+            <Flex gap={3} align="center">
+              <Text size={1} weight="medium">
+                Status:
+              </Text>
+              <Flex gap={3} wrap="wrap" align="center">
+                <Radio
+                  id="status-all"
+                  checked={statusFilter === ""}
+                  name="status"
+                  value=""
+                  onChange={(e) => setStatusFilter(e.currentTarget.value)}
+                />
+                <Text as="label" htmlFor="status-all" size={1}>
+                  All statuses
+                </Text>
 
-              <Radio
-                id="status-featured"
-                checked={statusFilter === "featured"}
-                name="status"
-                value="featured"
-                onChange={(e) => setStatusFilter(e.currentTarget.value)}
-              />
-              <label htmlFor="status-featured">Featured</label>
+                <Radio
+                  id="status-featured"
+                  checked={statusFilter === "featured"}
+                  name="status"
+                  value="featured"
+                  onChange={(e) => setStatusFilter(e.currentTarget.value)}
+                />
+                <Text as="label" htmlFor="status-featured" size={1}>
+                  Featured
+                </Text>
 
-              <Radio
-                id="status-new"
-                checked={statusFilter === "new"}
-                name="status"
-                value="new"
-                onChange={(e) => setStatusFilter(e.currentTarget.value)}
-              />
-              <label htmlFor="status-new">New</label>
+                <Radio
+                  id="status-new"
+                  checked={statusFilter === "new"}
+                  name="status"
+                  value="new"
+                  onChange={(e) => setStatusFilter(e.currentTarget.value)}
+                />
+                <Text as="label" htmlFor="status-new" size={1}>
+                  New
+                </Text>
 
-              <Radio
-                checked={statusFilter === "bestseller"}
-                name="status"
-                value="bestseller"
-                onChange={(e) => setStatusFilter(e.currentTarget.value)}
-              />
-              <label htmlFor="status-bestseller">Bestseller</label>
+                <Radio
+                  checked={statusFilter === "bestseller"}
+                  name="status"
+                  value="bestseller"
+                  onChange={(e) => setStatusFilter(e.currentTarget.value)}
+                />
+                <Text as="label" htmlFor="status-bestseller" size={1}>
+                  Bestseller
+                </Text>
 
-              <Radio
-                id="status-coming-soon"
-                checked={statusFilter === "coming-soon"}
-                name="status"
-                value="coming-soon"
-                onChange={(e) => setStatusFilter(e.currentTarget.value)}
-              />
-              <label htmlFor="status-coming-soon">Coming Soon</label>
+                <Radio
+                  id="status-coming-soon"
+                  checked={statusFilter === "coming-soon"}
+                  name="status"
+                  value="coming-soon"
+                  onChange={(e) => setStatusFilter(e.currentTarget.value)}
+                />
+                <Text as="label" htmlFor="status-coming-soon" size={1}>
+                  Coming Soon
+                </Text>
+              </Flex>
             </Flex>
-          </Stack>
-        </Card>
-        <Card>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <Card
-                  key={headerGroup.id}
-                  as="tr"
-                  style={{ display: "table-row" }}
-                >
-                  {headerGroup.headers.map((header) => (
+          </Card>
+          <Card>
+            <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead>
+                {table
+                  .getHeaderGroups()
+                  .map((headerGroup: HeaderGroup<BookDocument>) => (
                     <Card
-                      key={header.id}
-                      as="th"
-                      padding={2}
-                      style={{ display: "table-cell", textAlign: "left" }}
+                      key={headerGroup.id}
+                      as="tr"
+                      style={{ display: "table-row" }}
                     >
-                      {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
+                      {headerGroup.headers.map(
+                        (header: Header<BookDocument, unknown>) => (
+                          <Card
+                            key={header.id}
+                            as="th"
+                            padding={
+                              header.column.id === "_documentFetcher" ? 0 : 2
+                            }
+                            style={{ display: "table-cell", textAlign: "left" }}
+                          >
+                            {flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+                          </Card>
+                        )
                       )}
                     </Card>
                   ))}
-                </Card>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map((row) => (
-                <Card key={row.id} as="tr" style={{ display: "table-row" }}>
-                  {row.getVisibleCells().map((cell) => (
-                    <Card
-                      key={cell.id}
-                      as="td"
-                      padding={2}
-                      borderTop
-                      style={{ display: "table-cell" }}
-                    >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </Card>
-                  ))}
-                </Card>
-              ))}
-            </tbody>
-          </table>
-        </Card>
-      </Stack>
-    </ExampleLayout>
+              </thead>
+              <tbody>
+                {table.getRowModel().rows.map((row: Row<BookDocument>) => (
+                  <Card key={row.id} as="tr" style={{ display: "table-row" }}>
+                    {row
+                      .getVisibleCells()
+                      .map((cell: Cell<BookDocument, unknown>) => (
+                        <Card
+                          key={cell.id}
+                          as="td"
+                          padding={
+                            cell.column.id === "_documentFetcher" ? 0 : 2
+                          }
+                          borderTop
+                          tone={row.getIsSelected() ? "primary" : "default"}
+                          style={{ display: "table-cell" }}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </Card>
+                      ))}
+                  </Card>
+                ))}
+              </tbody>
+            </table>
+          </Card>
+        </Stack>
+      </ExampleLayout>
+    </TableContext.Provider>
   );
 }
 
