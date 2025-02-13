@@ -1,4 +1,4 @@
-import { deleteDocument, DocumentHandle, publishDocument } from "@sanity/sdk";
+import { DocumentHandle, publishDocument } from "@sanity/sdk";
 import {
   useDocuments,
   usePreview,
@@ -18,6 +18,7 @@ import {
   Stack,
   Text,
   TextInput,
+  Radio,
 } from "@sanity/ui";
 import { useMemo, useState, ReactElement } from "react";
 import {
@@ -35,7 +36,6 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   PublishIcon,
-  ResetIcon,
 } from "@sanity/icons";
 
 function getIcon(isSorted: false | SortDirection) {
@@ -73,7 +73,7 @@ function AuthorCell({ docId }: { docId: string }) {
 
   return (
     <Text size={1}>
-      {data.lastName as string}, {data.firstName as string}
+      {data.firstName as string} {data.lastName as string}
     </Text>
   );
 }
@@ -205,8 +205,15 @@ function PreviewTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [previewCache, setPreviewCache] = useState<PreviewCache>({});
   const [selected, setSelected] = useState<string[]>([]);
+  const [statusFilter, setStatusFilter] = useState<string>("");
+
   const { results: books, isPending } = useDocuments({
-    filter: '_type == "book" && defined(releaseDate)',
+    filter: [
+      '_type == "book" && defined(releaseDate)',
+      statusFilter && `status == "${statusFilter}"`,
+    ]
+      .filter(Boolean)
+      .join(" && "),
     sort: [
       { field: "authors[0]->lastName", direction: "asc" },
       { field: "releaseDate", direction: "asc" },
@@ -219,7 +226,31 @@ function PreviewTable() {
     () => [
       columnHelper.accessor((row) => row, {
         id: "_select",
-        header: () => <Button text="Select" disabled mode="bleed" />,
+        header: ({ table }) => {
+          const currentRows = table.getRowModel().rows;
+          const allSelected = currentRows.every((row) =>
+            selected.includes(row.original._id)
+          );
+
+          return (
+            <Button
+              text="Select"
+              mode="bleed"
+              onClick={() => {
+                if (allSelected) {
+                  // If all are selected, clear selection
+                  setSelected([]);
+                } else {
+                  // Otherwise select all visible rows
+                  const newSelected = currentRows.map(
+                    (row) => row.original._id
+                  );
+                  setSelected(newSelected);
+                }
+              }}
+            />
+          );
+        },
         enableSorting: false,
         cell: (info) => {
           const document = info.getValue();
@@ -305,47 +336,6 @@ function PreviewTable() {
         },
       }),
       columnHelper.accessor((row) => row, {
-        id: "subtitle",
-        header: ({ column }) => (
-          <Button
-            onClick={() => column.toggleSorting()}
-            mode={column.getIsSorted() ? "ghost" : "bleed"}
-            iconRight={getIcon(column.getIsSorted())}
-            text="Subtitle"
-          />
-        ),
-        cell: (info) => {
-          const document = info.getValue();
-          const preview = PreviewCell({ document });
-          // Update cache with latest preview
-          if (!(document._id in previewCache)) {
-            setPreviewCache((prev) => ({ ...prev, [document._id]: preview }));
-          }
-          if ("isLoading" in preview) {
-            return <Spinner />;
-          }
-          return (
-            <Text size={1} muted>
-              {preview.subtitle}
-            </Text>
-          );
-        },
-        sortingFn: (rowA, rowB) => {
-          const previewA = previewCache[rowA.original._id];
-          const previewB = previewCache[rowB.original._id];
-          if (
-            !previewA ||
-            !previewB ||
-            "isLoading" in previewA ||
-            "isLoading" in previewB
-          )
-            return 0;
-          return (previewA.subtitle || "").localeCompare(
-            previewB.subtitle || ""
-          );
-        },
-      }),
-      columnHelper.accessor((row) => row, {
         id: "status",
         header: () => <Button text="Status" disabled mode="bleed" />,
         enableSorting: false,
@@ -418,50 +408,105 @@ function PreviewTable() {
       hooks={["useDocuments", "usePreview"]}
       styling="Sanity UI"
     >
-      <Card>
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <Card
-                key={headerGroup.id}
-                as="tr"
-                style={{ display: "table-row" }}
-              >
-                {headerGroup.headers.map((header) => (
-                  <Card
-                    key={header.id}
-                    as="th"
-                    padding={2}
-                    style={{ display: "table-cell", textAlign: "left" }}
-                  >
-                    {flexRender(
-                      header.column.columnDef.header,
-                      header.getContext()
-                    )}
-                  </Card>
-                ))}
-              </Card>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <Card key={row.id} as="tr" style={{ display: "table-row" }}>
-                {row.getVisibleCells().map((cell) => (
-                  <Card
-                    key={cell.id}
-                    as="td"
-                    padding={2}
-                    borderTop
-                    style={{ display: "table-cell" }}
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </Card>
-                ))}
-              </Card>
-            ))}
-          </tbody>
-        </table>
-      </Card>
+      <Stack space={4}>
+        <Card padding={3}>
+          <Stack space={3}>
+            <Text weight="medium">Status:</Text>
+            <Flex gap={3} wrap="wrap" align="center">
+              <Radio
+                id="status-all"
+                checked={statusFilter === ""}
+                name="status"
+                value=""
+                onChange={(e) => setStatusFilter(e.currentTarget.value)}
+              />
+              <label htmlFor="status-all">All statuses</label>
+
+              <Radio
+                id="status-featured"
+                checked={statusFilter === "featured"}
+                name="status"
+                value="featured"
+                onChange={(e) => setStatusFilter(e.currentTarget.value)}
+              />
+              <label htmlFor="status-featured">Featured</label>
+
+              <Radio
+                id="status-new"
+                checked={statusFilter === "new"}
+                name="status"
+                value="new"
+                onChange={(e) => setStatusFilter(e.currentTarget.value)}
+              />
+              <label htmlFor="status-new">New</label>
+
+              <Radio
+                checked={statusFilter === "bestseller"}
+                name="status"
+                value="bestseller"
+                onChange={(e) => setStatusFilter(e.currentTarget.value)}
+              />
+              <label htmlFor="status-bestseller">Bestseller</label>
+
+              <Radio
+                id="status-coming-soon"
+                checked={statusFilter === "coming-soon"}
+                name="status"
+                value="coming-soon"
+                onChange={(e) => setStatusFilter(e.currentTarget.value)}
+              />
+              <label htmlFor="status-coming-soon">Coming Soon</label>
+            </Flex>
+          </Stack>
+        </Card>
+        <Card>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <Card
+                  key={headerGroup.id}
+                  as="tr"
+                  style={{ display: "table-row" }}
+                >
+                  {headerGroup.headers.map((header) => (
+                    <Card
+                      key={header.id}
+                      as="th"
+                      padding={2}
+                      style={{ display: "table-cell", textAlign: "left" }}
+                    >
+                      {flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                    </Card>
+                  ))}
+                </Card>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <Card key={row.id} as="tr" style={{ display: "table-row" }}>
+                  {row.getVisibleCells().map((cell) => (
+                    <Card
+                      key={cell.id}
+                      as="td"
+                      padding={2}
+                      borderTop
+                      style={{ display: "table-cell" }}
+                    >
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </Card>
+                  ))}
+                </Card>
+              ))}
+            </tbody>
+          </table>
+        </Card>
+      </Stack>
     </ExampleLayout>
   );
 }

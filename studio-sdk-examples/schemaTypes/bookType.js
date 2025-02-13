@@ -1,5 +1,11 @@
 import {defineField, defineType} from 'sanity'
 
+const STATUSES = [
+  {title: 'Featured', value: 'featured'},
+  {title: 'New', value: 'new'},
+  {title: 'Bestseller', value: 'bestseller'},
+  {title: 'Coming Soon', value: 'coming-soon'},
+]
 export const bookType = defineType({
   name: 'book',
   title: 'Book',
@@ -14,12 +20,7 @@ export const bookType = defineType({
       name: 'status',
       type: 'string',
       options: {
-        list: [
-          {title: 'Featured', value: 'featured'},
-          {title: 'New', value: 'new'},
-          {title: 'Bestseller', value: 'bestseller'},
-          {title: 'Coming Soon', value: 'coming-soon'},
-        ],
+        list: STATUSES,
         layout: 'radio',
       },
     }),
@@ -74,9 +75,10 @@ export const bookType = defineType({
     }) => {
       const author1 = `${author1FirstName} ${author1LastName}`
       const author2 = `${author2FirstName} ${author2LastName}`
+      const statusTitle = STATUSES.find((s) => s.value === status)?.title
       const titleCombined = [
         title,
-        status ? `(${status})` : '',
+        statusTitle ? `(${statusTitle})` : '',
         releaseDate ? ' • ' + new Date(releaseDate).toLocaleDateString() : '',
       ]
         .filter(Boolean)
