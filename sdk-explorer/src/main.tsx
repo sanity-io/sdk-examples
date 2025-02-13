@@ -12,7 +12,7 @@ import { schema } from './schema.ts'
 const theme = buildTheme()
 
 const sanityInstance = createSanityInstance({
-  projectId: 'flahoy03',
+  projectId: 'sxsy4puj',
   dataset: 'production',
   schema,
 })

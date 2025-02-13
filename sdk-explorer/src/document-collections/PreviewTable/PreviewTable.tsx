@@ -1,21 +1,25 @@
-import { DocumentHandle } from "@sanity/sdk";
+import { deleteDocument, DocumentHandle, publishDocument } from "@sanity/sdk";
 import {
   useDocuments,
   usePreview,
   UsePreviewResults,
   useDocument,
   useEditDocument,
+  useApplyActions,
 } from "@sanity/sdk-react/hooks";
 import {
   Button,
   Card,
+  CardProps,
+  Checkbox,
   Flex,
+  Select,
   Spinner,
   Stack,
   Text,
   TextInput,
 } from "@sanity/ui";
-import { useMemo, useState } from "react";
+import { useMemo, useState, ReactElement } from "react";
 import {
   createColumnHelper,
   useReactTable,
@@ -26,7 +30,13 @@ import {
   SortDirection,
 } from "@tanstack/react-table";
 import ExampleLayout from "../../ExampleLayout";
-import { DotIcon, ChevronDownIcon, ChevronUpIcon } from "@sanity/icons";
+import {
+  DotIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  PublishIcon,
+  ResetIcon,
+} from "@sanity/icons";
 
 function getIcon(isSorted: false | SortDirection) {
   return isSorted === "asc"
@@ -68,12 +78,14 @@ function AuthorCell({ docId }: { docId: string }) {
   );
 }
 
-function AuthorsCell({ doc }: { doc: DocumentHandle }) {
+function AuthorsCell({ doc }: { doc: DocumentHandle }): ReactElement | null {
   const data = useDocument(doc._id);
 
   if (!data) {
-    return { isLoading: true };
-  } else if (Array.isArray(data.authors)) {
+    return <Spinner />;
+  }
+
+  if (Array.isArray(data.authors)) {
     return (
       <Stack space={2}>
         {data.authors.map((author) => (
@@ -86,12 +98,12 @@ function AuthorsCell({ doc }: { doc: DocumentHandle }) {
   return <Text size={1}>{JSON.stringify(data.authors)}</Text>;
 }
 
-function ReleaseDateCell({ doc }: { doc: DocumentHandle }) {
+function ReleaseDateCell({ doc }: { doc: DocumentHandle }): ReactElement {
   const data = useDocument(doc._id);
   const editDocument = useEditDocument(doc._id, "releaseDate");
 
   if (!data) {
-    return { isLoading: true };
+    return <Spinner />;
   }
 
   return (
@@ -102,9 +114,97 @@ function ReleaseDateCell({ doc }: { doc: DocumentHandle }) {
   );
 }
 
+function StatusCell({
+  doc,
+  selectedIds,
+}: {
+  doc: DocumentHandle;
+  selectedIds: string[];
+}): ReactElement | null {
+  const data = useDocument(doc._id);
+  const editDocument = useEditDocument(doc._id, "status");
+  const applyActions = useApplyActions();
+
+  if (!data) {
+    return <Spinner />;
+  }
+
+  const CARD_TONES: Record<string, CardProps["tone"]> = {
+    featured: "critical",
+    new: "positive",
+    bestseller: "primary",
+    "coming-soon": "caution",
+  };
+
+  const status = data.status as string;
+
+  const handleStatusChange = (newStatus: string) => {
+    // If this document is selected, update all selected documents
+    if (selectedIds.includes(doc._id)) {
+      const actions = selectedIds.map((id) => ({
+        type: "document.edit" as const,
+        documentId: id.replace("drafts.", ""),
+        patches: [{ set: { status: newStatus } }],
+      }));
+      applyActions(actions);
+    } else {
+      // Otherwise just update this document
+      editDocument(newStatus);
+    }
+  };
+
+  return (
+    <Card tone={CARD_TONES[status]}>
+      <Select
+        value={status}
+        onChange={(e) => handleStatusChange(e.currentTarget.value)}
+      >
+        <option value="">Select status</option>
+        <option value="featured">Featured</option>
+        <option value="new">New</option>
+        <option value="bestseller">Bestseller</option>
+        <option value="coming-soon">Coming Soon</option>
+      </Select>
+    </Card>
+  );
+}
+
+function DocumentActions({
+  doc,
+  selectedIds,
+}: {
+  doc: DocumentHandle;
+  selectedIds: string[];
+}): ReactElement {
+  const data = useDocument(doc._id);
+  const isDraft = data?._id.startsWith("drafts.");
+  const actionIds = selectedIds.length ? selectedIds : [doc._id];
+  const publishedActionIds = actionIds.map((id) => id.replace("drafts.", ""));
+
+  const applyActions = useApplyActions();
+  const publishActions = publishedActionIds.map((id) => publishDocument(id));
+
+  if (!data) {
+    return <Spinner />;
+  }
+
+  return (
+    <Flex gap={1} justify="center">
+      <Button
+        icon={PublishIcon}
+        disabled={!isDraft}
+        tone="primary"
+        mode={isDraft ? "default" : "ghost"}
+        onClick={() => applyActions(publishActions)}
+      />
+    </Flex>
+  );
+}
+
 function PreviewTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [previewCache, setPreviewCache] = useState<PreviewCache>({});
+  const [selected, setSelected] = useState<string[]>([]);
   const { results: books, isPending } = useDocuments({
     filter: '_type == "book" && defined(releaseDate)',
     sort: [
@@ -117,6 +217,30 @@ function PreviewTable() {
 
   const columns = useMemo(
     () => [
+      columnHelper.accessor((row) => row, {
+        id: "_select",
+        header: () => <Button text="Select" disabled mode="bleed" />,
+        enableSorting: false,
+        cell: (info) => {
+          const document = info.getValue();
+          return (
+            <Flex justify="center">
+              <Checkbox
+                checked={selected.includes(document._id)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  if (e.target.checked) {
+                    setSelected((prev) => [...prev, document._id]);
+                  } else {
+                    setSelected((prev) =>
+                      prev.filter((id) => id !== document._id)
+                    );
+                  }
+                }}
+              />
+            </Flex>
+          );
+        },
+      }),
       columnHelper.accessor((row) => row, {
         id: "cover",
         header: () => <Button text="Cover" disabled mode="bleed" />,
@@ -222,6 +346,14 @@ function PreviewTable() {
         },
       }),
       columnHelper.accessor((row) => row, {
+        id: "status",
+        header: () => <Button text="Status" disabled mode="bleed" />,
+        enableSorting: false,
+        cell: (info) => (
+          <StatusCell doc={info.getValue()} selectedIds={selected} />
+        ),
+      }),
+      columnHelper.accessor((row) => row, {
         id: "authors",
         header: ({ column }) => (
           <Button
@@ -231,13 +363,7 @@ function PreviewTable() {
             text="Authors"
           />
         ),
-        cell: (info) => {
-          const result = <AuthorsCell doc={info.getValue()} />;
-          if ("isLoading" in result) {
-            return <Spinner />;
-          }
-          return result;
-        },
+        cell: (info) => <AuthorsCell doc={info.getValue()} />,
       }),
       columnHelper.accessor((row) => row, {
         id: "releaseDate",
@@ -249,22 +375,19 @@ function PreviewTable() {
             text="Release date"
           />
         ),
-        cell: (info) => {
-          const result = <ReleaseDateCell doc={info.getValue()} />;
-          // Handle both Element and {isLoading} return types
-          if ("isLoading" in result) {
-            return <Spinner />;
-          }
-          return result;
-        },
-        sortingFn: (rowA, rowB) => {
-          // Sorting would require caching author names similar to preview cache
-          // For now, return 0 to skip sorting
-          return 0;
-        },
+        cell: (info) => <ReleaseDateCell doc={info.getValue()} />,
+        sortingFn: () => 0,
+      }),
+      columnHelper.accessor((row) => row, {
+        id: "_action",
+        header: () => <Button disabled mode="bleed" text="Action" />,
+        cell: (info) => (
+          <DocumentActions doc={info.getValue()} selectedIds={selected} />
+        ),
+        sortingFn: () => 0,
       }),
     ],
-    [columnHelper, previewCache]
+    [columnHelper, previewCache, selected]
   );
 
   const data = useMemo(() => books, [books]);
@@ -280,7 +403,7 @@ function PreviewTable() {
     getSortedRowModel: getSortedRowModel(),
   });
 
-  if (isPending) {
+  if (isPending && !data) {
     return (
       <Flex align="center" justify="center" padding={5}>
         <Spinner />
