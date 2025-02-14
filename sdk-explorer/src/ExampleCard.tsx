@@ -1,14 +1,14 @@
-import { hues } from '@sanity/color'
-import { Card, Stack, Text } from '@sanity/ui'
-import { Link } from 'react-router'
-import ExampleAttributes from './ExampleAttributes'
+import { hues } from "@sanity/color";
+import { Card, Stack, Text } from "@sanity/ui";
+import { Link } from "react-router";
+import ExampleAttributes from "./ExampleAttributes";
 
 interface ExampleCardProps {
-  description: string
-  hooks: Array<string>
-  styling: string
-  title: string
-  to: string
+  description: string;
+  hooks: Array<string>;
+  styling: Array<string>;
+  title: string;
+  to: string;
 }
 
 /**
@@ -22,14 +22,14 @@ export default function ExampleCard({
   to,
 }: ExampleCardProps) {
   return (
-    <Link to={to} style={{ textDecoration: 'none' }}>
-      <Card tone='neutral' paddingX={3} paddingY={4} radius={3}>
+    <Link to={to} style={{ textDecoration: "none" }}>
+      <Card tone="neutral" paddingX={3} paddingY={4} radius={3}>
         <Stack space={4}>
           <Text
-            as='h3'
+            as="h3"
             size={3}
-            weight='medium'
-            style={{ color: hues.red['500'].hex }}
+            weight="medium"
+            style={{ color: hues.red["500"].hex }}
           >
             {title}
           </Text>
@@ -38,5 +38,5 @@ export default function ExampleCard({
         </Stack>
       </Card>
     </Link>
-  )
+  );
 }

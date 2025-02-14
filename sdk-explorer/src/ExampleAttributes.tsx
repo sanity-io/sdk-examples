@@ -1,10 +1,10 @@
-import { Badge, Inline, Label, Stack } from '@sanity/ui'
+import { Badge, Inline, Label, Stack } from "@sanity/ui";
 
-const labelInset = '14ch'
+const labelInset = "14ch";
 
 interface ExampleAttributeProps {
-  hooks: Array<string>
-  styling: string
+  hooks: Array<string>;
+  styling: Array<string>;
 }
 
 /**
@@ -30,8 +30,12 @@ export default function ExampleAttributes({
         <Label size={1} style={{ width: labelInset }}>
           Styled with:
         </Label>
-        <Badge padding={2}>{styling}</Badge>
+        {styling.map((style) => (
+          <Badge key={style} padding={2}>
+            {style}
+          </Badge>
+        ))}
       </Inline>
     </Stack>
-  )
+  );
 }

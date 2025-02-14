@@ -45,21 +45,21 @@ export default function Home() {
                 title="Preview table"
                 description="A table of document previews"
                 hooks={["useDocuments", "usePreview"]}
-                styling="Sanity UI"
+                styling={["Sanity UI", "Tanstack Table"]}
               />
               <ExampleCard
                 to="/document-collections/preview-list"
                 title="Preview list"
                 description="A list of document previews"
                 hooks={["useDocuments", "usePreview"]}
-                styling="Sanity UI"
+                styling={["Sanity UI"]}
               />
               <ExampleCard
                 to="/document-collections/preview-grid"
                 title="Preview grid"
                 description="A grid of document previews"
                 hooks={["useDocuments", "usePreview"]}
-                styling="Tailwind"
+                styling={["Tailwind"]}
               />
             </Stack>
           </Stack>
