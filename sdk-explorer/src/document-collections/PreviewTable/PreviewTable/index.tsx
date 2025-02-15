@@ -9,53 +9,41 @@ import {
   getSortedRowModel,
   SortingState,
   RowSelectionState,
-  getFilteredRowModel,
-  ColumnFiltersState,
 } from "@tanstack/react-table";
 import ExampleLayout from "../../../ExampleLayout";
 import { getIcon } from "../utils/table";
-
 import {
   PreviewCell,
   StatusCell,
   AuthorsCell,
   ReleaseDateCell,
   DocumentActions,
-  DocumentFetcherCell,
   DocumentSyncStatusCell,
 } from "../components/cells";
-import { BookDocument, TableMeta, DocumentCache } from "../types";
+import { BookDocument } from "../types";
 import { Table, TD, TH, TR } from "../components/TableElements";
-import { StatusFilter } from "../components/StatusFilter";
 
 function PreviewTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
-  const documentCache = useMemo<DocumentCache>(() => ({}), []);
 
-  const { results: books, isPending } = useDocuments({
+  const {
+    results: books,
+    isPending,
+    loadMore,
+    hasMore,
+    count,
+  } = useDocuments({
     filter: '_type == "book" && defined(releaseDate)',
+    sort: [{ field: "releaseDate", direction: "desc" }],
   });
 
   const columnHelper = createColumnHelper<BookDocument>();
 
   const columns = useMemo(
     () => [
-      columnHelper.accessor((row) => row, {
-        id: "_documentFetcher",
-        header: () => null,
-        cell: (info) => (
-          <DocumentFetcherCell
-            doc={info.getValue()}
-            meta={info.table.options.meta as TableMeta}
-          />
-        ),
-        size: 0,
-        enableSorting: false,
-      }),
       columnHelper.display({
-        id: "select",
+        id: "_select",
         header: ({ table }) => (
           <Flex justify="center">
             <Checkbox
@@ -79,7 +67,6 @@ function PreviewTable() {
         id: "_documentSyncStatus",
         header: () => <Text size={1}>Sync</Text>,
         cell: (info) => <DocumentSyncStatusCell doc={info.getValue()} />,
-        enableSorting: false,
       }),
       columnHelper.accessor((row) => row, {
         id: "cover",
@@ -93,8 +80,14 @@ function PreviewTable() {
           }
           if (preview.media?.type === "image-asset") {
             return (
-              <Card tone="transparent" shadow={2} style={{ width: 64 }}>
-                <img src={preview.media.url} alt="" width="64" />
+              <Card tone="transparent" shadow={1} style={{ width: 64 }}>
+                <img
+                  src={preview.media.url}
+                  alt={preview.title}
+                  width="64"
+                  height="96"
+                  style={{ objectFit: "cover" }}
+                />
               </Card>
             );
           }
@@ -123,13 +116,8 @@ function PreviewTable() {
             </Text>
           );
         },
-        sortingFn: (rowA, rowB) => {
-          const previewA = PreviewCell({ document: rowA.original });
-          const previewB = PreviewCell({ document: rowB.original });
-          if ("isLoading" in previewA || "isLoading" in previewB) return 0;
-          return previewA.title.localeCompare(previewB.title);
-        },
       }),
+      // Example of a bulk edit with selected rows
       columnHelper.accessor((row) => row, {
         id: "status",
         header: ({ column }) => (
@@ -143,23 +131,8 @@ function PreviewTable() {
         ),
         cell: (info) => <StatusCell doc={info.getValue()} table={info.table} />,
         enableSorting: true,
-        filterFn: (row, columnId, filterValue) => {
-          const status = documentCache[row.original._id]?.status;
-          return !filterValue || status === filterValue;
-        },
-        sortingFn: (rowA, rowB) => {
-          const rowAId = rowA.original._id;
-          const rowBId = rowB.original._id;
-          const rowAStatus = documentCache[rowAId]?.status;
-          const rowBStatus = documentCache[rowBId]?.status;
-
-          if (!rowAStatus || !rowBStatus) {
-            return 0;
-          }
-
-          return rowAStatus.localeCompare(rowBStatus);
-        },
       }),
+      // Example of retrieving an array of references
       columnHelper.accessor((row) => row, {
         id: "authors",
         header: ({ column }) => (
@@ -170,13 +143,9 @@ function PreviewTable() {
             text="Authors"
           />
         ),
-        cell: (info) => (
-          <AuthorsCell
-            doc={info.getValue()}
-            meta={info.table.options.meta as TableMeta}
-          />
-        ),
+        cell: (info) => <AuthorsCell doc={info.getValue()} />,
       }),
+      // Example of a single field edit
       columnHelper.accessor((row) => row, {
         id: "releaseDate",
         header: ({ column }) => (
@@ -187,7 +156,12 @@ function PreviewTable() {
             text="Release date"
           />
         ),
-        cell: (info) => <ReleaseDateCell doc={info.getValue()} />,
+        cell: (info) => (
+          <ReleaseDateCell
+            doc={info.getValue()}
+            selectedRows={info.table.getSelectedRowModel().rows}
+          />
+        ),
       }),
       columnHelper.accessor((row) => row, {
         id: "_action",
@@ -199,39 +173,30 @@ function PreviewTable() {
         cell: (info) => (
           <DocumentActions
             doc={info.getValue()}
-            meta={info.table.options.meta as TableMeta}
-            table={info.table}
+            selectedRows={info.table.getSelectedRowModel().rows}
           />
         ),
         sortingFn: () => 0,
       }),
     ],
-    [columnHelper, documentCache]
+    [columnHelper]
   );
 
   const table = useReactTable<BookDocument>({
-    data: books || [],
+    data: books,
     columns,
     state: {
       sorting,
       rowSelection,
-      columnFilters,
     },
+
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
+
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
-    meta: {
-      documentCache,
-    } as TableMeta,
   });
-
-  const handleStatusFilterChange = (value: string) => {
-    setColumnFilters([{ id: "status", value }]);
-  };
 
   if (isPending && !books) {
     return (
@@ -243,16 +208,12 @@ function PreviewTable() {
 
   return (
     <ExampleLayout
-      title="Preview Table"
+      title={`Preview Table ${count ? `(${count} documents)` : ""}`}
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewTable/index.tsx"
       hooks={["useDocuments", "usePreview"]}
       styling={["Sanity UI", "Tanstack Table"]}
     >
       <Stack space={4}>
-        <StatusFilter
-          value={(table.getColumn("status")?.getFilterValue() as string) || ""}
-          onChange={handleStatusFilterChange}
-        />
         <Card>
           <Table>
             <thead>
@@ -261,7 +222,7 @@ function PreviewTable() {
                   {headerGroup.headers.map((header) => (
                     <TH
                       key={header.id}
-                      padding={header.column.id === "_documentFetcher" ? 0 : 2}
+                      // padding={header.column.id === "_documentFetcher" ? 0 : 2}
                     >
                       {flexRender(
                         header.column.columnDef.header,
@@ -293,6 +254,7 @@ function PreviewTable() {
             </tbody>
           </Table>
         </Card>
+        <Button disabled={!hasMore} text="Load more" onClick={loadMore} />
       </Stack>
     </ExampleLayout>
   );

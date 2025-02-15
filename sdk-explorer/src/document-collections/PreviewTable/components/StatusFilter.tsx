@@ -1,9 +1,7 @@
 import { Card, Flex, Radio, Text } from "@sanity/ui";
-import { FilterFn } from "@tanstack/react-table";
-import { BookDocument } from "../types";
 
 interface StatusFilterProps {
-  value: FilterFn<BookDocument>;
+  value: string;
   onChange: (value: string) => void;
 }
 

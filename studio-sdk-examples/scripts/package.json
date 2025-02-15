@@ -1,0 +1,10 @@
+{
+  "name": "sanity-seed-generator",
+  "version": "1.0.0",
+  "description": "Script to generate seed data for Sanity studio",
+  "main": "generateSeed.js",
+  "type": "commonjs",
+  "scripts": {
+    "generate": "node generateSeed.js"
+  }
+}

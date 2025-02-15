@@ -30,11 +30,15 @@ export default function ExampleAttributes({
         <Label size={1} style={{ width: labelInset }}>
           Styled with:
         </Label>
-        {styling.map((style) => (
-          <Badge key={style} padding={2}>
-            {style}
-          </Badge>
-        ))}
+        {Array.isArray(styling) ? (
+          styling.map((style) => (
+            <Badge key={style} padding={2}>
+              {style}
+            </Badge>
+          ))
+        ) : (
+          <Badge padding={2}>{styling}</Badge>
+        )}
       </Inline>
     </Stack>
   );

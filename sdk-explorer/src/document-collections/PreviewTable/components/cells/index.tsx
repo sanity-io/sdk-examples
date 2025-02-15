@@ -8,6 +8,7 @@ import {
   useDocumentSyncStatus,
 } from "@sanity/sdk-react/hooks";
 import {
+  Box,
   Button,
   Card,
   Flex,
@@ -16,11 +17,12 @@ import {
   Stack,
   Text,
   TextInput,
+  Tooltip,
 } from "@sanity/ui";
 import { ReactElement, useEffect } from "react";
-import { DotIcon, PublishIcon, ResetIcon, SpinnerIcon } from "@sanity/icons";
-import { CARD_TONES, TableMeta, BookDocument } from "../../types";
-import { Table as TableType } from "@tanstack/react-table";
+import { DotIcon, PublishIcon, ResetIcon } from "@sanity/icons";
+import { CARD_TONES, BookDocument } from "../../types";
+import { RowModel, Table } from "@tanstack/react-table";
 
 export function PreviewCell({
   document,
@@ -36,23 +38,8 @@ export function PreviewCell({
   return results;
 }
 
-export function AuthorCell({
-  docId,
-  meta,
-}: {
-  docId: string;
-  meta: TableMeta;
-}) {
+export function AuthorCell({ docId }: { docId: string }) {
   const data = useDocument(docId);
-
-  useEffect(() => {
-    if (data) {
-      const cache = meta?.documentCache;
-      if (cache) {
-        cache[docId] = data;
-      }
-    }
-  }, [data, docId, meta]);
 
   if (!data) {
     return <Spinner />;
@@ -67,12 +54,10 @@ export function AuthorCell({
 
 export function AuthorsCell({
   doc,
-  meta,
 }: {
   doc: DocumentHandle;
-  meta: TableMeta;
 }): ReactElement | null {
-  const data = meta?.documentCache[doc._id];
+  const data = useDocument(doc._id);
 
   if (!data) {
     return <Spinner />;
@@ -82,7 +67,7 @@ export function AuthorsCell({
     return (
       <Stack space={2}>
         {data.authors.map((author) => (
-          <AuthorCell key={author._ref} docId={author._ref} meta={meta} />
+          <AuthorCell key={author._ref} docId={author._ref} />
         ))}
       </Stack>
     );
@@ -91,10 +76,14 @@ export function AuthorsCell({
   return <Text size={1}>{JSON.stringify(data.authors)}</Text>;
 }
 
+// This component is an example of useEditDocument
+// this is why it's disabled when multiple rows are selected
 export function ReleaseDateCell({
   doc,
+  selectedRows,
 }: {
   doc: DocumentHandle;
+  selectedRows: RowModel<BookDocument>["rows"];
 }): ReactElement {
   const editDocument = useEditDocument(doc._id, "releaseDate");
   const data = useDocument(doc._id);
@@ -108,33 +97,32 @@ export function ReleaseDateCell({
       <TextInput
         value={data.releaseDate as string}
         onChange={(e) => editDocument(e.currentTarget.value)}
+        disabled={selectedRows.length > 1}
       />
     </Card>
   );
 }
 
-export function StatusCell({
-  doc,
-  table,
-}: {
+interface StatusCellProps {
   doc: DocumentHandle;
-  table: TableType<BookDocument>;
-}): ReactElement | null {
-  const applyActions = useApplyActions();
+  table: Table<BookDocument>;
+}
+
+export function StatusCell({ doc, table }: StatusCellProps) {
   const data = useDocument(doc._id);
+  const applyActions = useApplyActions();
 
   if (!data) {
     return <Spinner />;
   }
 
-  const status = data.status as string;
   const selectedRows = table.getSelectedRowModel().rows;
   const selectedIds = selectedRows.length
-    ? selectedRows.map((row) => row.original._id)
+    ? selectedRows.map((row: { original: DocumentHandle }) => row.original._id)
     : [doc._id];
 
   const handleStatusChange = (newStatus: string) => {
-    const actions = selectedIds.map((documentId) => ({
+    const actions = selectedIds.map((documentId: string) => ({
       type: "document.edit" as const,
       documentId,
       patches: [
@@ -148,7 +136,7 @@ export function StatusCell({
   return (
     <Card tone={CARD_TONES[status]}>
       <Select
-        value={status}
+        value={data.status as string}
         onChange={(e) => handleStatusChange(e.currentTarget.value)}
       >
         <option value="">Select status</option>
@@ -163,16 +151,14 @@ export function StatusCell({
 
 export function DocumentActions({
   doc,
-  meta,
-  table,
+  selectedRows,
 }: {
   doc: DocumentHandle;
-  meta: TableMeta;
-  table: TableType<BookDocument>;
+  selectedRows: RowModel<BookDocument>["rows"];
 }): ReactElement {
-  const data = meta?.documentCache[doc._id];
+  const data = useDocument(doc._id);
   const isDraft = data?._id.startsWith("drafts.");
-  const selectedRows = table.getSelectedRowModel().rows;
+
   const selectedIds = selectedRows.map((row) => row.original._id);
   const actionIds = selectedIds.length ? selectedIds : [doc._id];
 
@@ -186,43 +172,44 @@ export function DocumentActions({
 
   return (
     <Flex gap={1} justify="center">
-      <Button
-        icon={PublishIcon}
-        disabled={!isDraft}
-        tone="primary"
-        mode={isDraft ? "default" : "ghost"}
-        onClick={() => applyActions(publishActions)}
-      />
-      <Button
-        icon={ResetIcon}
-        disabled={!isDraft}
-        tone="critical"
-        mode={isDraft ? "default" : "ghost"}
-        onClick={() => applyActions(discardActions)}
-      />
+      <Tooltip
+        content={
+          <Box padding={1}>
+            <Text muted size={1}>
+              Publish {actionIds.length} {actionIds.length > 1 && `selected`}{" "}
+              document{actionIds.length === 1 ? "" : "s"}
+            </Text>
+          </Box>
+        }
+      >
+        <Button
+          icon={PublishIcon}
+          disabled={!isDraft}
+          tone="primary"
+          mode={isDraft ? "default" : "ghost"}
+          onClick={() => applyActions(publishActions)}
+        />
+      </Tooltip>
+      <Tooltip
+        content={
+          <Box padding={1}>
+            <Text muted size={1}>
+              Discard {actionIds.length} {actionIds.length > 1 && `selected`}{" "}
+              draft{actionIds.length === 1 ? "" : "s"}
+            </Text>
+          </Box>
+        }
+      >
+        <Button
+          icon={ResetIcon}
+          disabled={!isDraft}
+          tone="critical"
+          mode={isDraft ? "default" : "ghost"}
+          onClick={() => applyActions(discardActions)}
+        />
+      </Tooltip>
     </Flex>
   );
-}
-
-export function DocumentFetcherCell({
-  doc,
-  meta,
-}: {
-  doc: DocumentHandle;
-  meta: TableMeta;
-}) {
-  const data = useDocument(doc._id);
-
-  useEffect(() => {
-    if (data) {
-      const cache = meta?.documentCache;
-      if (cache) {
-        cache[doc._id] = data;
-      }
-    }
-  }, [data, doc._id, meta]);
-
-  return null;
 }
 
 export function DocumentSyncStatusCell({ doc }: { doc: DocumentHandle }) {
