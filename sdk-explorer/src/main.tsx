@@ -13,7 +13,7 @@ import { Loading } from "./Loading.tsx";
 const theme = buildTheme();
 
 const sanityInstance = createSanityInstance({
-  projectId: "sxsy4puj",
+  projectId: "flahoy03",
   dataset: "production",
   schema,
 });
