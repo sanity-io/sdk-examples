@@ -7,7 +7,7 @@ import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import Home from './Home'
 import UserProfile from './users/UserProfile/UserProfile'
-import PreviewTable from './document-collections/PreviewTable/PreviewTable'
+import { TableDocuments } from './document-collections/PreviewTable/components/TableDocuments'
 
 export default function App() {
   const authState = useAuthState()
@@ -58,7 +58,7 @@ export default function App() {
             <Route path='/' element={<Home />} />
             <Route
               path='/document-collections/preview-table'
-              element={<PreviewTable />}
+              element={<TableDocuments />}
             />
             <Route
               path='/document-collections/preview-list'

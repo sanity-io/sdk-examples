@@ -1,4 +1,3 @@
-import { useDocuments } from "@sanity/sdk-react/hooks";
 import { Button, Card, Checkbox, Flex, Spinner, Stack, Text } from "@sanity/ui";
 import { useMemo, useState } from "react";
 import {
