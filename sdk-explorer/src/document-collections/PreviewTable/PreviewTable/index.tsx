@@ -13,32 +13,32 @@ import {
 import ExampleLayout from "../../../ExampleLayout";
 import { getIcon } from "../utils/table";
 import {
-  PreviewCell,
   StatusCell,
   AuthorsCell,
   ReleaseDateCell,
   DocumentActions,
   DocumentSyncStatusCell,
+  BookCover,
+  TitleCell,
 } from "../components/cells";
 import { BookDocument } from "../types";
 import { Table, TD, TH, TR } from "../components/TableElements";
 
-function PreviewTable() {
+const columnHelper = createColumnHelper<BookDocument>();
+
+interface PreviewTableProps {
+  results: BookDocument[];
+  isPending: boolean;
+  loadMore: () => void;
+  hasMore: boolean;
+  count: number;
+}
+
+function PreviewTable(props: PreviewTableProps) {
+  const { results, isPending, loadMore, hasMore, count } = props;
+
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
-
-  const {
-    results: books,
-    isPending,
-    loadMore,
-    hasMore,
-    count,
-  } = useDocuments({
-    filter: '_type == "book" && defined(releaseDate)',
-    sort: [{ field: "releaseDate", direction: "desc" }],
-  });
-
-  const columnHelper = createColumnHelper<BookDocument>();
 
   const columns = useMemo(
     () => [
@@ -72,27 +72,7 @@ function PreviewTable() {
         id: "cover",
         header: () => <Button text="Cover" disabled mode="bleed" />,
         enableSorting: false,
-        cell: (info) => {
-          const document = info.getValue();
-          const preview = PreviewCell({ document });
-          if ("isLoading" in preview) {
-            return <Spinner />;
-          }
-          if (preview.media?.type === "image-asset") {
-            return (
-              <Card tone="transparent" shadow={1} style={{ width: 64 }}>
-                <img
-                  src={preview.media.url}
-                  alt={preview.title}
-                  width="64"
-                  height="96"
-                  style={{ objectFit: "cover" }}
-                />
-              </Card>
-            );
-          }
-          return null;
-        },
+        cell: (info) => <BookCover doc={info.getValue()} />,
       }),
       columnHelper.accessor((row) => row, {
         id: "title",
@@ -104,18 +84,7 @@ function PreviewTable() {
             text="Title"
           />
         ),
-        cell: (info) => {
-          const document = info.getValue();
-          const preview = PreviewCell({ document });
-          if ("isLoading" in preview) {
-            return <Spinner />;
-          }
-          return (
-            <Text weight="medium" size={2}>
-              {preview.title}
-            </Text>
-          );
-        },
+        cell: (info) => <TitleCell doc={info.getValue()} />,
       }),
       // Example of a bulk edit with selected rows
       columnHelper.accessor((row) => row, {
@@ -179,26 +148,24 @@ function PreviewTable() {
         sortingFn: () => 0,
       }),
     ],
-    [columnHelper]
+    []
   );
 
   const table = useReactTable<BookDocument>({
-    data: books,
+    data: results,
     columns,
     state: {
       sorting,
       rowSelection,
     },
-
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
-
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   });
 
-  if (isPending && !books) {
+  if (isPending) {
     return (
       <Flex align="center" justify="center" padding={5}>
         <Spinner />
@@ -222,7 +189,7 @@ function PreviewTable() {
                   {headerGroup.headers.map((header) => (
                     <TH
                       key={header.id}
-                      // padding={header.column.id === "_documentFetcher" ? 0 : 2}
+                      padding={header.column.id === "_documentFetcher" ? 0 : 2}
                     >
                       {flexRender(
                         header.column.columnDef.header,

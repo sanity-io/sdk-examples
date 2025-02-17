@@ -1,10 +1,19 @@
 import { Card, CardProps } from "@sanity/ui";
 import { PropsWithChildren } from "react";
 
+const trStyle = { display: "table-row" } as const;
+const tdStyle = { display: "table-cell" } as const;
+const thStyle = { display: "table-cell", textAlign: "left" } as const;
+const tableStyle = {
+  display: "table",
+  borderCollapse: "collapse",
+  width: "100%",
+} as const;
+
 export function TR(props: PropsWithChildren<CardProps>) {
   const { children, ...rest } = props;
   return (
-    <Card {...rest} style={{ display: "table-row" }} as="tr">
+    <Card {...rest} style={trStyle} as="tr">
       {children}
     </Card>
   );
@@ -13,7 +22,7 @@ export function TR(props: PropsWithChildren<CardProps>) {
 export function TD(props: PropsWithChildren<CardProps>) {
   const { children, ...rest } = props;
   return (
-    <Card {...rest} style={{ display: "table-cell" }} as="td">
+    <Card {...rest} style={tdStyle} as="td">
       {children}
     </Card>
   );
@@ -22,11 +31,7 @@ export function TD(props: PropsWithChildren<CardProps>) {
 export function TH(props: PropsWithChildren<CardProps>) {
   const { children, ...rest } = props;
   return (
-    <Card
-      {...rest}
-      style={{ display: "table-cell", textAlign: "left" }}
-      as="th"
-    >
+    <Card {...rest} style={thStyle} as="th">
       {children}
     </Card>
   );
@@ -35,11 +40,7 @@ export function TH(props: PropsWithChildren<CardProps>) {
 export function Table(props: PropsWithChildren<CardProps>) {
   const { children, ...rest } = props;
   return (
-    <Card
-      {...rest}
-      style={{ display: "table", borderCollapse: "collapse", width: "100%" }}
-      as="table"
-    >
+    <Card {...rest} style={tableStyle} as="table">
       {children}
     </Card>
   );

@@ -1,7 +1,6 @@
 import { DocumentHandle, publishDocument, discardDocument } from "@sanity/sdk";
 import {
   usePreview,
-  UsePreviewResults,
   useDocument,
   useEditDocument,
   useApplyActions,
@@ -19,35 +18,58 @@ import {
   TextInput,
   Tooltip,
 } from "@sanity/ui";
-import { ReactElement, useEffect } from "react";
+import { ReactElement, Suspense, useRef } from "react";
 import { DotIcon, PublishIcon, ResetIcon } from "@sanity/icons";
 import { CARD_TONES, BookDocument } from "../../types";
 import { RowModel, Table } from "@tanstack/react-table";
 
-export function PreviewCell({
-  document,
-}: {
-  document: DocumentHandle;
-}): UsePreviewResults["results"] | { isLoading: true } {
-  const { results, isPending } = usePreview({ document });
+export function BookCover({ doc }: { doc: DocumentHandle }) {
+  const ref = useRef(null);
+  const { results } = usePreview({ document: doc, ref });
 
-  if (isPending) {
-    return { isLoading: true };
-  }
-
-  return results;
-}
-
-export function AuthorCell({ docId }: { docId: string }) {
-  const data = useDocument(docId);
-
-  if (!data) {
+  if (!results?.media) {
     return <Spinner />;
   }
 
   return (
-    <Text size={1}>
-      {data.firstName as string} {data.lastName as string}
+    <Card ref={ref} tone="transparent" shadow={1} style={{ width: 64 }}>
+      <img
+        src={results.media.url}
+        alt={results.title}
+        width="64"
+        height="96"
+        style={{ objectFit: "cover" }}
+      />
+    </Card>
+  );
+}
+
+export function TitleCell({ doc }: { doc: DocumentHandle }) {
+  const ref = useRef(null);
+  const { results } = usePreview({ document: doc, ref });
+
+  if (!results?.title) {
+    return <Spinner />;
+  }
+
+  return (
+    <Text ref={ref} weight="medium" size={2}>
+      {results.title}
+    </Text>
+  );
+}
+
+export function AuthorCell({ document }: { document: DocumentHandle }) {
+  const ref = useRef(null);
+  const { results } = usePreview({ document });
+
+  if (!results) {
+    return <Spinner />;
+  }
+
+  return (
+    <Text ref={ref} size={1}>
+      {results.title}
     </Text>
   );
 }
@@ -63,17 +85,17 @@ export function AuthorsCell({
     return <Spinner />;
   }
 
-  if (Array.isArray(data.authors)) {
-    return (
-      <Stack space={2}>
-        {data.authors.map((author) => (
-          <AuthorCell key={author._ref} docId={author._ref} />
-        ))}
-      </Stack>
-    );
-  }
+  const authors = Array.isArray(data.authors) ? data.authors : [];
 
-  return <Text size={1}>{JSON.stringify(data.authors)}</Text>;
+  return (
+    <Stack space={2}>
+      {authors.map((author) => (
+        <Suspense key={author._ref} fallback={<Spinner />}>
+          <AuthorCell document={{ _id: author._ref, _type: "author" }} />
+        </Suspense>
+      ))}
+    </Stack>
+  );
 }
 
 // This component is an example of useEditDocument
