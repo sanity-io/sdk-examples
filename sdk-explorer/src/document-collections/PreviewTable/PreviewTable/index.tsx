@@ -1,5 +1,5 @@
 import { Button, Card, Checkbox, Flex, Spinner, Stack, Text } from "@sanity/ui";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import {
   createColumnHelper,
   useReactTable,
@@ -43,14 +43,6 @@ function PreviewTable(props: PreviewTableProps) {
     getSortedRowModel: getSortedRowModel(),
   });
 
-  // if (isPending || !results.length) {
-  //   return (
-  //     <Flex align="center" justify="center" padding={5}>
-  //       <Spinner />
-  //     </Flex>
-  //   );
-  // }
-
   return (
     <ExampleLayout
       title={`Preview Table ${count ? `(${count} documents)` : ""}`}
@@ -88,10 +80,12 @@ function PreviewTable(props: PreviewTableProps) {
                       borderTop
                       tone={row.getIsSelected() ? "primary" : "default"}
                     >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
+                      <Suspense fallback={<Spinner />}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </Suspense>
                     </TD>
                   ))}
                 </TR>

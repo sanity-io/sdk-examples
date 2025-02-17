@@ -150,14 +150,4 @@ export const columns = [
     id: "debug_2",
     cell: (info) => <DebugCell doc={info.getValue()} />,
   }),
-]
-  .filter((column) => column.id && columnConfig[column.id])
-  // wrapping every cell in Suspense was the only way to work with large document sets
-  .map((col) => ({
-    ...col,
-    cell: (info: CellContext<BookDocument, BookDocument>) => (
-      <Suspense fallback={<Spinner />}>
-        {typeof col.cell === "function" ? col.cell(info) : col.cell}
-      </Suspense>
-    ),
-  }));
+].filter((column) => column.id && columnConfig[column.id]);

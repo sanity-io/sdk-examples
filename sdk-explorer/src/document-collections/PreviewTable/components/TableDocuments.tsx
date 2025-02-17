@@ -8,15 +8,6 @@ export function TableDocuments() {
     sort: [{ field: "releaseDate", direction: "desc" }],
   });
 
-  // const results = Array.from({ length: 30 }, (_, i) => ({
-  //   _id: `book-${i + 1}`,
-  //   _type: "book",
-  // }));
-  // const isPending = false;
-  // const loadMore = () => {};
-  // const hasMore = false;
-  // const count = results.length;
-
   return (
     <Suspense fallback="loading table">
       <PreviewTable
