@@ -18,10 +18,10 @@ import {
   TextInput,
   Tooltip,
 } from "@sanity/ui";
-import { ReactElement, Suspense, useRef } from "react";
+import { ReactElement, Suspense, useCallback, useMemo, useRef } from "react";
 import { DotIcon, PublishIcon, ResetIcon } from "@sanity/icons";
-import { CARD_TONES, BookDocument } from "../../types";
-import { RowModel, Table } from "@tanstack/react-table";
+import { BookDocument } from "../types";
+import { RowModel } from "@tanstack/react-table";
 
 export function BookCover({ doc }: { doc: DocumentHandle }) {
   const ref = useRef(null);
@@ -80,17 +80,22 @@ export function AuthorsCell({
   doc: DocumentHandle;
 }): ReactElement | null {
   const data = useDocument(doc._id);
+  const authors = useMemo(() => {
+    if (!data) {
+      return [];
+    }
+
+    return Array.isArray(data.authors) ? data.authors : [];
+  }, [data]);
 
   if (!data) {
     return <Spinner />;
   }
 
-  const authors = Array.isArray(data.authors) ? data.authors : [];
-
   return (
     <Stack space={2}>
       {authors.map((author) => (
-        <Suspense key={author._ref} fallback={<Spinner />}>
+        <Suspense key={author._ref} fallback="Loading author">
           <AuthorCell document={{ _id: author._ref, _type: "author" }} />
         </Suspense>
       ))}
@@ -109,15 +114,16 @@ export function ReleaseDateCell({
 }): ReactElement {
   const editDocument = useEditDocument(doc._id, "releaseDate");
   const data = useDocument(doc._id);
+  const isDraft = data?._id.startsWith("drafts.");
 
   if (!data) {
     return <Spinner />;
   }
 
   return (
-    <Card tone="default">
+    <Card tone={isDraft ? "caution" : "default"}>
       <TextInput
-        value={data.releaseDate as string}
+        value={(data.releaseDate as string) || ""}
         onChange={(e) => editDocument(e.currentTarget.value)}
         disabled={selectedRows.length > 1}
       />
@@ -127,38 +133,47 @@ export function ReleaseDateCell({
 
 interface StatusCellProps {
   doc: DocumentHandle;
-  table: Table<BookDocument>;
+  selectedRows: RowModel<BookDocument>["rows"];
 }
 
-export function StatusCell({ doc, table }: StatusCellProps) {
+export function StatusCell({ doc, selectedRows }: StatusCellProps) {
   const data = useDocument(doc._id);
   const applyActions = useApplyActions();
+  const isDraft = data?._id.startsWith("drafts.");
+
+  const selectedIds = useMemo(
+    () =>
+      selectedRows.length
+        ? selectedRows.map(
+            (row: { original: DocumentHandle }) => row.original._id
+          )
+        : [doc._id],
+    [selectedRows, doc._id]
+  );
+
+  const handleStatusChange = useCallback(
+    (newStatus: string) => {
+      const actions = selectedIds.map((documentId: string) => ({
+        type: "document.edit" as const,
+        documentId,
+        patches: [
+          newStatus ? { set: { status: newStatus } } : { unset: ["status"] },
+        ],
+      }));
+
+      applyActions(actions);
+    },
+    [applyActions, selectedIds]
+  );
 
   if (!data) {
     return <Spinner />;
   }
 
-  const selectedRows = table.getSelectedRowModel().rows;
-  const selectedIds = selectedRows.length
-    ? selectedRows.map((row: { original: DocumentHandle }) => row.original._id)
-    : [doc._id];
-
-  const handleStatusChange = (newStatus: string) => {
-    const actions = selectedIds.map((documentId: string) => ({
-      type: "document.edit" as const,
-      documentId,
-      patches: [
-        newStatus ? { set: { status: newStatus } } : { unset: ["status"] },
-      ],
-    }));
-
-    applyActions(actions);
-  };
-
   return (
-    <Card tone={CARD_TONES[status]}>
+    <Card tone={isDraft ? "caution" : "default"}>
       <Select
-        value={data.status as string}
+        value={(data.status as string) || ""}
         onChange={(e) => handleStatusChange(e.currentTarget.value)}
       >
         <option value="">Select status</option>
@@ -248,6 +263,73 @@ export function DocumentSyncStatusCell({ doc }: { doc: DocumentHandle }) {
           <DotIcon />
         </Text>
       </Flex>
+    </Card>
+  );
+}
+
+export function DebugCell({ doc }: { doc: DocumentHandle }) {
+  const data = useDocument(doc._id);
+  const preview = usePreview({ document: doc });
+  const syncStatus = useDocumentSyncStatus(doc._id);
+  // const editDocument = useEditDocument(doc._id, "releaseDate");
+  // const applyActions = useApplyActions();
+  // const publishActions = [publishDocument(doc._id)];
+  // const isDraft = data?._id.startsWith("drafts.");
+
+  return (
+    <Card padding={3} tone="inherit">
+      <Stack space={5}>
+        <MiniDocEditor doc={doc} path="releaseDate" />
+        <MiniDocEditor doc={doc} path="title" />
+        <MiniDocEditor doc={doc} path="status" />
+        <Text>{JSON.stringify(doc)}</Text>
+        <Text>{JSON.stringify(data)}</Text>
+        <Text>{JSON.stringify(preview)}</Text>
+        <Text>{JSON.stringify(syncStatus)}</Text>
+        <ReleaseDateCell doc={doc} selectedRows={[]} />
+        <StatusCell doc={doc} selectedRows={[]} />
+        {/* <Flex gap={2}>
+          <Card flex={1} tone={isDraft ? "caution" : "default"}>
+            <TextInput
+              padding={4}
+              value={data?.releaseDate as string}
+              onChange={(e) => editDocument(e.currentTarget.value)}
+            />
+          </Card>
+          <Button
+            disabled={!isDraft}
+            onClick={() => applyActions(publishActions)}
+          >
+            Publish
+          </Button>
+        </Flex> */}
+      </Stack>
+    </Card>
+  );
+}
+
+export function MiniDocEditor({
+  doc,
+  path,
+}: {
+  doc: DocumentHandle;
+  path: string;
+}) {
+  const data = useDocument(doc._id);
+  const value = (data?.[path] as string) || "";
+  const editDocument = useEditDocument(doc._id, path);
+  const isDraft = data?._id.startsWith("drafts.");
+
+  return (
+    <Card tone={isDraft ? "caution" : "default"}>
+      <Stack space={2}>
+        <Text muted>{path}</Text>
+        <TextInput
+          padding={4}
+          value={value}
+          onChange={(e) => editDocument(e.currentTarget.value)}
+        />
+      </Stack>
     </Card>
   );
 }

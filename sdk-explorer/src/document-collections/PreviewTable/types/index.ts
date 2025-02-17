@@ -28,10 +28,3 @@ export type BookDocument = DocumentHandle & {
   authors?: Array<{ _ref: string }>;
   releaseDate?: string;
 };
-
-export const CARD_TONES: Record<string, CardProps["tone"]> = {
-  featured: "critical",
-  new: "positive",
-  bestseller: "primary",
-  "coming-soon": "caution",
-};
