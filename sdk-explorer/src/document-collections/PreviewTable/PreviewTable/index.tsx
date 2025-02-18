@@ -1,4 +1,4 @@
-import { Button, Card, Flex, Stack, Text } from "@sanity/ui";
+import { Button, Card, Flex, Stack, Text, useToast } from "@sanity/ui";
 import { useState } from "react";
 import {
   useReactTable,
@@ -14,6 +14,7 @@ import { BookDocument } from "../types";
 import { Table, TD, TH, TR } from "../components/TableElements";
 import { columns } from "./columns";
 import { STATUS_OPTIONS } from "../constants";
+import { useDocumentEvent } from "@sanity/sdk-react/hooks";
 
 interface PreviewTableProps {
   results: BookDocument[];
@@ -28,10 +29,18 @@ function PreviewTable(props: PreviewTableProps) {
 
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
-
-  const [statusFilter, setStatusFilter] = useState<string>(
-    STATUS_OPTIONS[0].value
-  );
+  const toast = useToast();
+  useDocumentEvent((event) => {
+    switch (event.type) {
+      case "published":
+        toast.push({
+          title: "Document published",
+          description: event.documentId,
+          status: "success",
+        });
+        break;
+    }
+  });
 
   const table = useReactTable<BookDocument>({
     data: results,

@@ -1,6 +1,6 @@
 import { useDocuments } from "@sanity/sdk-react/hooks";
 import PreviewTable from "../PreviewTable";
-import { Suspense } from "react";
+import { ToastProvider } from "@sanity/ui";
 
 export function TableDocuments() {
   const { results, isPending, loadMore, hasMore, count } = useDocuments({
@@ -9,7 +9,7 @@ export function TableDocuments() {
   });
 
   return (
-    <Suspense fallback="loading table">
+    <ToastProvider>
       <PreviewTable
         results={results}
         isPending={isPending}
@@ -17,6 +17,6 @@ export function TableDocuments() {
         hasMore={hasMore}
         count={count}
       />
-    </Suspense>
+    </ToastProvider>
   );
 }
