@@ -51,49 +51,62 @@ function PreviewTable(props: PreviewTableProps) {
       styling={["Sanity UI", "Tanstack Table"]}
     >
       <Stack space={4}>
-        <Card>
-          <Table>
-            <thead>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <TR key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <TH
-                      key={header.id}
-                      padding={header.column.id === "_documentFetcher" ? 0 : 2}
-                    >
-                      {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
-                    </TH>
+        {results.length > 0 ? (
+          <>
+            <Card>
+              <Table>
+                <thead>
+                  {table.getHeaderGroups().map((headerGroup) => (
+                    <TR key={headerGroup.id}>
+                      {headerGroup.headers.map((header) => (
+                        <TH
+                          key={header.id}
+                          padding={
+                            header.column.id === "_documentFetcher" ? 0 : 2
+                          }
+                        >
+                          {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                        </TH>
+                      ))}
+                    </TR>
                   ))}
-                </TR>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map((row) => (
-                <TR key={row.id}>
-                  {row.getVisibleCells().map((cell) => (
-                    <TD
-                      key={cell.id}
-                      padding={cell.column.id === "_documentFetcher" ? 0 : 2}
-                      borderTop
-                      tone={row.getIsSelected() ? "primary" : "default"}
-                    >
-                      <Suspense fallback={<Spinner />}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </Suspense>
-                    </TD>
+                </thead>
+                <tbody>
+                  {table.getRowModel().rows.map((row) => (
+                    <TR key={row.id}>
+                      {row.getVisibleCells().map((cell) => (
+                        <TD
+                          key={cell.id}
+                          padding={
+                            cell.column.id === "_documentFetcher" ? 0 : 2
+                          }
+                          borderTop
+                          tone={row.getIsSelected() ? "primary" : "default"}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </TD>
+                      ))}
+                    </TR>
                   ))}
-                </TR>
-              ))}
-            </tbody>
-          </Table>
-        </Card>
-        <Button disabled={!hasMore} text="Load more" onClick={loadMore} />
+                </tbody>
+              </Table>
+            </Card>
+
+            <Button disabled={!hasMore} text="Load more" onClick={loadMore} />
+          </>
+        ) : (
+          <Card padding={4}>
+            <Flex justify="center">
+              <Text>{isPending ? "Loading..." : "No results"}</Text>
+            </Flex>
+          </Card>
+        )}
       </Stack>
     </ExampleLayout>
   );

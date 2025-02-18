@@ -1,19 +1,18 @@
-import { createColumnHelper, CellContext } from "@tanstack/react-table";
+import { createColumnHelper } from "@tanstack/react-table";
 import { BookDocument } from "../types";
-import { Button, Flex, Spinner, Text } from "@sanity/ui";
+import { Button, Flex, Text } from "@sanity/ui";
 import { Checkbox } from "@sanity/ui";
 import {
-  AuthorsCell,
+  AuthorsCellSkeleton,
+  BookCoverSkeleton,
   DebugCell,
-  DocumentActions,
-  ReleaseDateCell,
-  StatusCell,
-  TitleCell,
+  DocumentActionsSkeleton,
+  DocumentSyncStatusSkeleton,
+  ReleaseDateCellSkeleton,
+  StatusCellSkeleton,
+  TitleCellSkeleton,
 } from "./cells";
 import { getIcon } from "../utils";
-import { BookCover } from "./cells";
-import { DocumentSyncStatusCell } from "./cells";
-import { Suspense } from "react";
 
 const columnHelper = createColumnHelper<BookDocument>();
 
@@ -28,7 +27,6 @@ export const columnConfig: Record<string, boolean> = {
   releaseDate: true,
   _action: true,
   debug: false,
-  debug_2: false,
 };
 
 export const columns = [
@@ -56,16 +54,16 @@ export const columns = [
   columnHelper.accessor((row) => row, {
     id: "_documentSyncStatus",
     header: () => <Text size={1}>Sync</Text>,
-    cell: (info) => <DocumentSyncStatusCell doc={info.getValue()} />,
+    cell: (info) => <DocumentSyncStatusSkeleton doc={info.getValue()} />,
   }),
   columnHelper.accessor((row) => row, {
     id: "cover",
     header: () => <Button text="Cover" disabled mode="bleed" />,
-    enableSorting: false,
-    cell: (info) => <BookCover doc={info.getValue()} />,
+    cell: (info) => <BookCoverSkeleton doc={info.getValue()} />,
   }),
   columnHelper.accessor((row) => row, {
     id: "title",
+
     header: ({ column }) => (
       <Button
         onClick={() => column.toggleSorting()}
@@ -74,7 +72,7 @@ export const columns = [
         text="Title"
       />
     ),
-    cell: (info) => <TitleCell doc={info.getValue()} />,
+    cell: (info) => <TitleCellSkeleton doc={info.getValue()} />,
   }),
   // Example of a bulk edit with selected rows
   columnHelper.accessor((row) => row, {
@@ -89,7 +87,7 @@ export const columns = [
       />
     ),
     cell: (info) => (
-      <StatusCell
+      <StatusCellSkeleton
         doc={info.getValue()}
         selectedRows={info.table.getSelectedRowModel().rows}
       />
@@ -107,7 +105,7 @@ export const columns = [
         text="Authors"
       />
     ),
-    cell: (info) => <AuthorsCell doc={info.getValue()} />,
+    cell: (info) => <AuthorsCellSkeleton doc={info.getValue()} />,
   }),
   // Example of a single field edit
   columnHelper.accessor((row) => row, {
@@ -121,7 +119,7 @@ export const columns = [
       />
     ),
     cell: (info) => (
-      <ReleaseDateCell
+      <ReleaseDateCellSkeleton
         doc={info.getValue()}
         selectedRows={info.table.getSelectedRowModel().rows}
       />
@@ -135,19 +133,14 @@ export const columns = [
       </Flex>
     ),
     cell: (info) => (
-      <DocumentActions
+      <DocumentActionsSkeleton
         doc={info.getValue()}
         selectedRows={info.table.getSelectedRowModel().rows}
       />
     ),
-    sortingFn: () => 0,
   }),
   columnHelper.accessor((row) => row, {
     id: "debug",
-    cell: (info) => <DebugCell doc={info.getValue()} />,
-  }),
-  columnHelper.accessor((row) => row, {
-    id: "debug_2",
     cell: (info) => <DebugCell doc={info.getValue()} />,
   }),
 ].filter((column) => column.id && columnConfig[column.id]);

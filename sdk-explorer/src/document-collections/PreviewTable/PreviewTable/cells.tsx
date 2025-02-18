@@ -12,6 +12,7 @@ import {
   Card,
   Flex,
   Select,
+  Skeleton,
   Spinner,
   Stack,
   Text,
@@ -22,6 +23,23 @@ import { ReactElement, Suspense, useCallback, useMemo, useRef } from "react";
 import { DotIcon, PublishIcon, ResetIcon } from "@sanity/icons";
 import { BookDocument } from "../types";
 import { RowModel } from "@tanstack/react-table";
+
+export function BookCoverSkeleton({ doc }: { doc: DocumentHandle }) {
+  return (
+    <Suspense
+      fallback={
+        <Card
+          __unstable_checkered
+          tone="transparent"
+          shadow={1}
+          style={{ width: 64, height: 96 }}
+        />
+      }
+    >
+      <BookCover doc={doc} />
+    </Suspense>
+  );
+}
 
 export function BookCover({ doc }: { doc: DocumentHandle }) {
   const ref = useRef(null);
@@ -40,6 +58,16 @@ export function BookCover({ doc }: { doc: DocumentHandle }) {
         height="96"
         style={{ objectFit: "cover" }}
       />
+    </Card>
+  );
+}
+
+export function TitleCellSkeleton({ doc }: { doc: DocumentHandle }) {
+  return (
+    <Card style={{ maxWidth: 100 }} tone="inherit">
+      <Suspense fallback={<Skeleton style={{ width: 100, height: 20 }} />}>
+        <TitleCell doc={doc} />
+      </Suspense>
     </Card>
   );
 }
@@ -74,6 +102,16 @@ export function AuthorCell({ document }: { document: DocumentHandle }) {
   );
 }
 
+export function AuthorsCellSkeleton({ doc }: { doc: DocumentHandle }) {
+  return (
+    <Card style={{ width: 150 }} tone="inherit">
+      <Suspense fallback={<Skeleton style={{ width: 200, height: 30 }} />}>
+        <AuthorsCell doc={doc} />
+      </Suspense>
+    </Card>
+  );
+}
+
 export function AuthorsCell({
   doc,
 }: {
@@ -95,11 +133,34 @@ export function AuthorsCell({
   return (
     <Stack space={2}>
       {authors.map((author) => (
-        <Suspense key={author._ref} fallback="Loading author">
-          <AuthorCell document={{ _id: author._ref, _type: "author" }} />
-        </Suspense>
+        <AuthorCell
+          key={author._ref}
+          document={{ _id: author._ref, _type: "author" }}
+        />
       ))}
     </Stack>
+  );
+}
+
+export function ReleaseDateCellSkeleton({
+  doc,
+  selectedRows,
+}: {
+  doc: DocumentHandle;
+  selectedRows: RowModel<BookDocument>["rows"];
+}) {
+  return (
+    <Card style={{ width: 150 }}>
+      <Suspense
+        fallback={
+          <Card tone="transparent">
+            <TextInput readOnly value="Loading..." disabled />
+          </Card>
+        }
+      >
+        <ReleaseDateCell doc={doc} selectedRows={selectedRows} />
+      </Suspense>
+    </Card>
   );
 }
 
@@ -115,28 +176,73 @@ export function ReleaseDateCell({
   const editDocument = useEditDocument(doc._id, "releaseDate");
   const data = useDocument(doc._id);
   const isDraft = data?._id.startsWith("drafts.");
+  const multipleRowsSelected = selectedRows.length > 1;
 
   if (!data) {
     return <Spinner />;
   }
 
+  const InputField = (
+    <TextInput
+      value={(data.releaseDate as string) || ""}
+      onChange={(e) => editDocument(e.currentTarget.value)}
+      disabled={selectedRows.length > 1}
+    />
+  );
+
   return (
     <Card tone={isDraft ? "caution" : "default"}>
-      <TextInput
-        value={(data.releaseDate as string) || ""}
-        onChange={(e) => editDocument(e.currentTarget.value)}
-        disabled={selectedRows.length > 1}
-      />
+      {multipleRowsSelected ? (
+        <Tooltip
+          content={
+            <Box padding={1}>
+              <Text size={1}>
+                Editing multiple rows is not supported. Please select a single
+                row.
+              </Text>
+            </Box>
+          }
+        >
+          <div>{InputField}</div>
+        </Tooltip>
+      ) : (
+        InputField
+      )}
     </Card>
   );
 }
 
-interface StatusCellProps {
+export function StatusCellSkeleton({
+  doc,
+  selectedRows,
+}: {
   doc: DocumentHandle;
   selectedRows: RowModel<BookDocument>["rows"];
+}) {
+  return (
+    <Card style={{ width: 200 }}>
+      <Suspense
+        fallback={
+          <Card>
+            <Select disabled>
+              <option value="">Loading...</option>
+            </Select>
+          </Card>
+        }
+      >
+        <StatusCell doc={doc} selectedRows={selectedRows} />
+      </Suspense>
+    </Card>
+  );
 }
 
-export function StatusCell({ doc, selectedRows }: StatusCellProps) {
+export function StatusCell({
+  doc,
+  selectedRows,
+}: {
+  doc: DocumentHandle;
+  selectedRows: RowModel<BookDocument>["rows"];
+}) {
   const data = useDocument(doc._id);
   const applyActions = useApplyActions();
   const isDraft = data?._id.startsWith("drafts.");
@@ -183,6 +289,27 @@ export function StatusCell({ doc, selectedRows }: StatusCellProps) {
         <option value="coming-soon">Coming Soon</option>
       </Select>
     </Card>
+  );
+}
+
+export function DocumentActionsSkeleton({
+  doc,
+  selectedRows,
+}: {
+  doc: DocumentHandle;
+  selectedRows: RowModel<BookDocument>["rows"];
+}) {
+  return (
+    <Suspense
+      fallback={
+        <Flex gap={1} justify="center">
+          <Button icon={PublishIcon} disabled tone="primary" mode="ghost" />
+          <Button icon={ResetIcon} disabled tone="critical" mode="ghost" />
+        </Flex>
+      }
+    >
+      <DocumentActions doc={doc} selectedRows={selectedRows} />
+    </Suspense>
   );
 }
 
@@ -246,6 +373,22 @@ export function DocumentActions({
         />
       </Tooltip>
     </Flex>
+  );
+}
+
+export function DocumentSyncStatusSkeleton({ doc }: { doc: DocumentHandle }) {
+  return (
+    <Suspense
+      fallback={
+        <Card
+          tone="default"
+          padding={0}
+          style={{ width: 15, height: 15, borderRadius: 10 }}
+        />
+      }
+    >
+      <DocumentSyncStatusCell doc={doc} />
+    </Suspense>
   );
 }
 
