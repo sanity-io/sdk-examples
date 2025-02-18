@@ -1,17 +1,10 @@
 import { Card, Flex, Radio, Text } from "@sanity/ui";
+import { STATUS_OPTIONS } from "../constants";
 
 interface StatusFilterProps {
   value: string;
   onChange: (value: string) => void;
 }
-
-const STATUS_OPTIONS = [
-  { id: "all", value: "", label: "All statuses" },
-  { id: "featured", value: "featured", label: "Featured" },
-  { id: "new", value: "new", label: "New" },
-  { id: "bestseller", value: "bestseller", label: "Bestseller" },
-  { id: "coming-soon", value: "coming-soon", label: "Coming Soon" },
-] as const;
 
 export function StatusFilter({ value, onChange }: StatusFilterProps) {
   return (

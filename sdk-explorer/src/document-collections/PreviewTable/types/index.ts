@@ -1,7 +1,6 @@
 import { DocumentHandle } from "@sanity/sdk";
 import type { SanityDocument as BaseSanityDocument } from "@sanity/types";
 import { UsePreviewResults } from "@sanity/sdk-react/hooks";
-import { CardProps } from "@sanity/ui";
 
 export interface SanityDocument extends BaseSanityDocument {
   status?: string;

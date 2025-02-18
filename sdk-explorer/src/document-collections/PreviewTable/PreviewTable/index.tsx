@@ -1,7 +1,6 @@
-import { Button, Card, Checkbox, Flex, Spinner, Stack, Text } from "@sanity/ui";
-import { Suspense, useMemo, useState } from "react";
+import { Button, Card, Flex, Stack, Text } from "@sanity/ui";
+import { useState } from "react";
 import {
-  createColumnHelper,
   useReactTable,
   getCoreRowModel,
   flexRender,
@@ -14,6 +13,7 @@ import ExampleLayout from "../../../ExampleLayout";
 import { BookDocument } from "../types";
 import { Table, TD, TH, TR } from "../components/TableElements";
 import { columns } from "./columns";
+import { STATUS_OPTIONS } from "../constants";
 
 interface PreviewTableProps {
   results: BookDocument[];
@@ -28,6 +28,10 @@ function PreviewTable(props: PreviewTableProps) {
 
   const [sorting, setSorting] = useState<SortingState>([]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
+
+  const [statusFilter, setStatusFilter] = useState<string>(
+    STATUS_OPTIONS[0].value
+  );
 
   const table = useReactTable<BookDocument>({
     data: results,
@@ -103,7 +107,9 @@ function PreviewTable(props: PreviewTableProps) {
         ) : (
           <Card padding={4}>
             <Flex justify="center">
-              <Text>{isPending ? "Loading..." : "No results"}</Text>
+              <Text>
+                {isPending ? "Loading..." : "No documents to display"}
+              </Text>
             </Flex>
           </Card>
         )}
