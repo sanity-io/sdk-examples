@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+
+.league {
+    font-family: 'League Gothic', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: 'wdth' 82;
+}
+
+.belleza {
+    font-family: 'Belleza', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header h1 {
+    color: goldenrod;
+}
+
+section {
+    max-inline-size: 64ch;
+    -webkit-font-smoothing: antialiased;
+}

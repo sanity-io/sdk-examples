@@ -75,6 +75,24 @@ export default function Home() {
             </Stack>
           </Stack>
         </Card>
+
+        <Card padding={4} radius={2} shadow={3}>
+          <Stack space={4}>
+            <Text as='h2' size={4} weight='medium'>
+              Permissions
+            </Text>
+
+            <Stack space={3}>
+              <ExampleCard
+                to='/permissions/before-the-law'
+                title='Before the Law'
+                description='A short story told via permissions'
+                hooks={['usePermissions']}
+                styling='Paramour'
+              />
+            </Stack>
+          </Stack>
+        </Card>
       </Stack>
     </Container>
   )

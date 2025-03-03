@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import Home from './Home'
+import BeforeTheLaw from './permissions/BeforeTheLaw'
 import UserProfile from './users/UserProfile/UserProfile'
 
 export default function App() {
@@ -64,6 +65,10 @@ export default function App() {
               element={<PreviewGrid />}
             />
             <Route path='/users/user-profile' element={<UserProfile />} />
+            <Route
+              path='/permissions/before-the-law'
+              element={<BeforeTheLaw />}
+            />
           </Routes>
         </AuthBoundary>
       </Card>
