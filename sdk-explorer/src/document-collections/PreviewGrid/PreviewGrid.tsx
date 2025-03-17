@@ -1,22 +1,40 @@
 import { DocumentHandle } from '@sanity/sdk'
-import { useDocuments, usePreview } from '@sanity/sdk-react/hooks'
+import { useInfiniteList, useProjection } from '@sanity/sdk-react'
 import { Spinner } from '@sanity/ui'
 import { Suspense, useRef } from 'react'
 import ExampleLayout from '../../ExampleLayout'
 import './styles.css'
 
+// @todo replace with type from SDK
+interface ProjectionResults {
+  results: {
+    title: string
+    subtitle: string
+    coverImage: string
+  }
+  isPending: boolean
+}
+
 // The DocumentPreview component uses the `usePreview` hook to render a document preview interface
 function DocumentPreview({ document }: { document: DocumentHandle }) {
   // Generate a ref for the outer element
-  // This keeps the usePreview hook from resolving if the preview is not currently displayed in the viewport
+  // This keeps the useProjection hook from resolving if the preview is not currently displayed in the viewport
   const ref = useRef(null)
 
-  // Get the preview's title, subtitle, and media fields,
-  // plus an `isPending` flag to indicate if preview value resolutions are pending
+  // Project the title, subtitle, and cover image values for the document,
+  // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
-    results: { title, subtitle, media },
+    results: { title, subtitle, coverImage },
     isPending,
-  } = usePreview({ document, ref })
+  }: ProjectionResults = useProjection({
+    document,
+    ref,
+    projection: `{
+      title,
+      'subtitle': array::join(authors[]->{'name': firstName + ' ' + lastName}.name, ', '),
+      'coverImage': cover.asset->url,
+    }`,
+  })
 
   return (
     <button
@@ -28,7 +46,7 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
     >
       <img
         alt=''
-        src={media?.url}
+        src={coverImage}
         className='aspect-square w-full rounded-sm bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8'
         style={{ width: 400 }}
       />
@@ -41,9 +59,9 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
 function PreviewGrid() {
   // Use the `useDocuments` hook to return an index of document handles for all of our 'book' type documents
   // Sort the documents by the author's last name, then the release date
-  const { results: books, isPending } = useDocuments({
+  const { data: books, isPending } = useInfiniteList({
     filter: '_type == "book"',
-    sort: [
+    orderings: [
       { field: 'authors[0]->lastName', direction: 'asc' },
       { field: 'releaseDate', direction: 'asc' },
     ],
@@ -57,7 +75,7 @@ function PreviewGrid() {
     <ExampleLayout
       title='Preview grid'
       codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx'
-      hooks={['useDocuments', 'usePreview']}
+      hooks={['useInfiniteList', 'useProjection']}
       styling='Tailwind'
     >
       <div className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>

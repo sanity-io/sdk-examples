@@ -44,33 +44,15 @@ export default function Home() {
                 to='/document-collections/preview-list'
                 title='Preview list'
                 description='A list of document previews'
-                hooks={['useDocuments', 'usePreview']}
+                hooks={['useInfiniteList', 'useProjection']}
                 styling='Sanity UI'
               />
               <ExampleCard
                 to='/document-collections/preview-grid'
                 title='Preview grid'
                 description='A grid of document previews'
-                hooks={['useDocuments', 'usePreview']}
+                hooks={['useInfiniteList', 'useProjection']}
                 styling='Tailwind'
-              />
-            </Stack>
-          </Stack>
-        </Card>
-
-        <Card padding={4} radius={2} shadow={3}>
-          <Stack space={4}>
-            <Text as='h2' size={4} weight='medium'>
-              Users
-            </Text>
-
-            <Stack space={3}>
-              <ExampleCard
-                to='/users/user-profile'
-                title='User profile'
-                description='Information about the currently authenticated user'
-                hooks={['useAuthState', 'useCurrentUser']}
-                styling='Sanity UI'
               />
             </Stack>
           </Stack>

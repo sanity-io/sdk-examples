@@ -1,17 +1,11 @@
 import { SanityMonogram } from '@sanity/logos'
-import { AuthBoundary } from '@sanity/sdk-react/components'
-import { useAuthState, useLogOut } from '@sanity/sdk-react/hooks'
-import { Button, Card, Flex, Inline, Text } from '@sanity/ui'
+import { Card, Flex, Inline, Text } from '@sanity/ui'
 import { BrowserRouter, Link, Route, Routes } from 'react-router'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import Home from './Home'
-import UserProfile from './users/UserProfile/UserProfile'
 
 export default function App() {
-  const authState = useAuthState()
-  const logOut = useLogOut()
-
   return (
     <BrowserRouter>
       <Card style={{ position: 'relative' }}>
@@ -46,26 +40,20 @@ export default function App() {
                   Home
                 </Text>
               </Link>
-              {authState?.type === 'logged-in' && (
-                <Button mode='ghost' text='Log out' onClick={logOut} />
-              )}
             </Inline>
           </Flex>
         </Card>
-        <AuthBoundary>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route
-              path='/document-collections/preview-list'
-              element={<PreviewList />}
-            />
-            <Route
-              path='/document-collections/preview-grid'
-              element={<PreviewGrid />}
-            />
-            <Route path='/users/user-profile' element={<UserProfile />} />
-          </Routes>
-        </AuthBoundary>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route
+            path='/document-collections/preview-list'
+            element={<PreviewList />}
+          />
+          <Route
+            path='/document-collections/preview-grid'
+            element={<PreviewGrid />}
+          />
+        </Routes>
       </Card>
     </BrowserRouter>
   )
