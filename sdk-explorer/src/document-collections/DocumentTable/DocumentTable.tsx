@@ -7,6 +7,16 @@ import { useRef } from 'react'
 import ExampleLayout from '../../ExampleLayout'
 import './styles.css'
 
+interface BookProjectionResults {
+  results: {
+    title: string
+    coverImage: string
+    authorNames: string
+    publisherName: string
+    releaseDate: string
+  }
+}
+
 function DocumentRow({
   document,
   index,
@@ -18,7 +28,7 @@ function DocumentRow({
 
   const {
     results: { title, coverImage, authorNames, publisherName, releaseDate },
-  } = useProjection({
+  }: BookProjectionResults = useProjection({
     document,
     ref,
     projection: `{
