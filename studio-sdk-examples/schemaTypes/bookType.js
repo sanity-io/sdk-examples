@@ -37,6 +37,16 @@ export const bookType = defineType({
       title: 'Release date',
       type: 'date',
     }),
+    defineField({
+      name: 'summary',
+      title: 'Summary',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
   ],
   preview: {
     select: {

@@ -41,6 +41,13 @@ export default function Home() {
 
             <Stack space={3}>
               <ExampleCard
+                to='/document-collections/document-table'
+                title='Document table'
+                description='A tabular rendering of documents and their content'
+                hooks={['usePaginatedList', 'useProjection']}
+                styling='Tailwind'
+              />
+              <ExampleCard
                 to='/document-collections/preview-list'
                 title='Preview list'
                 description='A list of document previews'
