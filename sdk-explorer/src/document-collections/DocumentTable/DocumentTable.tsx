@@ -31,6 +31,12 @@ function DocumentRow({
   }: BookProjectionResults = useProjection({
     document,
     ref,
+    // In our projection, we will:
+    // 1. Get the title of the book
+    // 2. Get the cover image URL of the book by dereferencing the cover asset
+    // 3. Get the names of the authors of the book by dereferencing the author assets and joining them to a string
+    // 4. Get the name of the publisher of the book by dereferencing the publisher field and returning the name
+    // 5. Get the release date of the book
     projection: `{
       title,
       'coverImage': cover.asset->url,
@@ -96,6 +102,7 @@ export default function DocumentTable() {
         </tbody>
       </table>
 
+      {/* Table navigation */}
       <nav className='flex justify-between items-center my-8'>
         <button
           className='rounded-sm px-4 py-2 bg-blue-500 text-white font-medium hover:bg-blue-700 transition'
