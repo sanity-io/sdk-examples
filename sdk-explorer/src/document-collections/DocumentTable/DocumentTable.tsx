@@ -7,13 +7,13 @@ import { useRef } from 'react'
 import ExampleLayout from '../../ExampleLayout'
 import './styles.css'
 
-interface BookProjectionResults {
+interface MovieProjectionResults {
   results: {
     title: string
-    coverImage: string
-    authorNames: string
-    publisherName: string
+    posterImage: string
+    cast: string
     releaseDate: string
+    popularity: number
   }
 }
 
@@ -27,21 +27,21 @@ function DocumentRow({
   const ref = useRef(null)
 
   const {
-    results: { title, coverImage, authorNames, publisherName, releaseDate },
-  }: BookProjectionResults = useProjection({
+    results: { title, posterImage, cast, popularity, releaseDate },
+  }: MovieProjectionResults = useProjection({
     document,
     ref,
     // In our projection, we will:
-    // 1. Get the title of the book
-    // 2. Get the cover image URL of the book by dereferencing the cover asset
-    // 3. Get the names of the authors of the book by dereferencing the author assets and joining them to a string
-    // 4. Get the name of the publisher of the book by dereferencing the publisher field and returning the name
-    // 5. Get the release date of the book
+    // 1. Get the title of the movie
+    // 2. Get the poster image URL of the movie by dereferencing the poster asset
+    // 3. Get the names of the first 3 cast members by dereferencing the castMembers array and joining them to a string
+    // 4. Get the popularity of the movie
+    // 5. Get the release date of the movie
     projection: `{
       title,
-      'coverImage': cover.asset->url,
-      'authorNames': array::join(authors[]->{'name': firstName + ' ' + lastName}.name, ', '),
-      'publisherName': publisher->name,
+      'posterImage': poster.asset->url,
+      'cast': array::join(castMembers[0..2].person->name, ', '),
+      popularity,
       releaseDate
     }`,
   })
@@ -51,15 +51,15 @@ function DocumentRow({
       <td className='p-2'>
         <img
           width={64}
-          src={coverImage}
-          alt={`Cover for ${title}`}
+          src={posterImage}
+          alt={`Poster for ${title}`}
           className='border-4 border-solid border-white shadow-sm'
         />
       </td>
       <td className='p-2'>{title}</td>
-      <td className='p-2'>{authorNames}</td>
-      <td className='p-2'>{publisherName}</td>
-      <td className='p-2'>{releaseDate}</td>
+      <td className='p-2'>{cast}</td>
+      <td className='p-2'>{Math.round(popularity)}</td>
+      <td className='p-2'>{new Date(releaseDate).toLocaleDateString()}</td>
     </tr>
   )
 }
@@ -74,8 +74,9 @@ export default function DocumentTable() {
     hasNextPage,
     hasPreviousPage,
   } = usePaginatedList({
-    filter: '_type == "book"',
-    pageSize: 10,
+    filter: '_type == "movie"',
+    pageSize: 6,
+    orderings: [{ field: 'releaseDate', direction: 'desc' }],
   })
 
   return (
@@ -88,10 +89,10 @@ export default function DocumentTable() {
       <table className='w-full'>
         <thead>
           <tr>
-            <th className='text-left px-2 py-4'>Cover</th>
+            <th className='text-left px-2 py-4'>Poster</th>
             <th className='text-left px-2 py-4'>Title</th>
-            <th className='text-left px-2 py-4'>Authors</th>
-            <th className='text-left px-2 py-4'>Publisher</th>
+            <th className='text-left px-2 py-4'>Cast</th>
+            <th className='text-left px-2 py-4'>Popularity</th>
             <th className='text-left px-2 py-4'>Release Date</th>
           </tr>
         </thead>

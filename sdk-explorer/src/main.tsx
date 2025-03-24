@@ -11,7 +11,7 @@ import './inter.css'
 const theme = buildTheme()
 
 const sanityInstance = createSanityInstance({
-  projectId: 'flahoy03',
+  projectId: 'v28v5k8m',
   dataset: 'production',
 })
 
