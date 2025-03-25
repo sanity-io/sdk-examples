@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router'
 import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
-import MoviesByActor from './groq/MoviesByActor'
+import MoviesByActor from './groq/MoviesByActor/MoviesByActor'
 import Home from './Home'
 
 export default function App() {

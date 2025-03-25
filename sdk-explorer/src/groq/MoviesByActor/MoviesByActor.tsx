@@ -10,7 +10,7 @@ import {
   Text,
 } from '@sanity/ui'
 import { useState } from 'react'
-import ExampleLayout from '../ExampleLayout'
+import ExampleLayout from '../../ExampleLayout'
 
 interface CastMember {
   _id: string
@@ -57,7 +57,7 @@ export default function MoviesByActor() {
   return (
     <ExampleLayout
       title='Movies by actor'
-      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx'
+      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/groq/MoviesByActor/MoviesByActor.tsx'
       hooks={['useQuery']}
       styling='Sanity UI'
     >
