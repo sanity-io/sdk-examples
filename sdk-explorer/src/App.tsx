@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router'
 import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
+import MoviesByActor from './groq/MoviesByActor'
 import Home from './Home'
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
             path='/document-collections/document-table'
             element={<DocumentTable />}
           />
+          <Route path='/groq/movies-by-actor' element={<MoviesByActor />} />
         </Routes>
       </Card>
     </BrowserRouter>

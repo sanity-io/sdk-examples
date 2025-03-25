@@ -65,6 +65,26 @@ export default function Home() {
           </Stack>
         </Card>
       </Stack>
+
+      <Stack space={5} paddingY={4}>
+        <Card padding={4} radius={2} shadow={3}>
+          <Stack space={4}>
+            <Text as='h2' size={4} weight='medium'>
+              GROQ
+            </Text>
+
+            <Stack space={3}>
+              <ExampleCard
+                to='/groq/movies-by-actor'
+                title='Movies by actor'
+                description='Use multiple useQuery hooks to fetch and filter data'
+                hooks={['useQuery']}
+                styling='Sanity UI'
+              />
+            </Stack>
+          </Stack>
+        </Card>
+      </Stack>
     </Container>
   )
 }
