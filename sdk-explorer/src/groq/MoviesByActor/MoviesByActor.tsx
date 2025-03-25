@@ -36,7 +36,10 @@ export default function MoviesByActor() {
   )
 
   // Create a state variable to store the selected cast member's ID
-  const [castMemberId, setCastMemberId] = useState<string | null>(null)
+  // Initialize it with the ID of the first cast member
+  const [castMemberId, setCastMemberId] = useState<string>(
+    () => castMembers?.[0]?._id
+  )
 
   // Construct another query for movies that the cast member has appeared in
   // by passing the cast member's ID as a parameter to the query
@@ -70,12 +73,12 @@ export default function MoviesByActor() {
               id='castMembers'
               fontSize={2}
               padding={4}
-              value={castMemberId || 'default'}
+              value={castMemberId}
               onChange={(e) =>
                 setCastMemberId(
                   castMembers?.find(
                     (member) => member._id === e.currentTarget.value
-                  )?._id || null
+                  )?._id || ''
                 )
               }
             >
