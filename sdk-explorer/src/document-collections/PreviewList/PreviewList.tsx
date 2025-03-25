@@ -18,8 +18,8 @@ function Loading() {
 interface ProjectionResults {
   results: {
     title: string
-    subtitle: string
-    coverImage: string
+    cast: string
+    posterImage: string
   }
   isPending: boolean
 }
@@ -30,18 +30,18 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
   // This keeps the useProjection hook from firing if the preview is not currently displayed in the viewport
   const ref = useRef(null)
 
-  // Project the title, subtitle, and cover image values for the document,
+  // Project the title, first 3 cast mambers, and post image values for the document,
   // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
-    results: { title, subtitle, coverImage },
+    results: { title, cast, posterImage },
     isPending,
   }: ProjectionResults = useProjection({
     document,
     ref,
     projection: `{
       title,
-      'subtitle': array::join(authors[]->{'name': firstName + ' ' + lastName}.name, ', '),
-      'coverImage': cover.asset->url,
+      'cast': array::join(castMembers[0..2].person->name, ', '),
+      'posterImage': poster.asset->url,
     }`,
   })
 
@@ -50,19 +50,19 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
       // Assign the ref to the outer element
       ref={ref}
       mode='bleed'
-      onClick={() => alert(`Good choice! ${title} is an excellent book.`)}
+      onClick={() => alert(`Good choice! ${title} is an excellent movie.`)}
       // When preview values are resolving, we’ll lower the opacity to indicate this state visually
       style={{ opacity: isPending ? 0.5 : 1 }}
     >
       <Inline space={4}>
         <Card tone='transparent' shadow={2}>
-          <img src={coverImage} alt='' width='128' />
+          <img src={posterImage} alt='' width='128' />
         </Card>
         <Stack space={3}>
           <Text as='h2' weight='medium' size={4}>
             {title}
           </Text>
-          <Text size={2}>{subtitle}</Text>
+          <Text size={2}>{cast}</Text>
         </Stack>
       </Inline>
     </Button>
@@ -70,14 +70,11 @@ function DocumentPreview({ document }: { document: DocumentHandle }) {
 }
 
 function PreviewList() {
-  // Use the `useDocuments` hook to return an index of document handles for all of our 'book' type documents
-  // Sort the documents by the author's last name, then the release date
-  const { data: books, isPending } = useInfiniteList({
-    filter: '_type == "book"',
-    orderings: [
-      { field: 'authors[0]->lastName', direction: 'asc' },
-      { field: 'releaseDate', direction: 'asc' },
-    ],
+  // Use the `useDocuments` hook to return an index of document handles for all of our 'movie' type documents
+  // Sort the documents by the the release date
+  const { data: movies, isPending } = useInfiniteList({
+    filter: '_type == "movie"',
+    orderings: [{ field: 'releaseDate', direction: 'desc' }],
   })
 
   if (isPending) {
@@ -96,9 +93,9 @@ function PreviewList() {
       styling='Sanity UI'
     >
       <Stack space={4}>
-        {books.map((book) => (
-          <Suspense key={book._id} fallback={<Loading />}>
-            <DocumentPreview key={book._id} document={book} />
+        {movies.map((movie) => (
+          <Suspense key={movie._id} fallback={<Loading />}>
+            <DocumentPreview key={movie._id} document={movie} />
           </Suspense>
         ))}
       </Stack>

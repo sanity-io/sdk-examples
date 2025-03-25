@@ -5,12 +5,15 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'sdk-examples',
+  title: 'sdk-examples-movies',
 
-  projectId: 'flahoy03',
+  projectId: 'v28v5k8m',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool(),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,

@@ -1,6 +1,7 @@
 import { SanityMonogram } from '@sanity/logos'
 import { Card, Flex, Inline, Text } from '@sanity/ui'
 import { BrowserRouter, Link, Route, Routes } from 'react-router'
+import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import Home from './Home'
@@ -52,6 +53,10 @@ export default function App() {
           <Route
             path='/document-collections/preview-grid'
             element={<PreviewGrid />}
+          />
+          <Route
+            path='/document-collections/document-table'
+            element={<DocumentTable />}
           />
         </Routes>
       </Card>
