@@ -82,7 +82,7 @@ export default function DocumentTable() {
   return (
     <ExampleLayout
       title='Document table'
-      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx'
+      codeUrl='https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx'
       hooks={['usePaginatedList', 'useProjection']}
       styling='Tailwind'
     >
@@ -106,7 +106,7 @@ export default function DocumentTable() {
       {/* Table navigation */}
       <nav className='flex justify-between items-center my-8'>
         <button
-          className='rounded-sm px-4 py-2 bg-blue-500 text-white font-medium hover:bg-blue-700 transition'
+          className={`rounded-sm px-4 py-2 bg-blue-500 text-white font-medium transition ${!hasPreviousPage ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
           onClick={previousPage}
           disabled={!hasPreviousPage}
         >
@@ -116,7 +116,7 @@ export default function DocumentTable() {
           Page {currentPage}/{totalPages}
         </div>
         <button
-          className='rounded-sm px-4 py-2 bg-blue-500 text-white font-medium hover:bg-blue-700 transition'
+          className={`rounded-sm px-4 py-2 bg-blue-500 text-white font-medium transition ${!hasNextPage ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'}`}
           onClick={nextPage}
           disabled={!hasNextPage}
         >
