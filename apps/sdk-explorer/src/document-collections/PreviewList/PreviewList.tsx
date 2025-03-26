@@ -89,7 +89,7 @@ function PreviewList(): JSX.Element {
   return (
     <ExampleLayout
       title="Preview list"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx"
       hooks={['useInfiniteList', 'useProjection']}
       styling="Sanity UI"
     >
