@@ -25,3 +25,5 @@ dist-ssr
 
 # macOS
 .DS_Store
+
+.turbo

@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>sanity-io/renovate-config",
-    ":dependencyDashboardApproval"
-  ],
+  "extends": ["local>sanity-io/renovate-config"],
   "ignorePresets": ["github>sanity-io/renovate-config:group-non-major"],
+  "schedule": ["every weekday"],
+  "prConcurrentLimit": 5,
+  "automerge": true,
   "hostRules": [
     {
       "matchHost": "registry.npmjs.org",
