@@ -1,0 +1,33 @@
+{
+  "name": "sdk-examples-root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Sanity Examples",
+  "keywords": [],
+  "homepage": "https://github.com/sanity-io/sdk-examples#readme",
+  "bugs": {
+    "url": "https://github.com/sanity-io/sdk-examples/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanity-io/sdk-examples.git"
+  },
+  "license": "MIT",
+  "author": "Sanity <developers@sanity.io>",
+  "sideEffects": false,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint -- --fix && eslint . --fix"
+  },
+  "prettier": "@sanity/prettier-config",
+  "devDependencies": {
+    "@sanity/prettier-config": "^1.0.3",
+    "turbo": "^2.4.4"
+  },
+  "packageManager": "pnpm@9.15.5",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
