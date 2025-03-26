@@ -67,7 +67,7 @@ export default function DocumentTable(): JSX.Element {
   return (
     <ExampleLayout
       title="Document table"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx"
       hooks={['usePaginatedList', 'useProjection']}
       styling="Tailwind"
     >

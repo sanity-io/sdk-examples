@@ -50,7 +50,7 @@ export default function MoviesByActor(): JSX.Element {
   return (
     <ExampleLayout
       title="Movies by actor"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/groq/MoviesByActor/MoviesByActor.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/groq/MoviesByActor/MoviesByActor.tsx"
       hooks={['useQuery']}
       styling="Sanity UI"
     >

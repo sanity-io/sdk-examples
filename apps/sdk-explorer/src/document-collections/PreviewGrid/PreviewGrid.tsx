@@ -73,7 +73,7 @@ function PreviewGrid(): JSX.Element {
   return (
     <ExampleLayout
       title="Preview grid"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx"
       hooks={['useInfiniteList', 'useProjection']}
       styling="Tailwind"
     >
