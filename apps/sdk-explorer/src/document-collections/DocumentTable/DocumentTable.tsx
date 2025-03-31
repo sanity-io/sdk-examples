@@ -15,7 +15,7 @@ interface MovieProjectionResults {
   }
 }
 
-function DocumentRow({document, index}: {document: DocumentHandle; index: number}) {
+function DocumentRow({document}: {document: DocumentHandle}) {
   const ref = useRef(null)
 
   const {
@@ -39,19 +39,14 @@ function DocumentRow({document, index}: {document: DocumentHandle; index: number
   })
 
   return (
-    <tr ref={ref} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+    <tr ref={ref} className="border-solid border-b border-gray-200">
       <td className="p-2">
-        <img
-          width={64}
-          src={posterImage}
-          alt={`Poster for ${title}`}
-          className="border-4 border-solid border-white shadow-sm"
-        />
+        <img width={64} src={posterImage} alt={`Poster for ${title}`} className="shadow-sm" />
       </td>
-      <td className="p-2">{title}</td>
-      <td className="p-2">{cast}</td>
-      <td className="p-2">{Math.round(popularity)}</td>
-      <td className="p-2">{new Date(releaseDate).toLocaleDateString()}</td>
+      <td className="p-2 font-medium">{title}</td>
+      <td className="p-2 text-gray-600">{cast}</td>
+      <td className="p-2 text-gray-600">{Math.round(popularity)}</td>
+      <td className="p-2 text-gray-600">{new Date(releaseDate).toLocaleDateString()}</td>
     </tr>
   )
 }
@@ -71,19 +66,29 @@ export default function DocumentTable(): JSX.Element {
       hooks={['usePaginatedList', 'useProjection']}
       styling="Tailwind"
     >
-      <table className="w-full">
+      <table className="w-full text-sm border-collapse">
         <thead>
-          <tr>
-            <th className="text-left px-2 py-4">Poster</th>
-            <th className="text-left px-2 py-4">Title</th>
-            <th className="text-left px-2 py-4">Cast</th>
-            <th className="text-left px-2 py-4">Popularity</th>
-            <th className="text-left px-2 py-4">Release Date</th>
+          <tr className="border-solid border-b-2 border-gray-200">
+            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+              Poster
+            </th>
+            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+              Title
+            </th>
+            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+              Cast
+            </th>
+            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+              Popularity
+            </th>
+            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+              Release Date
+            </th>
           </tr>
         </thead>
         <tbody>
-          {data.map((document, index) => (
-            <DocumentRow key={document._id} document={document} index={index} />
+          {data.map((document) => (
+            <DocumentRow key={document._id} document={document} />
           ))}
         </tbody>
       </table>

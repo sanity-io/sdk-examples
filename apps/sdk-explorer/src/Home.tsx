@@ -1,11 +1,11 @@
-import {Card, Container, Heading, Stack, Text} from '@sanity/ui'
+import {Box, Card, Heading, Stack, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 
 import ExampleCard from './ExampleCard'
 
 export default function Home(): JSX.Element {
   return (
-    <Container padding={4}>
+    <Box>
       <Stack space={5} paddingY={4}>
         <Heading
           as="h1"
@@ -84,6 +84,6 @@ export default function Home(): JSX.Element {
           </Stack>
         </Card>
       </Stack>
-    </Container>
+    </Box>
   )
 }

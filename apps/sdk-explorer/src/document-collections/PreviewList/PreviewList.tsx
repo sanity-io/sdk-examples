@@ -56,14 +56,14 @@ function DocumentPreview({document}: {document: DocumentHandle}) {
       style={{opacity: isPending ? 0.5 : 1}}
     >
       <Inline space={4}>
-        <Card tone="transparent" shadow={2}>
-          <img src={posterImage} alt="" width="128" />
-        </Card>
+        <img src={posterImage} alt="" width="96" height="144" />
         <Stack space={3}>
-          <Text as="h2" weight="medium" size={4}>
+          <Text as="h2" weight="medium" size={2}>
             {title}
           </Text>
-          <Text size={2}>{cast}</Text>
+          <Text size={2} muted>
+            {cast}
+          </Text>
         </Stack>
       </Inline>
     </Button>
@@ -93,7 +93,7 @@ function PreviewList(): JSX.Element {
       hooks={['useInfiniteList', 'useProjection']}
       styling="Sanity UI"
     >
-      <Stack space={4}>
+      <Stack>
         {movies.map((movie) => (
           <Suspense key={movie._id} fallback={<Loading />}>
             <DocumentPreview key={movie._id} document={movie} />

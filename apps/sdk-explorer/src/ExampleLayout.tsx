@@ -23,7 +23,7 @@ export default function ExampleLayout({
   styling,
 }: ExampleLayoutProps): JSX.Element {
   return (
-    <Stack space={5} padding={4}>
+    <Stack space={5}>
       <Heading as="h1" size={5} style={{fontWeight: '500'}}>
         {title}
       </Heading>

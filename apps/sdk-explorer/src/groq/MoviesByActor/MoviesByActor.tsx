@@ -1,5 +1,5 @@
 import {useQuery} from '@sanity/sdk-react'
-import {Avatar, Card, Heading, Inline, Label, Select, Stack, Text} from '@sanity/ui'
+import {Avatar, Card, Inline, Label, Select, Stack, Text} from '@sanity/ui'
 import {type JSX, useState} from 'react'
 
 import ExampleLayout from '../../ExampleLayout'
@@ -92,17 +92,17 @@ export default function MoviesByActor(): JSX.Element {
                 src={`${castMembers?.find((member) => member._id === castMemberId)?.photo}?h=200&w=200&fit=min`}
                 color="purple"
               />
-              <Heading as="h2">
+              <Text as="h2" size={4}>
                 {castMembers?.find((member) => member._id === castMemberId)?.name} stars in:
-              </Heading>
+              </Text>
             </Inline>
           )}
           {castMemberMovies?.map((movie) => (
             <Inline key={movie._id} space={3}>
               <img src={movie.posterImage} alt={movie.title} width={100} />
               <Stack space={3}>
-                <Text weight="semibold">{movie.title}</Text>
-                <Text>{new Date(movie.releaseDate).getFullYear()}</Text>
+                <Text weight="medium">{movie.title}</Text>
+                <Text muted>{new Date(movie.releaseDate).getFullYear()}</Text>
               </Stack>
             </Inline>
           ))}
