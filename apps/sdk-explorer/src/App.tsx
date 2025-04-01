@@ -1,5 +1,5 @@
 import {SanityMonogram} from '@sanity/logos'
-import {Card, Container, Flex, Inline, Text} from '@sanity/ui'
+import {Box, Card, Container, Flex, Inline, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
 
@@ -21,11 +21,10 @@ export default function App(): JSX.Element {
             position: 'sticky',
             top: 0,
             zIndex: 3,
-            backgroundColor: 'hsl(0deg 0% 100% / 0.65)',
-            backdropFilter: 'blur(15px) brightness(110%)',
+            backgroundColor: 'white',
           }}
         >
-          <Container width={2} paddingX={4}>
+          <Box paddingX={4}>
             <Flex align="center" justify="space-between" style={{height: 52}}>
               <Text as="h1" size={2} weight="medium">
                 <Link to="/" style={{color: 'inherit'}}>
@@ -43,7 +42,7 @@ export default function App(): JSX.Element {
                 </Link>
               </Inline>
             </Flex>
-          </Container>
+          </Box>
         </Card>
         <Container width={2} padding={4}>
           <Routes>
