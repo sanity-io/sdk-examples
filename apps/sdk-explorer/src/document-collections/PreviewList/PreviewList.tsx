@@ -1,5 +1,5 @@
 import {DocumentHandle} from '@sanity/sdk'
-import {useInfiniteList, useProjection} from '@sanity/sdk-react'
+import {useDocuments, useProjection} from '@sanity/sdk-react'
 import {Button, Card, Flex, Inline, Spinner, Stack, Text} from '@sanity/ui'
 import {type JSX, Suspense, useRef} from 'react'
 
@@ -17,12 +17,11 @@ function Loading() {
 
 // @todo replace with type from SDK
 interface ProjectionResults {
-  results: {
+  data: {
     title: string
     cast: string
     posterImage: string
   }
-  isPending: boolean
 }
 
 // The DocumentPreview component uses the `usePreview` hook to render a document preview interface
@@ -34,9 +33,9 @@ function DocumentPreview({document}: {document: DocumentHandle}) {
   // Project the title, first 3 cast mambers, and post image values for the document,
   // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
-    results: {title, cast, posterImage},
+    data: {title, cast, posterImage},
   }: ProjectionResults = useProjection({
-    document,
+    ...document,
     ref,
     projection: `{
       title,
@@ -70,18 +69,10 @@ function DocumentPreview({document}: {document: DocumentHandle}) {
 function PreviewList(): JSX.Element {
   // Use the `useDocuments` hook to return an index of document handles for all of our 'movie' type documents
   // Sort the documents by the the release date
-  const {data: movies, isPending} = useInfiniteList({
+  const {data: movies} = useDocuments({
     filter: '_type == "movie"',
     orderings: [{field: 'releaseDate', direction: 'desc'}],
   })
-
-  if (isPending) {
-    return (
-      <Flex align="center" justify="center" padding={5}>
-        <Spinner />
-      </Flex>
-    )
-  }
 
   return (
     <ExampleLayout
@@ -93,8 +84,8 @@ function PreviewList(): JSX.Element {
     >
       <Stack>
         {movies.map((movie) => (
-          <Suspense key={movie._id} fallback={<Loading />}>
-            <DocumentPreview key={movie._id} document={movie} />
+          <Suspense key={movie.documentId} fallback={<Loading />}>
+            <DocumentPreview document={movie} />
           </Suspense>
         ))}
       </Stack>

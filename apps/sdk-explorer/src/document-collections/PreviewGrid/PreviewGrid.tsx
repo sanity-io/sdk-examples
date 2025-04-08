@@ -1,7 +1,7 @@
 import './styles.css'
 
 import {DocumentHandle} from '@sanity/sdk'
-import {useInfiniteList, useProjection} from '@sanity/sdk-react'
+import {useDocuments, useProjection} from '@sanity/sdk-react'
 import {Spinner} from '@sanity/ui'
 import {type JSX, Suspense, useRef} from 'react'
 
@@ -9,12 +9,11 @@ import ExampleLayout from '../../ExampleLayout'
 
 // @todo replace with type from SDK
 interface ProjectionResults {
-  results: {
+  data: {
     title: string
     cast: string
     posterImage: string
   }
-  isPending: boolean
 }
 
 // The DocumentPreview component uses the `usePreview` hook to render a document preview interface
@@ -26,9 +25,9 @@ function DocumentPreview({document}: {document: DocumentHandle}): JSX.Element {
   // Project the title, first 2 cast members, and poster image values for the document,
   // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
-    results: {title, cast, posterImage},
+    data: {title, cast, posterImage},
   }: ProjectionResults = useProjection({
-    document,
+    ...document,
     ref,
     projection: `{
       title,
@@ -69,7 +68,7 @@ function DocumentPreview({document}: {document: DocumentHandle}): JSX.Element {
 function PreviewGrid(): JSX.Element {
   // Use the `useDocuments` hook to return an index of document handles for all of our 'movie' type documents
   // Sort the documents by the release date
-  const {data: movies} = useInfiniteList({
+  const {data: movies} = useDocuments({
     filter: '_type == "movie"',
     orderings: [{field: 'releaseDate', direction: 'desc'}],
   })
@@ -84,8 +83,8 @@ function PreviewGrid(): JSX.Element {
     >
       <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {movies.map((movie) => (
-          <Suspense key={movie._id} fallback={<Spinner />}>
-            <DocumentPreview key={movie._id} document={movie} />
+          <Suspense key={movie.documentId} fallback={<Spinner />}>
+            <DocumentPreview document={movie} />
           </Suspense>
         ))}
       </div>
