@@ -35,7 +35,6 @@ function DocumentPreview({document}: {document: DocumentHandle}) {
   // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
     results: {title, cast, posterImage},
-    isPending,
   }: ProjectionResults = useProjection({
     document,
     ref,
@@ -52,8 +51,6 @@ function DocumentPreview({document}: {document: DocumentHandle}) {
       ref={ref}
       mode="bleed"
       onClick={() => alert(`Good choice! ${title} is an excellent movie.`)}
-      // When preview values are resolving, we’ll lower the opacity to indicate this state visually
-      style={{opacity: isPending ? 0.5 : 1}}
     >
       <Inline space={4}>
         <img src={posterImage} alt="" width="96" height="144" />
@@ -92,6 +89,7 @@ function PreviewList(): JSX.Element {
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx"
       hooks={['useInfiniteList', 'useProjection']}
       styling="Sanity UI"
+      summary="This example uses the useInfiniteList hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members."
     >
       <Stack>
         {movies.map((movie) => (

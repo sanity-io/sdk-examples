@@ -1,18 +1,29 @@
+import {hues} from '@sanity/color'
 import {SanityMonogram} from '@sanity/logos'
 import {Box, Card, Container, Flex, Inline, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
+import {createGlobalStyle} from 'styled-components'
 
 import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import MoviesByActor from './groq/MoviesByActor/MoviesByActor'
 import Home from './Home'
+import ScrollOnPathChange from './ScollOnPathChange'
+
+const Body = createGlobalStyle`
+  body {
+    background-color: ${hues.gray['50'].hex};
+  }
+`
 
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <Card style={{position: 'relative'}}>
+      <Body />
+      <ScrollOnPathChange />
+      <Card style={{position: 'relative'}} tone="transparent">
         <Card
           tone="transparent"
           shadow={1}
@@ -35,11 +46,15 @@ export default function App(): JSX.Element {
                 </Link>
               </Text>
               <Inline space={4}>
-                <Link to="/">
-                  <Text weight="medium" size={1}>
-                    Home
-                  </Text>
-                </Link>
+                <Text weight="medium" size={1}>
+                  <a href="/">Home</a>
+                </Text>
+                <Text weight="medium" size={1}>
+                  <a href="https://sdk-docs.sanity.dev">SDK Docs</a>
+                </Text>
+                <Text weight="medium" size={1}>
+                  <a href="https://github.com/sanity-io/sdk">GitHub</a>
+                </Text>
               </Inline>
             </Flex>
           </Box>

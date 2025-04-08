@@ -1,4 +1,4 @@
-import {Box, Heading, Stack} from '@sanity/ui'
+import {Box, Card, Heading, Stack, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 
 import ExampleAttributes from './ExampleAttributes'
@@ -10,6 +10,7 @@ interface ExampleLayoutProps {
   codeUrl: string
   hooks: Array<string>
   styling: string
+  summary: string
 }
 
 /**
@@ -21,7 +22,9 @@ export default function ExampleLayout({
   codeUrl,
   hooks,
   styling,
+  summary,
 }: ExampleLayoutProps): JSX.Element {
+  // Scroll to top of view when component loads
   return (
     <Stack space={5}>
       <Heading as="h1" size={5} style={{fontWeight: '500'}}>
@@ -29,10 +32,17 @@ export default function ExampleLayout({
       </Heading>
       <ExampleAttributes hooks={hooks} styling={styling} />
       <Box>
+        <Text muted style={{maxInlineSize: '64ch'}}>
+          {summary}
+        </Text>
+      </Box>
+      <Box>
         <ViewCode url={codeUrl} />
       </Box>
       <hr style={{border: 'none', borderTop: '1px solid #ddd'}} />
-      <Box>{children}</Box>
+      <Card padding={4} radius={3} shadow={3}>
+        {children}
+      </Card>
     </Stack>
   )
 }

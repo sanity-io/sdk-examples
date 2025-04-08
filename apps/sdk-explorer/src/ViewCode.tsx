@@ -10,7 +10,7 @@ export default function ViewCode({url}: {url: string}): JSX.Element {
       as="a"
       href={url}
       target="_blank"
-      mode="ghost"
+      tone="primary"
       text="View the code on GitHub"
       fontSize={2}
       padding={4}

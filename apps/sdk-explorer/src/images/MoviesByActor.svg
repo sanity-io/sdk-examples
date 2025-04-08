@@ -1,0 +1,803 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="white"/>
+<mask id="mask0_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="45" width="35" height="35">
+<path d="M45 45H10L45 80V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask0_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -118 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -114.301 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -110.603 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -106.904 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -103.205 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -99.5069 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -95.8082 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.1096 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.411 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.7123 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.0137 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.3151 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.6164 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -69.9178 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.2192 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.5206 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -58.8219 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.1233 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.4247 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.726 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.0274 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.3288 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.6301 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -32.9315 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.2329 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.5342 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -21.8356 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.137 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.4384 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.7397 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.04111 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.34247 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.356171 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 4.05481 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.75342 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.4521 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 15.1507 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.8493 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.5479 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.2466 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.9452 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.6438 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.3425 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 41.0411 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.7397 167)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask1_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="120" y="45" width="35" height="35">
+<path d="M155 45H120L155 80V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask1_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -8 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -4.30138 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -0.602737 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.09589 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 6.79453 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 10.4931 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.1918 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 17.8904 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 21.589 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 25.2877 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 28.9863 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 32.6849 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 36.3836 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.0822 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 43.7808 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 47.4794 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.1781 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 54.8767 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 58.5753 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 62.274 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 65.9726 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 69.6712 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 73.3699 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 77.0685 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 80.7671 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 84.4658 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 88.1644 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 91.863 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 95.5616 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 99.2603 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 102.959 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 106.658 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 110.356 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 114.055 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 117.753 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 121.452 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 125.151 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 128.849 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 132.548 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 136.247 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 139.945 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 143.644 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 147.342 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 151.041 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 154.74 167)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask2_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="45" y="45" width="35" height="35">
+<path d="M45 45H80L45 80V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask2_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 208 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 204.301 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 200.603 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 196.904 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 193.205 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 189.507 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 185.808 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 182.11 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 178.411 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 174.712 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 171.014 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 167.315 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 163.616 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 159.918 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 156.219 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 152.521 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 148.822 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 145.123 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 141.425 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 137.726 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 134.027 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 130.329 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 126.63 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 122.932 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 119.233 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 115.534 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 111.836 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 108.137 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 104.438 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 100.74 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 97.0411 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 93.3425 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 89.6438 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 85.9452 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 82.2466 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 78.5479 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 74.8493 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 71.1507 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 67.4521 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 63.7534 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 60.0548 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 56.3562 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 52.6575 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 48.9589 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 45.2603 167)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask3_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="155" y="45" width="35" height="35">
+<path d="M155 45H190L155 80V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask3_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 318 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 314.301 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 310.603 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 306.904 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 303.205 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 299.507 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 295.808 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 292.11 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 288.411 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 284.712 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 281.014 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 277.315 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 273.616 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 269.918 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 266.219 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 262.521 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 258.822 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 255.123 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 251.425 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 247.726 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 244.027 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 240.329 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 236.63 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 232.932 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 229.233 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 225.534 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 221.836 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 218.137 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 214.438 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 210.74 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 207.041 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 203.342 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 199.644 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 195.945 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 192.247 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 188.548 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 184.849 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 181.151 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 177.452 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 173.753 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 170.055 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 166.356 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 162.658 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 158.959 167)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(-0.707711 -0.706502 -0.707711 0.706502 155.26 167)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask4_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="35" height="35">
+<path d="M45 45H10L45 10V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask4_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -118 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -114.301 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -110.603 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -106.904 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -103.205 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -99.5069 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -95.8082 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -92.1096 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -88.411 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -84.7123 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -81.0137 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -77.3151 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -73.6164 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -69.9178 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -66.2192 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -62.5206 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -58.8219 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -55.1233 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -51.4247 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -47.726 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -44.0274 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -40.3288 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -36.6301 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -32.9315 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -29.2329 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -25.5342 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -21.8356 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -18.137 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -14.4384 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -10.7397 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -7.04111 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -3.34247 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 0.356171 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 4.05481 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 7.75342 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 11.4521 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 15.1507 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 18.8493 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 22.5479 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 26.2466 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 29.9452 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 33.6438 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 37.3425 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 41.0411 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 44.7397 -77)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask5_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="120" y="10" width="35" height="35">
+<path d="M155 45H120L155 10V45Z" fill="#D1D8F6"/>
+</mask>
+<g mask="url(#mask5_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -8 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -4.30138 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 -0.602737 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 3.09589 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 6.79453 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 10.4931 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 14.1918 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 17.8904 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 21.589 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 25.2877 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 28.9863 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 32.6849 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 36.3836 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 40.0822 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 43.7808 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 47.4794 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 51.1781 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 54.8767 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 58.5753 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 62.274 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 65.9726 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 69.6712 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 73.3699 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 77.0685 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 80.7671 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 84.4658 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 88.1644 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 91.863 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 95.5616 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 99.2603 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 102.959 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 106.658 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 110.356 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 114.055 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 117.753 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 121.452 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 125.151 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 128.849 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 132.548 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 136.247 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 139.945 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 143.644 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 147.342 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 151.041 -77)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 0.706502 0.707711 -0.706502 154.74 -77)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask6_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="100" width="74" height="8">
+<rect x="10" y="100" width="74" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask6_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 55.6438 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 59.3425 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 63.0411 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 66.7397 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 70.4384 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 74.137 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 77.8356 203)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 81.5343 203)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask7_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="116" y="102" width="74" height="8">
+<rect x="116" y="102" width="74" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask7_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 10 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 13.6986 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 17.3973 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 21.0959 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 24.7945 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 28.4931 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 32.1918 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 35.8904 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 39.589 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 43.2877 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 46.9863 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 50.6849 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 54.3836 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 58.0822 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 61.7808 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 65.4794 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 69.1781 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 72.8767 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 76.5753 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 80.274 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 83.9726 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 87.6712 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 91.3699 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 95.0685 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 98.7671 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 102.466 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 106.164 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 109.863 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 113.562 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 117.26 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 120.959 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 124.658 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 128.356 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 132.055 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 135.753 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 139.452 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 143.151 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 146.849 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 150.548 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 154.247 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 157.945 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 161.644 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 165.342 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 169.041 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 172.74 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 176.438 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 180.137 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 183.836 205)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 187.534 205)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask8_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="132" width="74" height="8">
+<rect x="10" y="132" width="74" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask8_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 55.6438 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 59.3425 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 63.0411 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 66.7397 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 70.4384 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 74.137 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 77.8356 235)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 81.5343 235)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask9_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="116" y="134" width="74" height="8">
+<rect x="116" y="134" width="74" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask9_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 10 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 13.6986 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 17.3973 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 21.0959 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 24.7945 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 28.4931 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 32.1918 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 35.8904 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 39.589 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 43.2877 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 46.9863 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 50.6849 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 54.3836 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 58.0822 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 61.7808 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 65.4794 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 69.1781 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 72.8767 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 76.5753 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 80.274 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 83.9726 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 87.6712 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 91.3699 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 95.0685 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 98.7671 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 102.466 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 106.164 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 109.863 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 113.562 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 117.26 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 120.959 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 124.658 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 128.356 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 132.055 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 135.753 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 139.452 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 143.151 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 146.849 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 150.548 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 154.247 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 157.945 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 161.644 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 165.342 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 169.041 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 172.74 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 176.438 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 180.137 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 183.836 237)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 187.534 237)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask10_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="164" width="74" height="8">
+<rect x="10" y="164" width="74" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask10_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 55.6438 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 59.3425 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 63.0411 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 66.7397 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 70.4384 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 74.137 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 77.8356 267)" stroke="#909BCB" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 81.5343 267)" stroke="#909BCB" stroke-width="0.66"/>
+</g>
+<mask id="mask11_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="116" width="45" height="8">
+<rect x="10" y="116" width="45" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask11_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 219)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+</g>
+<mask id="mask12_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="116" y="118" width="45" height="8">
+<rect x="116" y="118" width="45" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask12_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 10 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 13.6986 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 17.3973 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 21.0959 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 24.7945 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 28.4931 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 32.1918 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 35.8904 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 39.589 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 43.2877 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 46.9863 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 50.6849 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 54.3836 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 58.0822 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 61.7808 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 65.4794 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 69.1781 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 72.8767 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 76.5753 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 80.274 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 83.9726 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 87.6712 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 91.3699 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 95.0685 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 98.7671 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 102.466 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 106.164 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 109.863 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 113.562 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 117.26 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 120.959 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 124.658 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 128.356 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 132.055 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 135.753 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 139.452 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 143.151 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 146.849 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 150.548 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 154.247 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 157.945 221)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+</g>
+<mask id="mask13_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="148" width="45" height="8">
+<rect x="10" y="148" width="45" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask13_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 251)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+</g>
+<mask id="mask14_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="116" y="150" width="45" height="8">
+<rect x="116" y="150" width="45" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask14_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 10 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 13.6986 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 17.3973 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 21.0959 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 24.7945 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 28.4931 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 32.1918 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 35.8904 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 39.589 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 43.2877 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 46.9863 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 50.6849 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 54.3836 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 58.0822 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 61.7808 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 65.4794 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 69.1781 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 72.8767 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 76.5753 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 80.274 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 83.9726 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 87.6712 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 91.3699 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 95.0685 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 98.7671 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 102.466 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 106.164 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 109.863 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 113.562 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 117.26 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 120.959 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 124.658 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 128.356 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 132.055 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 135.753 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 139.452 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 143.151 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 146.849 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 150.548 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 154.247 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 157.945 253)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+</g>
+<mask id="mask15_17_3899" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="180" width="45" height="8">
+<rect x="10" y="180" width="45" height="8" rx="4" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask15_17_3899)">
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -96 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -92.3014 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -88.6027 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -84.9041 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -81.2055 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -77.5069 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -73.8082 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -70.1096 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -66.411 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -62.7123 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -59.0137 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -55.3151 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -51.6164 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -47.9178 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -44.2192 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -40.5206 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -36.8219 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -33.1233 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -29.4247 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -25.726 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -22.0274 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -18.3288 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -14.6301 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -10.9315 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -7.23288 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 -3.53424 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 0.164383 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 3.86301 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 7.56165 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 11.2603 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 14.9589 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 18.6575 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 22.3562 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 26.0548 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 29.7534 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 33.4521 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 37.1507 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 40.8493 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 44.5479 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 48.2466 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+<line y1="-0.33" x2="203.821" y2="-0.33" transform="matrix(0.707711 -0.706502 0.707711 0.706502 51.9452 283)" stroke="#909BCB" stroke-opacity="0.5" stroke-width="0.66"/>
+</g>
+</svg>
