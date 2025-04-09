@@ -1,7 +1,6 @@
 import './inter.css'
 
-import {createSanityInstance} from '@sanity/sdk'
-import {SanityProvider} from '@sanity/sdk-react'
+import {SanityApp} from '@sanity/sdk-react'
 import {Flex, Spinner, ThemeProvider} from '@sanity/ui'
 import {buildTheme} from '@sanity/ui/theme'
 import {StrictMode, Suspense} from 'react'
@@ -12,10 +11,10 @@ import App from './App.tsx'
 
 const theme = buildTheme()
 
-const sanityInstance = createSanityInstance({
+const sanityConfig = {
   projectId: 'v28v5k8m',
   dataset: 'production',
-})
+}
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -36,9 +35,9 @@ createRoot(document.getElementById('root')!).render(
     <GlobalStyle />
     <ThemeProvider theme={theme}>
       <Suspense fallback={<Loading />}>
-        <SanityProvider sanityInstances={[sanityInstance]}>
+        <SanityApp config={[sanityConfig]} fallback={<Loading />}>
           <App />
-        </SanityProvider>
+        </SanityApp>
       </Suspense>
     </ThemeProvider>
   </StrictMode>,

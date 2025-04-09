@@ -1,12 +1,12 @@
 import './styles.css'
 
-import {DocumentHandle, usePaginatedList, useProjection} from '@sanity/sdk-react'
+import {DocumentHandle, usePaginatedDocuments, useProjection} from '@sanity/sdk-react'
 import {type JSX, useRef} from 'react'
 
 import ExampleLayout from '../../ExampleLayout'
 
 interface MovieProjectionResults {
-  results: {
+  data: {
     title: string
     posterImage: string
     cast: string
@@ -19,9 +19,9 @@ function DocumentRow({document}: {document: DocumentHandle}) {
   const ref = useRef(null)
 
   const {
-    results: {title, posterImage, cast, popularity, releaseDate},
+    data: {title, posterImage, cast, popularity, releaseDate},
   }: MovieProjectionResults = useProjection({
-    document,
+    ...document,
     ref,
     // In our projection, we will:
     // 1. Get the title of the movie
@@ -53,7 +53,7 @@ function DocumentRow({document}: {document: DocumentHandle}) {
 
 export default function DocumentTable(): JSX.Element {
   const {data, currentPage, totalPages, nextPage, previousPage, hasNextPage, hasPreviousPage} =
-    usePaginatedList({
+    usePaginatedDocuments({
       filter: '_type == "movie"',
       pageSize: 6,
       orderings: [{field: 'releaseDate', direction: 'desc'}],
@@ -63,9 +63,9 @@ export default function DocumentTable(): JSX.Element {
     <ExampleLayout
       title="Document table"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx"
-      hooks={['usePaginatedList', 'useProjection']}
+      hooks={['usePaginatedDocuments', 'useProjection']}
       styling="Tailwind"
-      summary="This example uses the usePaginatedList hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
+      summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
     >
       <table className="w-full text-sm border-collapse">
         <thead>
@@ -89,7 +89,7 @@ export default function DocumentTable(): JSX.Element {
         </thead>
         <tbody>
           {data.map((document) => (
-            <DocumentRow key={document._id} document={document} />
+            <DocumentRow key={document.documentId} document={document} />
           ))}
         </tbody>
       </table>
