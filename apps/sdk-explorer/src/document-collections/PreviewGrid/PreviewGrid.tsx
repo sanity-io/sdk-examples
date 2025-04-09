@@ -77,9 +77,9 @@ function PreviewGrid(): JSX.Element {
     <ExampleLayout
       title="Preview grid"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx"
-      hooks={['useInfiniteList', 'useProjection']}
+      hooks={['useDocuments', 'useProjection']}
       styling="Tailwind"
-      summary="This example uses the useInfiniteList hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members. The results are displayed in a grid."
+      summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members. The results are displayed in a grid."
     >
       <div className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {movies.map((movie) => (

@@ -46,7 +46,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/document-table"
               title="Document table"
               description="A tabular rendering of documents and their content"
-              hooks={['usePaginatedList', 'useProjection']}
+              hooks={['usePaginatedDocuments', 'useProjection']}
               styling="Tailwind"
               img={DocumentTableImage}
             />
@@ -54,7 +54,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-list"
               title="Preview list"
               description="A list of document previews"
-              hooks={['useInfiniteList', 'useProjection']}
+              hooks={['useDocuments', 'useProjection']}
               styling="Sanity UI"
               img={PreviewListImage}
             />
@@ -62,7 +62,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-grid"
               title="Preview grid"
               description="A grid of document previews"
-              hooks={['useInfiniteList', 'useProjection']}
+              hooks={['useDocuments', 'useProjection']}
               styling="Tailwind"
               img={PreviewGridImage}
             />
