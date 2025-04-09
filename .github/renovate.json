@@ -5,6 +5,7 @@
   "schedule": ["every weekday"],
   "prConcurrentLimit": 5,
   "automerge": true,
+  "dependencyDashboardApproval": false,
   "hostRules": [
     {
       "matchHost": "registry.npmjs.org",
