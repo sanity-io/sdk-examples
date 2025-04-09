@@ -1,59 +1,73 @@
+import {hues} from '@sanity/color'
 import {SanityMonogram} from '@sanity/logos'
-import {Card, Flex, Inline, Text} from '@sanity/ui'
+import {Box, Card, Container, Flex, Inline, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
+import {createGlobalStyle} from 'styled-components'
 
 import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
 import MoviesByActor from './groq/MoviesByActor/MoviesByActor'
 import Home from './Home'
+import ScrollOnPathChange from './ScollOnPathChange'
+
+const Body = createGlobalStyle`
+  body {
+    background-color: ${hues.gray['50'].hex};
+  }
+`
 
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <Card style={{position: 'relative'}}>
+      <Body />
+      <ScrollOnPathChange />
+      <Card style={{position: 'relative'}} tone="transparent">
         <Card
           tone="transparent"
-          shadow={3}
-          marginTop={2}
-          marginX={2}
+          shadow={1}
           marginBottom={5}
-          paddingX={4}
-          radius={3}
           style={{
             position: 'sticky',
-            top: 8,
+            top: 0,
             zIndex: 3,
-            backgroundColor: 'hsl(0deg 0% 100% / 0.5',
-            backdropFilter: 'blur(15px) brightness(110%)',
+            backgroundColor: 'white',
           }}
         >
-          <Flex align="center" justify="space-between" style={{height: 48}}>
-            <Text as="h1" size={2} weight="medium">
-              <Link to="/" style={{color: 'inherit'}}>
-                <Flex align="center" gap={3}>
-                  <SanityMonogram />
-                  SDK Explorer
-                </Flex>
-              </Link>
-            </Text>
-            <Inline space={4}>
-              <Link to="/">
+          <Box paddingX={4}>
+            <Flex align="center" justify="space-between" style={{height: 52}}>
+              <Text as="h1" size={2} weight="medium">
+                <Link to="/" style={{color: 'inherit'}}>
+                  <Flex align="center" gap={3}>
+                    <SanityMonogram style={{margin: 0}} />
+                    SDK Explorer
+                  </Flex>
+                </Link>
+              </Text>
+              <Inline space={4}>
                 <Text weight="medium" size={1}>
-                  Home
+                  <a href="/">Home</a>
                 </Text>
-              </Link>
-            </Inline>
-          </Flex>
+                <Text weight="medium" size={1}>
+                  <a href="https://sdk-docs.sanity.dev">SDK Docs</a>
+                </Text>
+                <Text weight="medium" size={1}>
+                  <a href="https://github.com/sanity-io/sdk">GitHub</a>
+                </Text>
+              </Inline>
+            </Flex>
+          </Box>
         </Card>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/document-collections/preview-list" element={<PreviewList />} />
-          <Route path="/document-collections/preview-grid" element={<PreviewGrid />} />
-          <Route path="/document-collections/document-table" element={<DocumentTable />} />
-          <Route path="/groq/movies-by-actor" element={<MoviesByActor />} />
-        </Routes>
+        <Container width={2} padding={4}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/document-collections/preview-list" element={<PreviewList />} />
+            <Route path="/document-collections/preview-grid" element={<PreviewGrid />} />
+            <Route path="/document-collections/document-table" element={<DocumentTable />} />
+            <Route path="/groq/movies-by-actor" element={<MoviesByActor />} />
+          </Routes>
+        </Container>
       </Card>
     </BrowserRouter>
   )
