@@ -12,13 +12,13 @@ interface Projection {
 
 // Component for rendering an item from the `useDocuments` result
 function DocumentResult({documentHandle}: {documentHandle: DocumentHandle}) {
+  // Use the `useProjection` hook to get the document’s title, overview text, and poster image URL
   const {
     data: {title, overviewText, imageUrl},
   } = useProjection<Projection>({
     ...documentHandle,
     projection: `{
       title,
-      overview,
       'overviewText': pt::text(overview),
       'imageUrl': poster.asset->url,
     }`,
