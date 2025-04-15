@@ -28,7 +28,7 @@ export default function ExampleCard({
   return (
     <Link to={to} style={{textDecoration: 'none'}}>
       <Card shadow={2} paddingX={2} paddingY={3} radius={3}>
-        <Inline space={5}>
+        <Inline>
           <div
             style={{
               backgroundImage: `url(${img})`,
@@ -41,7 +41,7 @@ export default function ExampleCard({
               display: 'inline-block',
             }}
           />
-          <Stack space={4}>
+          <Stack space={4} style={{marginLeft: '2rem'}}>
             <Text as="h3" size={3} weight="medium" style={{color: hues.blue['500'].hex}}>
               {title}
             </Text>
