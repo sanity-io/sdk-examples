@@ -1,6 +1,6 @@
 import './inter.css'
 
-import {SanityApp} from '@sanity/sdk-react'
+import {ResourceProvider} from '@sanity/sdk-react'
 import {Flex, Spinner, ThemeProvider} from '@sanity/ui'
 import {buildTheme} from '@sanity/ui/theme'
 import {StrictMode, Suspense} from 'react'
@@ -35,9 +35,13 @@ createRoot(document.getElementById('root')!).render(
     <GlobalStyle />
     <ThemeProvider theme={theme}>
       <Suspense fallback={<Loading />}>
-        <SanityApp config={[sanityConfig]} fallback={<Loading />}>
+        <ResourceProvider
+          projectId={sanityConfig.projectId}
+          dataset={sanityConfig.dataset}
+          fallback={<Loading />}
+        >
           <App />
-        </SanityApp>
+        </ResourceProvider>
       </Suspense>
     </ThemeProvider>
   </StrictMode>,
