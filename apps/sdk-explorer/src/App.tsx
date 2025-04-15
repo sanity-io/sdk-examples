@@ -5,6 +5,7 @@ import {type JSX} from 'react'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
 import {createGlobalStyle} from 'styled-components'
 
+import DocumentSearch from './document-collections/DocumentSearch/DocumentSearch'
 import DocumentTable from './document-collections/DocumentTable/DocumentTable'
 import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
 import PreviewList from './document-collections/PreviewList/PreviewList'
@@ -62,9 +63,10 @@ export default function App(): JSX.Element {
         <Container width={2} padding={4}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/document-collections/document-search" element={<DocumentSearch />} />
+            <Route path="/document-collections/document-table" element={<DocumentTable />} />
             <Route path="/document-collections/preview-list" element={<PreviewList />} />
             <Route path="/document-collections/preview-grid" element={<PreviewGrid />} />
-            <Route path="/document-collections/document-table" element={<DocumentTable />} />
             <Route path="/groq/movies-by-actor" element={<MoviesByActor />} />
           </Routes>
         </Container>

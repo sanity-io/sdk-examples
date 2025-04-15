@@ -3,6 +3,7 @@ import {type JSX} from 'react'
 
 import ExampleCard from './ExampleCard'
 import DocumentTableImage from './images/DocumentTable.svg'
+import DocumentSearchImage from './images/DoumentSearch.svg'
 import MoviesByActorImage from './images/MoviesByActor.svg'
 import PreviewGridImage from './images/PreviewGrid.svg'
 import PreviewListImage from './images/PreviewList.svg'
@@ -43,6 +44,14 @@ export default function Home(): JSX.Element {
 
           <Stack space={3}>
             <ExampleCard
+              to="/document-collections/document-search"
+              title="Document search"
+              description="An interface for generating dynamic document searches"
+              hooks={['useDocuments', 'useProjection']}
+              styling="Sanity UI"
+              img={DocumentSearchImage}
+            />
+            <ExampleCard
               to="/document-collections/document-table"
               title="Document table"
               description="A tabular rendering of documents and their content"
@@ -51,20 +60,20 @@ export default function Home(): JSX.Element {
               img={DocumentTableImage}
             />
             <ExampleCard
-              to="/document-collections/preview-list"
-              title="Preview list"
-              description="A list of document previews"
-              hooks={['useDocuments', 'useProjection']}
-              styling="Sanity UI"
-              img={PreviewListImage}
-            />
-            <ExampleCard
               to="/document-collections/preview-grid"
               title="Preview grid"
               description="A grid of document previews"
               hooks={['useDocuments', 'useProjection']}
               styling="Tailwind"
               img={PreviewGridImage}
+            />
+            <ExampleCard
+              to="/document-collections/preview-list"
+              title="Preview list"
+              description="A list of document previews"
+              hooks={['useDocuments', 'useProjection']}
+              styling="Sanity UI"
+              img={PreviewListImage}
             />
           </Stack>
         </Stack>
