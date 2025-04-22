@@ -3,12 +3,13 @@ import {type JSX} from 'react'
 
 import ExampleAttributes from './ExampleAttributes'
 import ViewCode from './ViewCode'
+import { HookReference } from './Hooks'
 
 interface ExampleLayoutProps {
   children: React.ReactNode
   title: string
   codeUrl: string
-  hooks: Array<string>
+  hooks: HookReference[]
   styling: string
   summary: string
 }
