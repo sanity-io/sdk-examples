@@ -1,16 +1,15 @@
 import {Box, Card, Heading, Stack, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 
-import ExampleAttributes from './ExampleAttributes'
+import ExampleAttributes, {type ExampleAttributeProps} from './ExampleAttributes'
 import ViewCode from './ViewCode'
-import { HookReference } from './Hooks'
 
 interface ExampleLayoutProps {
   children: React.ReactNode
   title: string
   codeUrl: string
-  hooks: HookReference[]
-  styling: string
+  hooks: ExampleAttributeProps['hooks']
+  styling: ExampleAttributeProps['styling']
   summary: string
 }
 
