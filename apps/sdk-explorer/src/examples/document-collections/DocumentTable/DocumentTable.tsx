@@ -3,7 +3,8 @@ import './styles.css'
 import {DocumentHandle, usePaginatedDocuments, useProjection} from '@sanity/sdk-react'
 import {type JSX, useRef} from 'react'
 
-import ExampleLayout from '../../ExampleLayout'
+import ExampleLayout from '../../../components/ExampleLayout'
+import {paginatedDocuments, projection} from '../../../components/Hooks'
 
 interface MovieProjectionResults {
   data: {
@@ -63,36 +64,38 @@ export default function DocumentTable(): JSX.Element {
     <ExampleLayout
       title="Document table"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx"
-      hooks={['usePaginatedDocuments', 'useProjection']}
+      hooks={[paginatedDocuments, projection]}
       styling="Tailwind"
       summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
     >
-      <table className="w-full text-sm border-collapse">
-        <thead>
-          <tr className="border-solid border-b-2 border-gray-200">
-            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
-              Poster
-            </th>
-            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
-              Title
-            </th>
-            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
-              Cast
-            </th>
-            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
-              Popularity
-            </th>
-            <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
-              Release Date
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((document) => (
-            <DocumentRow key={document.documentId} document={document} />
-          ))}
-        </tbody>
-      </table>
+      <div className="overflow-x-scroll">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="border-solid border-b-2 border-gray-200">
+              <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+                Poster
+              </th>
+              <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+                Title
+              </th>
+              <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+                Cast
+              </th>
+              <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+                Popularity
+              </th>
+              <th className="text-left text-xs uppercase font-semibold text-gray-600 px-2 py-4">
+                Release Date
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((document) => (
+              <DocumentRow key={document.documentId} document={document} />
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Table navigation */}
       <nav className="flex justify-between items-center my-8">

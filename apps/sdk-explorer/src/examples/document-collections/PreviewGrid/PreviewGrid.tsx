@@ -5,7 +5,8 @@ import {useDocuments, useProjection} from '@sanity/sdk-react'
 import {Spinner} from '@sanity/ui'
 import {type JSX, Suspense, useRef} from 'react'
 
-import ExampleLayout from '../../ExampleLayout'
+import ExampleLayout from '../../../components/ExampleLayout'
+import {documents, projection} from '../../../components/Hooks'
 
 // @todo replace with type from SDK
 interface ProjectionResults {
@@ -77,7 +78,7 @@ function PreviewGrid(): JSX.Element {
     <ExampleLayout
       title="Preview grid"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewGrid/PreviewGrid.tsx"
-      hooks={['useDocuments', 'useProjection']}
+      hooks={[documents, projection]}
       styling="Tailwind"
       summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members. The results are displayed in a grid."
     >

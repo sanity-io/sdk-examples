@@ -5,13 +5,13 @@ import {type JSX} from 'react'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
 import {createGlobalStyle} from 'styled-components'
 
-import DocumentSearch from './document-collections/DocumentSearch/DocumentSearch'
-import DocumentTable from './document-collections/DocumentTable/DocumentTable'
-import PreviewGrid from './document-collections/PreviewGrid/PreviewGrid'
-import PreviewList from './document-collections/PreviewList/PreviewList'
-import MoviesByActor from './groq/MoviesByActor/MoviesByActor'
+import ScrollOnPathChange from './components/ScollOnPathChange'
+import DocumentSearch from './examples/document-collections/DocumentSearch/DocumentSearch'
+import DocumentTable from './examples/document-collections/DocumentTable/DocumentTable'
+import PreviewGrid from './examples/document-collections/PreviewGrid/PreviewGrid'
+import PreviewList from './examples/document-collections/PreviewList/PreviewList'
+import MoviesByActor from './examples/groq/MoviesByActor/MoviesByActor'
 import Home from './Home'
-import ScrollOnPathChange from './ScollOnPathChange'
 
 const Body = createGlobalStyle`
   body {

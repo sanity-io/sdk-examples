@@ -1,7 +1,8 @@
 import {Box, Heading, Stack, Text} from '@sanity/ui'
 import {type JSX} from 'react'
 
-import ExampleCard from './ExampleCard'
+import ExampleCard from './components/ExampleCard'
+import {documents, paginatedDocuments, projection, query} from './components/Hooks'
 import DocumentTableImage from './images/DocumentTable.svg'
 import DocumentSearchImage from './images/DoumentSearch.svg'
 import MoviesByActorImage from './images/MoviesByActor.svg'
@@ -15,7 +16,7 @@ export default function Home(): JSX.Element {
         <Heading
           as="h1"
           style={{
-            fontSize: '4rem',
+            fontSize: '3.5rem',
             fontWeight: 400,
             letterSpacing: '-0.025em',
           }}
@@ -47,7 +48,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/document-search"
               title="Document search"
               description="An interface for generating dynamic document searches"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={[documents, projection]}
               styling="Sanity UI"
               img={DocumentSearchImage}
             />
@@ -55,7 +56,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/document-table"
               title="Document table"
               description="A tabular rendering of documents and their content"
-              hooks={['usePaginatedDocuments', 'useProjection']}
+              hooks={[paginatedDocuments, projection]}
               styling="Tailwind"
               img={DocumentTableImage}
             />
@@ -63,7 +64,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-grid"
               title="Preview grid"
               description="A grid of document previews"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={[documents, projection]}
               styling="Tailwind"
               img={PreviewGridImage}
             />
@@ -71,7 +72,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-list"
               title="Preview list"
               description="A list of document previews"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={[documents, projection]}
               styling="Sanity UI"
               img={PreviewListImage}
             />
@@ -90,7 +91,7 @@ export default function Home(): JSX.Element {
               to="/groq/movies-by-actor"
               title="Movies by actor"
               description="Use multiple useQuery hooks to fetch and filter data"
-              hooks={['useQuery']}
+              hooks={[query]}
               styling="Sanity UI"
               img={MoviesByActorImage}
             />

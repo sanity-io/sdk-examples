@@ -2,14 +2,18 @@ import './inter.css'
 
 import {ResourceProvider} from '@sanity/sdk-react'
 import {Flex, Spinner, ThemeProvider} from '@sanity/ui'
-import {buildTheme} from '@sanity/ui/theme'
+import {buildTheme, ThemeConfig} from '@sanity/ui/theme'
 import {StrictMode, Suspense} from 'react'
 import {createRoot} from 'react-dom/client'
 import {createGlobalStyle} from 'styled-components'
 
 import App from './App.tsx'
 
-const theme = buildTheme()
+const themeConfig: ThemeConfig = {
+  media: [320, 600],
+}
+
+const theme = buildTheme(themeConfig)
 
 const sanityConfig = {
   projectId: 'v28v5k8m',
