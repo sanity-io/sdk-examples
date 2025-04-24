@@ -63,7 +63,7 @@ export default function DocumentTable(): JSX.Element {
   return (
     <ExampleLayout
       title="Document table"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/DocumentTable/DocumentTable.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/DocumentTable/DocumentTable.tsx"
       hooks={[paginatedDocuments, projection]}
       styling="Tailwind"
       summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."

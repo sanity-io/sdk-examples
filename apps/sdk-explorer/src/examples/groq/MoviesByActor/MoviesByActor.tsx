@@ -51,7 +51,7 @@ export default function MoviesByActor(): JSX.Element {
   return (
     <ExampleLayout
       title="Movies by actor"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/groq/MoviesByActor/MoviesByActor.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/groq/MoviesByActor/MoviesByActor.tsx"
       hooks={[query]}
       styling="Sanity UI"
       summary="This example uses two instances of the useQuery hook. The first executes a GROQ query to look for entries of type ‘person’ in our dataset and filters those entries down to those who are referenced in at least 2 movie entries’ ‘castMembers’ field. For each of those results, we return a projection that includes the person’s name, photo, and document ID. The second useQuery hook executes a GROQ query for the movies the selected person has starred in, and returns the title, poster image, release date, and document ID for each."

@@ -78,7 +78,7 @@ function PreviewList(): JSX.Element {
   return (
     <ExampleLayout
       title="Preview list"
-      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/document-collections/PreviewList/PreviewList.tsx"
+      codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/PreviewList/PreviewList.tsx"
       hooks={[documents, projection]}
       styling="Sanity UI"
       summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members."
