@@ -4,12 +4,10 @@ import {type JSX} from 'react'
 import ExampleAttributes, {type ExampleAttributeProps} from './ExampleAttributes'
 import ViewCode from './ViewCode'
 
-interface ExampleLayoutProps {
+type ExampleLayoutProps = ExampleAttributeProps & {
   children: React.ReactNode
   title: string
   codeUrl: string
-  hooks: ExampleAttributeProps['hooks']
-  styling: ExampleAttributeProps['styling']
   summary: string
 }
 

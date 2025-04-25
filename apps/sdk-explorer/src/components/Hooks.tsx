@@ -1,9 +1,18 @@
 import {Badge, Box, Inline} from '@sanity/ui'
 import {type JSX} from 'react'
 
-export interface HookReference {
+const baseUrl = 'https://sdk-docs.sanity.dev/functions/React_SDK.exports.'
+
+const referenceLinks = {
+  useDocuments: `${baseUrl}useDocuments.html`,
+  usePaginatedDocuments: `${baseUrl}usePaginatedDocuments.html`,
+  useProjection: `${baseUrl}useProjection.html`,
+  useQuery: `${baseUrl}useQuery.html`,
+}
+
+interface HookReference {
   name: 'useDocuments' | 'usePaginatedDocuments' | 'useProjection' | 'useQuery'
-  reference: `https://${string}`
+  reference: (typeof referenceLinks)[keyof typeof referenceLinks]
 }
 
 // These consts can't begin with the word `use` or eslint yells at you for
@@ -11,27 +20,27 @@ export interface HookReference {
 
 const documents: HookReference = {
   name: 'useDocuments',
-  reference: 'https://sdk-docs.sanity.dev/functions/sdk-react.index.useDocuments.html',
+  reference: referenceLinks.useDocuments,
 }
 
 const paginatedDocuments: HookReference = {
   name: 'usePaginatedDocuments',
-  reference: 'https://sdk-docs.sanity.dev/functions/sdk-react.index.usePaginatedDocuments.html',
+  reference: referenceLinks.usePaginatedDocuments,
 }
 
 const projection: HookReference = {
   name: 'useProjection',
-  reference: 'https://sdk-docs.sanity.dev/functions/sdk-react.index.useProjection.html',
+  reference: referenceLinks.useProjection,
 }
 
 const query: HookReference = {
   name: 'useQuery',
-  reference: 'https://sdk-docs.sanity.dev/functions/sdk-react.index.useQuery.html',
+  reference: referenceLinks.useQuery,
 }
 
 export {documents, paginatedDocuments, projection, query}
 
-interface HooksProps {
+export interface HooksProps {
   hooks: HookReference[]
 }
 

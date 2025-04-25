@@ -6,11 +6,9 @@ import styled from 'styled-components'
 
 import ExampleAttributes, {type ExampleAttributeProps} from './ExampleAttributes'
 
-interface ExampleCardProps {
+type ExampleCardProps = ExampleAttributeProps & {
   description: string
-  hooks: ExampleAttributeProps['hooks']
   img: string
-  styling: ExampleAttributeProps['styling']
   title: string
   to: string
 }
