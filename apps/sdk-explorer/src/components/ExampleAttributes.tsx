@@ -2,12 +2,11 @@ import {LaunchIcon} from '@sanity/icons'
 import {Badge, Box, Inline, Label, Stack} from '@sanity/ui'
 import {type JSX} from 'react'
 
-import Hooks, {type HookReference} from './Hooks'
+import Hooks, {type HooksProps} from './Hooks'
 
 const labelInset = '14ch'
 
-export interface ExampleAttributeProps {
-  hooks: HookReference[]
+export type ExampleAttributeProps = HooksProps & {
   styling: 'Sanity UI' | 'Tailwind'
 }
 
