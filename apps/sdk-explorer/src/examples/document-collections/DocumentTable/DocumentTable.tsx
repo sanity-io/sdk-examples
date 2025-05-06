@@ -4,7 +4,6 @@ import {DocumentHandle, usePaginatedDocuments, useProjection} from '@sanity/sdk-
 import {type JSX, useRef} from 'react'
 
 import ExampleLayout from '../../../components/ExampleLayout'
-import {paginatedDocuments, projection} from '../../../components/Hooks'
 
 interface MovieProjectionResults {
   data: {
@@ -64,7 +63,7 @@ export default function DocumentTable(): JSX.Element {
     <ExampleLayout
       title="Document table"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/DocumentTable/DocumentTable.tsx"
-      hooks={[paginatedDocuments, projection]}
+      hooks={['usePaginatedDocuments', 'useProjection']}
       styling="Tailwind"
       summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
     >

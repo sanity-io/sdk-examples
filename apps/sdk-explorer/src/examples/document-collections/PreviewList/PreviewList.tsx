@@ -4,7 +4,6 @@ import {Button, Card, Flex, Inline, Spinner, Stack, Text} from '@sanity/ui'
 import {type JSX, Suspense, useRef} from 'react'
 
 import ExampleLayout from '../../../components/ExampleLayout'
-import {documents, projection} from '../../../components/Hooks'
 
 function Loading() {
   return (
@@ -79,7 +78,7 @@ function PreviewList(): JSX.Element {
     <ExampleLayout
       title="Preview list"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/PreviewList/PreviewList.tsx"
-      hooks={[documents, projection]}
+      hooks={['useDocuments', 'useProjection']}
       styling="Sanity UI"
       summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members."
     >
