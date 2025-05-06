@@ -3,7 +3,6 @@ import {Card, Flex, Label, Stack, Text, TextInput} from '@sanity/ui'
 import {type JSX, Suspense, useState} from 'react'
 
 import ExampleLayout from '../../../components/ExampleLayout'
-import {documents, projection} from '../../../components/Hooks'
 
 interface Projection {
   title: string
@@ -53,7 +52,7 @@ export default function DocumentSearch(): JSX.Element {
   return (
     <ExampleLayout
       title="Document search"
-      hooks={[documents, projection]}
+      hooks={['useDocuments', 'useProjection']}
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/DocumentSearch/DocumentSearch.tsx"
       styling="Sanity UI"
       summary="This example passes a state variable to the useDocuments hook’s ‘search’ argument, enabling the creation of a dynamic search interface for documents in the targeted dataset(s). (Note: the ‘search’ parameter currently searches for matches across all of a document’s string fields.)"
