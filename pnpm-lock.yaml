@@ -83,7 +83,7 @@ importers:
         version: 2.15.8(@emotion/is-prop-valid@1.2.2)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(styled-components@6.1.16(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       '@tailwindcss/vite':
         specifier: ^4.0.0
-        version: 4.0.17(vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
+        version: 4.0.17(vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -91,8 +91,8 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
       react-router:
-        specifier: ^7.1.3
-        version: 7.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^7.5.3
+        version: 7.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       styled-components:
         specifier: ^6.1.14
         version: 6.1.16(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -111,7 +111,7 @@ importers:
         version: 19.1.3(@types/react@19.1.2)
       '@vitejs/plugin-react':
         specifier: ^4.4.1
-        version: 4.4.1(vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
+        version: 4.4.1(vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       eslint:
         specifier: ^9.25.1
         version: 9.25.1(jiti@2.4.2)
@@ -131,8 +131,8 @@ importers:
         specifier: ^8.31.1
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: ^6.2.5
-        version: 6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+        specifier: ^6.3.5
+        version: 6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
 
   packages/@repo/config-eslint/config-eslint:
     devDependencies:
@@ -2000,9 +2000,6 @@ packages:
 
   '@types/babel__traverse@7.20.7':
     resolution: {integrity: sha512-dkO5fhS7+/oos4ciWxyEyjWe48zmG6wbCheo/G2ZnHx4fs3EU6YC6UM8rk56gAjNJ9P3MTH2jo5jb92/K6wbng==}
-
-  '@types/cookie@0.6.0':
-    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -4758,8 +4755,8 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router@7.4.0:
-    resolution: {integrity: sha512-Y2g5ObjkvX3VFeVt+0CIPuYd9PpgqCslG7ASSIdN73LwA1nNWzcMLaoMRJfP3prZFI92svxFwbn7XkLJ+UPQ6A==}
+  react-router@7.5.3:
+    resolution: {integrity: sha512-3iUDM4/fZCQ89SXlDa+Ph3MevBrozBAI655OAfWQlTm9nBR0IKlrmNwFow5lPHttbwvITZfkeeeZFP6zt3F7pw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -5595,8 +5592,8 @@ packages:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  vite@6.2.5:
-    resolution: {integrity: sha512-j023J/hCAa4pRIUH6J9HemwYfjB5llR2Ps0CWeikOtdR8+pAURAk0DoJC5/mm9kd+UgdnIy7d6HE4EAvlYhPhA==}
+  vite@6.3.5:
+    resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -7930,13 +7927,13 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.17
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.17
 
-  '@tailwindcss/vite@4.0.17(vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.17(vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.0.17
       '@tailwindcss/oxide': 4.0.17
       lightningcss: 1.29.2
       tailwindcss: 4.0.17
-      vite: 6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vite: 6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
 
   '@tanstack/react-table@8.21.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
@@ -7979,8 +7976,6 @@ snapshots:
   '@types/babel__traverse@7.20.7':
     dependencies:
       '@babel/types': 7.27.0
-
-  '@types/cookie@0.6.0': {}
 
   '@types/estree@1.0.6': {}
 
@@ -8208,14 +8203,14 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.7.2':
     optional: true
 
-  '@vitejs/plugin-react@4.4.1(vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
+  '@vitejs/plugin-react@4.4.1(vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.10)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.10)
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vite: 6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10850,9 +10845,8 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router@7.4.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  react-router@7.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      '@types/cookie': 0.6.0
       cookie: 1.0.2
       react: 19.0.0
       set-cookie-parser: 2.7.1
@@ -11143,7 +11137,7 @@ snapshots:
       '@types/speakingurl': 13.0.6
       '@types/tar-stream': 3.1.3
       '@types/use-sync-external-store': 0.0.6
-      '@vitejs/plugin-react': 4.4.1(vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
+      '@vitejs/plugin-react': 4.4.1(vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       archiver: 7.0.1
       arrify: 2.0.1
       async-mutex: 0.4.1
@@ -11226,7 +11220,7 @@ snapshots:
       use-sync-external-store: 1.4.0(react@19.0.0)
       uuid: 11.1.0
       valibot: 0.31.1
-      vite: 6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vite: 6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
@@ -11953,11 +11947,14 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite@6.2.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0):
+  vite@6.3.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.1
+      fdir: 6.4.4(picomatch@4.0.2)
+      picomatch: 4.0.2
       postcss: 8.5.3
       rollup: 4.37.0
+      tinyglobby: 0.2.13
     optionalDependencies:
       '@types/node': 22.13.13
       fsevents: 2.3.3
