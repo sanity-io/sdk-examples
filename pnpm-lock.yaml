@@ -1682,10 +1682,6 @@ packages:
     resolution: {integrity: sha512-6Rbg71hkeoGInk/9hBsCUBCZ33IHSs2fZynAR85ANkXDM+WYiwRDlker7OngBkfbK8TF9+G797VjNMQQgJINiQ==}
     engines: {node: '>=18'}
 
-  '@sanity/comlink@3.0.1':
-    resolution: {integrity: sha512-I1F57GKL69xoJUF9/4XTMvXFJZ7BnaFmTBIaiRvXaovJEZ677p5f+UkURPG/dd9L63+OnTV0SNmhTjIIzNexdw==}
-    engines: {node: '>=18'}
-
   '@sanity/comlink@3.0.3':
     resolution: {integrity: sha512-Nk9f2R+Ss7NGPHIjx6sXO3XVDYh/5EcO5ODy4mKRniks9O5t3ZhCDZoOaZtrudYKZbFTACDfEul53MzPT4JoHA==}
     engines: {node: '>=18'}
@@ -7484,12 +7480,6 @@ snapshots:
       uuid: 11.1.0
       xstate: 5.19.2
 
-  '@sanity/comlink@3.0.1':
-    dependencies:
-      rxjs: 7.8.2
-      uuid: 11.1.0
-      xstate: 5.19.2
-
   '@sanity/comlink@3.0.3':
     dependencies:
       rxjs: 7.8.2
@@ -7643,7 +7633,7 @@ snapshots:
   '@sanity/presentation-comlink@1.0.13(@sanity/client@6.29.1(debug@4.4.0))(@sanity/types@3.81.0(@types/react@19.1.2)(debug@4.4.0))':
     dependencies:
       '@sanity/client': 6.29.1(debug@4.4.0)
-      '@sanity/comlink': 3.0.1
+      '@sanity/comlink': 3.0.3
       '@sanity/visual-editing-types': 1.0.12(@sanity/client@6.29.1(debug@4.4.0))(@sanity/types@3.81.0(@types/react@19.1.2)(debug@4.4.0))
     transitivePeerDependencies:
       - '@sanity/types'
@@ -11124,7 +11114,7 @@ snapshots:
       '@sanity/cli': 3.81.0(@types/node@22.13.13)(@types/react@19.1.2)(react@19.0.0)
       '@sanity/client': 6.29.1(debug@4.4.0)
       '@sanity/color': 3.0.6
-      '@sanity/comlink': 3.0.1
+      '@sanity/comlink': 3.0.3
       '@sanity/diff': 3.81.0
       '@sanity/diff-match-patch': 3.2.0
       '@sanity/diff-patch': 5.0.0
