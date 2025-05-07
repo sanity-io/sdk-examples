@@ -6,27 +6,20 @@
   "prConcurrentLimit": 5,
   "automerge": true,
   "dependencyDashboardApproval": false,
-  "hostRules": [
-    {
-      "matchHost": "registry.npmjs.org",
-      "token": "{{ secrets.SANITY_NPM_TOKEN }}"
-    }
-  ],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "devDependencies (non-major)"
-    },
-    {
-      "description": "Group TypeScript related deps in a single PR, as they often have to update together",
-      "groupName": "typescript-tooling",
-      "matchPackageNames": ["@sanity/pkg-utils", "@sanity/tsdoc", "typescript"]
+      "groupName": "devDependencies (non-major)",
+      "group": {"semanticCommitType": "chore"},
+      "semanticCommitType": "chore"
     },
     {
       "description": "Group sdk related deps in a single PR, as they often have to update together",
       "groupName": "sdk-tooling",
-      "matchPackageNames": ["@sanity/sdk", "@sanity/sdk-*"]
+      "matchPackageNames": ["@sanity/sdk", "@sanity/sdk-*"],
+      "group": {"semanticCommitType": "fix"},
+      "semanticCommitType": "fix"
     },
     {
       "description": "Group eslint related deps in a single PR, as they often have to update together",
@@ -38,6 +31,11 @@
         "eslint-config-*",
         "typescript-eslint"
       ]
+    },
+    {
+      "matchDepTypes": ["dependencies", "peerDependencies"],
+      "rangeStrategy": "bump",
+      "semanticCommitType": "fix"
     }
   ]
 }
