@@ -70,11 +70,11 @@ importers:
         specifier: ^2.1.13
         version: 2.1.13(@sanity/color@3.0.6)(react@19.0.0)
       '@sanity/sdk':
-        specifier: 0.0.0-alpha.29
-        version: 0.0.0-alpha.29(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
+        specifier: ^1.0.0
+        version: 1.0.0(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
       '@sanity/sdk-react':
-        specifier: 0.0.0-alpha.29
-        version: 0.0.0-alpha.29(@types/react@19.1.2)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
+        specifier: ^1.0.0
+        version: 1.0.0(@types/react@19.1.2)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
       '@sanity/types':
         specifier: ^3.72.1
         version: 3.86.1(@types/react@19.1.2)
@@ -1666,6 +1666,10 @@ packages:
     resolution: {integrity: sha512-BQRCMeDlBxwnMbFtB61HUxFf9aSb4HNVrpfrC7IFVqFf4cwcc3o5H8/nlrL9U3cDFedbe4W0AXt1mQzwbY/ljw==}
     engines: {node: '>=14.18'}
 
+  '@sanity/client@7.1.0':
+    resolution: {integrity: sha512-AQ9NV2iXSGKlWFywxT1bnLKUfyq6GnZvY0KJLZiob/12faOoWHXYOF/m1qevpahXaw0le2ytUfCbvwZMYZfH4g==}
+    engines: {node: '>=20'}
+
   '@sanity/codegen@3.81.0':
     resolution: {integrity: sha512-9cAe5gaGkYplaUactJaF9ltD1K2AqzDGGU84JStodl0O7tZxLAxSzAKZYiXuWQSAJ2LTppHLyqTvqjIxzWJnBg==}
     engines: {node: '>=18'}
@@ -1680,6 +1684,10 @@ packages:
 
   '@sanity/comlink@3.0.1':
     resolution: {integrity: sha512-I1F57GKL69xoJUF9/4XTMvXFJZ7BnaFmTBIaiRvXaovJEZ677p5f+UkURPG/dd9L63+OnTV0SNmhTjIIzNexdw==}
+    engines: {node: '>=18'}
+
+  '@sanity/comlink@3.0.3':
+    resolution: {integrity: sha512-Nk9f2R+Ss7NGPHIjx6sXO3XVDYh/5EcO5ODy4mKRniks9O5t3ZhCDZoOaZtrudYKZbFTACDfEul53MzPT4JoHA==}
     engines: {node: '>=18'}
 
   '@sanity/diff-match-patch@3.2.0':
@@ -1741,8 +1749,8 @@ packages:
       '@sanity/color': ^2.0 || ^3.0 || ^3.0.0-beta
       react: ^18.3 || >=19.0.0-rc
 
-  '@sanity/message-protocol@0.8.0':
-    resolution: {integrity: sha512-yeQbKmvC4BrTPdp3/b56ihd16E8EL6oc7QEMOY1jHo9l2cOjKcLssb9gTKl/m9gKaOkqWiHHN5y8P0aPkS9Y6Q==}
+  '@sanity/message-protocol@0.12.0':
+    resolution: {integrity: sha512-RMRWQG5yVkCZnnBHW3qxVbZGUOeXPBzFPdD9+pynQCTVZI7zYBEzjnY8lcSYjty+0unDHqeoqMPfBXhqs0rg2g==}
     engines: {node: '>=20.0.0'}
 
   '@sanity/migrate@3.81.0':
@@ -1781,15 +1789,15 @@ packages:
   '@sanity/schema@3.81.0':
     resolution: {integrity: sha512-914kdPMGlwmRb1F6ozdK/0qjk+jzWmbHrmAE3IJASa/Vf5pxdzPdMht+7qxciwQYoFEuOzRnoy6O+Z3guywJgg==}
 
-  '@sanity/sdk-react@0.0.0-alpha.29':
-    resolution: {integrity: sha512-B7Fx4FoyZ1VFj50+W5UwOhJqd404jYihzZW/Q0C7Tn0w2xslpwxoyzQPNdhjxTxXSRpErdLmiXPvcj9gii6chA==}
+  '@sanity/sdk-react@1.0.0':
+    resolution: {integrity: sha512-gZ4p5gh+2TaR22HZbrvXvPlR90onRyIVP84FRIgXcd2SDyPmqOfoCuZ/rpgYNhtU88ZwLPDWAh1+rMYJXxUNqg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@sanity/sdk@0.0.0-alpha.29':
-    resolution: {integrity: sha512-ppLqTdaySt7OMLWou1mGhXW6lSF+f6fVGvq6iNF3E0PLch4DDimt0mn7S+OsDAv5RQlN20YY1kBcSsTARzdNAA==}
+  '@sanity/sdk@1.0.0':
+    resolution: {integrity: sha512-9IsaEboT+KIWnWASMZIBEarZP8E0NE+XSqQOUZ+0PZ3G5TRhgcLaq8D9hM5MRvNdVjxAY/QEFeGyduEs2hMSpw==}
     engines: {node: '>=20.0.0'}
 
   '@sanity/telemetry@0.7.9':
@@ -3441,6 +3449,10 @@ packages:
     resolution: {integrity: sha512-CpQ1Zf5mpGMBYuXOI2fiV+B0x/yn1kdsA/x/LH/GMLpfT6h1MreOm0tR1Oxez84kDvPVIbxoeTrWLB0TSEUEnA==}
     engines: {node: '>=18'}
 
+  groq@3.88.1-typegen-experimental.0:
+    resolution: {integrity: sha512-6TZD6H1y3P7zk0BQharjFa7BOivV9nFL6KKVZbRZRH0yOSSyu2xHglTO48b1/2mCEdYoBQpvE7rjCDUf6XmQYQ==}
+    engines: {node: '>=18'}
+
   gunzip-maybe@1.4.2:
     resolution: {integrity: sha512-4haO1M4mLO91PW57BMsDFf75UmwoRX0GkdD+Faw+Lr+r/OZrOCS0pIBwOL1xCKQqnQzbNFGgK2V2CpBUPeFNTw==}
     hasBin: true
@@ -4690,8 +4702,8 @@ packages:
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
 
-  react-compiler-runtime@19.0.0-beta-ebf51a3-20250411:
-    resolution: {integrity: sha512-CetwBv7Wny+4Re6TZRPtVbNMx65CvLNDMkMp2KJ/pRmEc6WLPUoSSBuyY0bML9GPWiO/3LcWQ4iDGKitFU0qng==}
+  react-compiler-runtime@19.1.0-rc.1:
+    resolution: {integrity: sha512-wCt6g+cRh8g32QT18/9blfQHywGjYu+4FlEc3CW1mx3pPxYzZZl1y+VtqxRgnKKBCFLIGUYxog4j4rs5YS86hw==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
 
@@ -5809,8 +5821,8 @@ packages:
   zod@3.24.2:
     resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
-  zustand@5.0.3:
-    resolution: {integrity: sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==}
+  zustand@5.0.4:
+    resolution: {integrity: sha512-39VFTN5InDtMd28ZhjLyuTnlytDr9HfwO512Ai4I8ZABCoyAj4F1+sr7sD1jP/+p7k77Iko0Pb5NhgBFDCX0kQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=18.0.0'
@@ -7436,6 +7448,14 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sanity/client@7.1.0':
+    dependencies:
+      '@sanity/eventsource': 5.0.2
+      get-it: 8.6.7(debug@4.4.0)
+      rxjs: 7.8.2
+    transitivePeerDependencies:
+      - debug
+
   '@sanity/codegen@3.81.0':
     dependencies:
       '@babel/core': 7.26.10
@@ -7465,6 +7485,12 @@ snapshots:
       xstate: 5.19.2
 
   '@sanity/comlink@3.0.1':
+    dependencies:
+      rxjs: 7.8.2
+      uuid: 11.1.0
+      xstate: 5.19.2
+
+  '@sanity/comlink@3.0.3':
     dependencies:
       rxjs: 7.8.2
       uuid: 11.1.0
@@ -7571,7 +7597,7 @@ snapshots:
       '@sanity/color': 3.0.6
       react: 19.0.0
 
-  '@sanity/message-protocol@0.8.0':
+  '@sanity/message-protocol@0.12.0':
     dependencies:
       '@sanity/comlink': 2.0.5
 
@@ -7664,16 +7690,17 @@ snapshots:
       - debug
       - supports-color
 
-  '@sanity/sdk-react@0.0.0-alpha.29(@types/react@19.1.2)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))':
+  '@sanity/sdk-react@1.0.0(@types/react@19.1.2)(immer@10.1.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))':
     dependencies:
-      '@sanity/client': 6.29.1(debug@4.4.0)
-      '@sanity/message-protocol': 0.8.0
-      '@sanity/sdk': 0.0.0-alpha.29(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
+      '@sanity/client': 7.1.0
+      '@sanity/message-protocol': 0.12.0
+      '@sanity/sdk': 1.0.0(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
       '@sanity/types': 3.86.1(@types/react@19.1.2)
       '@types/lodash-es': 4.17.12
+      groq: 3.88.1-typegen-experimental.0
       lodash-es: 4.17.21
       react: 19.0.0
-      react-compiler-runtime: 19.0.0-beta-ebf51a3-20250411(react@19.0.0)
+      react-compiler-runtime: 19.1.0-rc.1(react@19.0.0)
       react-dom: 19.0.0(react@19.0.0)
       react-error-boundary: 5.0.0(react@19.0.0)
       rxjs: 7.8.2
@@ -7683,18 +7710,20 @@ snapshots:
       - immer
       - use-sync-external-store
 
-  '@sanity/sdk@0.0.0-alpha.29(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))':
+  '@sanity/sdk@1.0.0(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))':
     dependencies:
-      '@sanity/client': 6.29.1(debug@4.4.0)
-      '@sanity/comlink': 3.0.1
+      '@sanity/client': 7.1.0
+      '@sanity/comlink': 3.0.3
       '@sanity/diff-match-patch': 3.2.0
+      '@sanity/message-protocol': 0.12.0
       '@sanity/mutate': 0.12.4(debug@4.4.0)
       '@sanity/types': 3.86.1(@types/react@19.1.2)
       '@types/lodash-es': 4.17.12
+      groq: 3.88.1-typegen-experimental.0
       lodash-es: 4.17.21
       reselect: 5.1.1
       rxjs: 7.8.2
-      zustand: 5.0.3(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
+      zustand: 5.0.4(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
     transitivePeerDependencies:
       - '@types/react'
       - debug
@@ -9647,6 +9676,8 @@ snapshots:
 
   groq@3.81.0: {}
 
+  groq@3.88.1-typegen-experimental.0: {}
+
   gunzip-maybe@1.4.2:
     dependencies:
       browserify-zlib: 0.1.4
@@ -10775,7 +10806,7 @@ snapshots:
     dependencies:
       react: 19.0.0
 
-  react-compiler-runtime@19.0.0-beta-ebf51a3-20250411(react@19.0.0):
+  react-compiler-runtime@19.1.0-rc.1(react@19.0.0):
     dependencies:
       react: 19.0.0
 
@@ -12116,7 +12147,7 @@ snapshots:
 
   zod@3.24.2: {}
 
-  zustand@5.0.3(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0)):
+  zustand@5.0.4(@types/react@19.1.2)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0)):
     optionalDependencies:
       '@types/react': 19.1.2
       immer: 10.1.1

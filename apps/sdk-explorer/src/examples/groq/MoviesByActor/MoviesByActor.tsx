@@ -19,13 +19,13 @@ interface Movie {
 
 export default function MoviesByActor(): JSX.Element {
   // Get a list of people who are referenced as cast members in more than 1 movie
-  const {data: castMembers} = useQuery<CastMember[]>(
-    `*[_type == "person" && count(*[_type == "movie" && ^._id in castMembers[].person._ref]) > 1] {
-      _id,
-      name,
-      'photo': image.asset->url
-    }`,
-  )
+  const castMembersQuery = `*[_type == "person" && count(*[_type == "movie" && ^._id in castMembers[].person._ref]) > 1] {
+    _id,
+    name,
+    'photo': image.asset->url
+  }`
+
+  const {data: castMembers} = useQuery<CastMember[]>({query: castMembersQuery})
 
   // Create a state variable to store the selected cast member's ID
   // Initialize it with the ID of the first cast member
@@ -33,19 +33,19 @@ export default function MoviesByActor(): JSX.Element {
 
   // Construct another query for movies that the cast member has appeared in
   // by passing the cast member's ID as a parameter to the query
-  const {data: castMemberMovies} = useQuery<Movie[]>(
-    `*[_type == "movie" && $castMemberId in castMembers[].person._ref]{
-    _id,
-    title,
-      'posterImage': poster.asset->url,
-      releaseDate,
-    }`,
-    {
-      params: {
-        castMemberId: castMemberId,
-      },
+  const castMembersMoviesQuery = `*[_type == "movie" && $castMemberId in castMembers[].person._ref]{
+  _id,
+  title,
+    'posterImage': poster.asset->url,
+    releaseDate,
+  }`
+
+  const {data: castMemberMovies} = useQuery<Movie[]>({
+    query: castMembersMoviesQuery,
+    params: {
+      castMemberId: castMemberId,
     },
-  )
+  })
 
   return (
     <ExampleLayout

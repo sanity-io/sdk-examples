@@ -51,7 +51,7 @@ export default function App(): JSX.Element {
                   <a href="/">Home</a>
                 </Text>
                 <Text weight="medium" size={1}>
-                  <a href="https://sdk-docs.sanity.dev">SDK Docs</a>
+                  <a href="https://sanity.io/docs/app-sdk">App SDK Docs</a>
                 </Text>
                 <Text weight="medium" size={1}>
                   <a href="https://github.com/sanity-io/sdk">GitHub</a>

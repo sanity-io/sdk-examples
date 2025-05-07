@@ -1,6 +1,6 @@
 import './styles.css'
 
-import {DocumentHandle, usePaginatedDocuments, useProjection} from '@sanity/sdk-react'
+import {type DocumentHandle, useDocumentProjection, usePaginatedDocuments} from '@sanity/sdk-react'
 import {type JSX, useRef} from 'react'
 
 import ExampleLayout from '../../../components/ExampleLayout'
@@ -20,7 +20,7 @@ function DocumentRow({document}: {document: DocumentHandle}) {
 
   const {
     data: {title, posterImage, cast, popularity, releaseDate},
-  }: MovieProjectionResults = useProjection({
+  }: MovieProjectionResults = useDocumentProjection({
     ...document,
     ref,
     // In our projection, we will:
@@ -54,7 +54,7 @@ function DocumentRow({document}: {document: DocumentHandle}) {
 export default function DocumentTable(): JSX.Element {
   const {data, currentPage, totalPages, nextPage, previousPage, hasNextPage, hasPreviousPage} =
     usePaginatedDocuments({
-      filter: '_type == "movie"',
+      documentType: 'movie',
       pageSize: 6,
       orderings: [{field: 'releaseDate', direction: 'desc'}],
     })
@@ -63,9 +63,9 @@ export default function DocumentTable(): JSX.Element {
     <ExampleLayout
       title="Document table"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/DocumentTable/DocumentTable.tsx"
-      hooks={['usePaginatedDocuments', 'useProjection']}
+      hooks={['usePaginatedDocuments', 'useDocumentProjection']}
       styling="Tailwind"
-      summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
+      summary="This example uses the usePaginatedDocuments hook to retrieve a paginated collection of documents with six items per page, in addition to state and functions to control the pagination. The useDocumentProjection hook is used to retrieve contents and create projections from each document. Each document and its content and projections are then rendered in a table row."
     >
       <div className="overflow-x-scroll">
         <table className="w-full text-sm border-collapse">

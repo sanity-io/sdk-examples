@@ -4,7 +4,12 @@ import {type JSX} from 'react'
 const baseUrl = 'https://reference.sanity.io/_sanity/sdk-react/exports/'
 
 // Just update this array with a hook name to add a ReferenceLink for it
-const hookNames = ['useDocuments', 'usePaginatedDocuments', 'useProjection', 'useQuery'] as const
+const hookNames = [
+  'useDocuments',
+  'usePaginatedDocuments',
+  'useDocumentProjection',
+  'useQuery',
+] as const
 
 type HookName = (typeof hookNames)[number]
 
