@@ -1,5 +1,4 @@
-import {DocumentHandle} from '@sanity/sdk'
-import {useDocuments, useProjection} from '@sanity/sdk-react'
+import {type DocumentHandle, useDocumentProjection, useDocuments} from '@sanity/sdk-react'
 import {Button, Card, Flex, Inline, Spinner, Stack, Text} from '@sanity/ui'
 import {type JSX, Suspense, useRef} from 'react'
 
@@ -27,14 +26,14 @@ interface ProjectionResults {
 // The DocumentPreview component uses the `usePreview` hook to render a document preview interface
 function DocumentPreview({document}: {document: DocumentHandle}) {
   // Generate a ref for the outer element
-  // This keeps the useProjection hook from firing if the preview is not currently displayed in the viewport
+  // This keeps the useDocumentProjection hook from firing if the preview is not currently displayed in the viewport
   const ref = useRef(null)
 
   // Project the title, first 3 cast mambers, and post image values for the document,
   // plus an `isPending` flag to indicate if projection value resolutions are pending
   const {
     data: {title, cast, posterImage},
-  }: ProjectionResults = useProjection({
+  }: ProjectionResults = useDocumentProjection({
     ...document,
     ref,
     projection: `{
@@ -70,7 +69,7 @@ function PreviewList(): JSX.Element {
   // Use the `useDocuments` hook to return an index of document handles for all of our 'movie' type documents
   // Sort the documents by the the release date
   const {data: movies} = useDocuments({
-    filter: '_type == "movie"',
+    documentType: 'movie',
     orderings: [{field: 'releaseDate', direction: 'desc'}],
   })
 
@@ -78,9 +77,9 @@ function PreviewList(): JSX.Element {
     <ExampleLayout
       title="Preview list"
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/PreviewList/PreviewList.tsx"
-      hooks={['useDocuments', 'useProjection']}
+      hooks={['useDocuments', 'useDocumentProjection']}
       styling="Sanity UI"
-      summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members."
+      summary="This example uses the useDocuments hook to retrieve a collection of documents. That collection is then mapped over, with each document passed to a component that uses the useDocumentProjection hook to retrieve each document’s title and poster image, and to create a projection of the first three listed cast members."
     >
       <Stack style={{overflowY: 'scroll'}}>
         {movies.map((movie) => (

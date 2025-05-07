@@ -25,8 +25,9 @@ export default function Home(): JSX.Element {
         <Stack space={5} style={{maxInlineSize: '64ch'}}>
           <Text size={2} muted>
             The Sanity App SDK Explorer contains an assortment of example interfaces built with our
-            React SDK’s hooks. The purpose of the Explorer is to demonstrate how these hooks can be
-            used to build out interfaces powered by Sanity, with a variety of approaches to styling.
+            React App SDK’s hooks. The purpose of the Explorer is to demonstrate how these hooks can
+            be used to build out interfaces powered by Sanity, with a variety of approaches to
+            styling.
           </Text>
           <Text size={2} muted>
             Each example contains an interface rendered in the browser as well as a link to the
@@ -47,7 +48,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/document-search"
               title="Document search"
               description="An interface for generating dynamic document searches"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={['useDocuments', 'useDocumentProjection']}
               styling="Sanity UI"
               img={DocumentSearchImage}
             />
@@ -55,7 +56,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/document-table"
               title="Document table"
               description="A tabular rendering of documents and their content"
-              hooks={['usePaginatedDocuments', 'useProjection']}
+              hooks={['usePaginatedDocuments', 'useDocumentProjection']}
               styling="Tailwind"
               img={DocumentTableImage}
             />
@@ -63,7 +64,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-grid"
               title="Preview grid"
               description="A grid of document previews"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={['useDocuments', 'useDocumentProjection']}
               styling="Tailwind"
               img={PreviewGridImage}
             />
@@ -71,7 +72,7 @@ export default function Home(): JSX.Element {
               to="/document-collections/preview-list"
               title="Preview list"
               description="A list of document previews"
-              hooks={['useDocuments', 'useProjection']}
+              hooks={['useDocuments', 'useDocumentProjection']}
               styling="Sanity UI"
               img={PreviewListImage}
             />

@@ -1,4 +1,4 @@
-import {DocumentHandle, useDocuments, useProjection} from '@sanity/sdk-react'
+import {type DocumentHandle, useDocumentProjection, useDocuments} from '@sanity/sdk-react'
 import {Card, Flex, Label, Stack, Text, TextInput} from '@sanity/ui'
 import {type JSX, Suspense, useState} from 'react'
 
@@ -12,10 +12,10 @@ interface Projection {
 
 // Component for rendering an item from the `useDocuments` result
 function DocumentResult({documentHandle}: {documentHandle: DocumentHandle}) {
-  // Use the `useProjection` hook to get the document’s title, overview text, and poster image URL
+  // Use the `useDocumentProjection` hook to get the document’s title, overview text, and poster image URL
   const {
     data: {title, overviewText, imageUrl},
-  } = useProjection<Projection>({
+  } = useDocumentProjection<Projection>({
     ...documentHandle,
     projection: `{
       title,
@@ -44,7 +44,7 @@ export default function DocumentSearch(): JSX.Element {
   const [search, setSearch] = useState('')
 
   const {data: movies} = useDocuments({
-    filter: '_type == "movie"',
+    documentType: 'movie',
     // Pass the `search` state variable to the `useDocuments` hook’s `search` parameter
     search,
   })
@@ -52,7 +52,7 @@ export default function DocumentSearch(): JSX.Element {
   return (
     <ExampleLayout
       title="Document search"
-      hooks={['useDocuments', 'useProjection']}
+      hooks={['useDocuments', 'useDocumentProjection']}
       codeUrl="https://github.com/sanity-io/sdk-examples/blob/main/apps/sdk-explorer/src/examples/document-collections/DocumentSearch/DocumentSearch.tsx"
       styling="Sanity UI"
       summary="This example passes a state variable to the useDocuments hook’s ‘search’ argument, enabling the creation of a dynamic search interface for documents in the targeted dataset(s). (Note: the ‘search’ parameter currently searches for matches across all of a document’s string fields.)"
