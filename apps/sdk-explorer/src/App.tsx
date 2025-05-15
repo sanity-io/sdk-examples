@@ -3,7 +3,7 @@ import './inter.css'
 import {ResourceProvider} from '@sanity/sdk-react'
 import {Flex, Spinner, ThemeProvider} from '@sanity/ui'
 import {buildTheme, ThemeConfig} from '@sanity/ui/theme'
-import {type JSX, StrictMode, Suspense} from 'react'
+import {type JSX, StrictMode, Suspense, useEffect} from 'react'
 import {createGlobalStyle} from 'styled-components'
 
 import Explorer from './Explorer'
@@ -34,6 +34,11 @@ function Loading() {
 }
 
 export default function App(): JSX.Element {
+  // Temp workaround for title set in index.html by CLI build process
+  useEffect(() => {
+    document.title = 'Sanity App SDK Explorer'
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <StrictMode>
