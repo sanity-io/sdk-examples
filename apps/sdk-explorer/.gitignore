@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.sanity
 
 # Editor directories and files
 .vscode/*
