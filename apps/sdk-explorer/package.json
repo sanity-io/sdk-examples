@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "sanity build",
+    "postbuild": "node scripts/update-title.mjs",
     "dev": "sanity dev"
   },
   "dependencies": {
