@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/update-title.mjs",
     "build": "sanity build",
+    "postbuild": "node scripts/update-title.mjs",
     "dev": "sanity dev"
   },
   "dependencies": {
