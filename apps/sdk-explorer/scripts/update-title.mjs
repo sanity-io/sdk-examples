@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import fs from 'fs'
 
-const indexHtmlPath = './.sanity/runtime/index.html'
+const indexHtmlPath = 'dist/index.html'
 
 function updateTitle() {
   console.log('Updating site title…')
