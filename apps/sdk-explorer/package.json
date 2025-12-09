@@ -18,7 +18,7 @@
     "@sanity/ui": "^2.16.21",
     "@tailwindcss/vite": "^4.0.0",
     "react": "19.2.1",
-    "react-dom": "^19.0.0",
+    "react-dom": "19.2.1",
     "react-router": "^7.6.2",
     "sanity": "^3.88.3",
     "styled-components": "^6.1.19",
