@@ -67,8 +67,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4(react@19.0.0)
       '@sanity/logos':
-        specifier: ^2.2.0
-        version: 2.2.0(@sanity/color@3.0.6)(react@19.0.0)
+        specifier: ^2.2.2
+        version: 2.2.2(react@19.0.0)
       '@sanity/sdk':
         specifier: ^1.0.0
         version: 1.0.0(@types/react@19.1.8)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.5.0(react@19.0.0))
@@ -1768,12 +1768,11 @@ packages:
       react-dom: ^18.3 || >=19.0.0-rc
       react-is: ^18.3 || >=19.0.0-rc
 
-  '@sanity/logos@2.2.0':
-    resolution: {integrity: sha512-Tg5WiUxF/xjjPgZXC5y6tdyBgUHZEvmlo8xaUbnzZX8Gz4aqk4QxD1od3p8kjVT1+wSbpigPSnSpmouVMP2xBQ==}
+  '@sanity/logos@2.2.2':
+    resolution: {integrity: sha512-KIWFL7nYEOINXIzaTF9aVhd481hFF/ak+SRnpgksYuJXlo2hbY/UoEJBz6KhsEP5dfO/NwqG82QrkwzLvd6izA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      '@sanity/color': ^2.0 || ^3.0 || ^3.0.0-beta
-      react: ^18.3 || >=19.0.0-rc
+      react: ^18.3 || ^19.0.0-0
 
   '@sanity/message-protocol@0.12.0':
     resolution: {integrity: sha512-RMRWQG5yVkCZnnBHW3qxVbZGUOeXPBzFPdD9+pynQCTVZI7zYBEzjnY8lcSYjty+0unDHqeoqMPfBXhqs0rg2g==}
@@ -7722,7 +7721,7 @@ snapshots:
       - '@emotion/is-prop-valid'
       - styled-components
 
-  '@sanity/logos@2.2.0(@sanity/color@3.0.6)(react@19.0.0)':
+  '@sanity/logos@2.2.2(react@19.0.0)':
     dependencies:
       '@sanity/color': 3.0.6
       react: 19.0.0
@@ -11447,7 +11446,7 @@ snapshots:
       '@sanity/image-url': 1.1.0
       '@sanity/import': 3.38.2(@types/react@19.1.8)
       '@sanity/insert-menu': 1.1.11(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.88.3(@types/react@19.1.8)(debug@4.4.1))(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(styled-components@6.1.19(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
-      '@sanity/logos': 2.2.0(@sanity/color@3.0.6)(react@19.0.0)
+      '@sanity/logos': 2.2.2(react@19.0.0)
       '@sanity/message-protocol': 0.13.1
       '@sanity/migrate': 3.88.3(@types/react@19.1.8)
       '@sanity/mutator': 3.88.3(@types/react@19.1.8)
