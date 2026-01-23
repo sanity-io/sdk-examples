@@ -15,7 +15,7 @@
     "@sanity/sdk": "^1.0.0",
     "@sanity/sdk-react": "^1.0.0",
     "@sanity/types": "^3.72.1",
-    "@sanity/ui": "^2.16.21",
+    "@sanity/ui": "^2.16.22",
     "@tailwindcss/vite": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
