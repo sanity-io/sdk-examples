@@ -9,7 +9,7 @@
     "dev": "sanity dev"
   },
   "dependencies": {
-    "@sanity/color": "^3.0.6",
+    "@sanity/color": "^3.0.9",
     "@sanity/icons": "^3.7.4",
     "@sanity/logos": "^2.2.2",
     "@sanity/sdk": "^1.0.0",
