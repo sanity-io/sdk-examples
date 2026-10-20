@@ -67,8 +67,8 @@ importers:
         specifier: ^3.7.4
         version: 3.7.4(react@19.0.0)
       '@sanity/logos':
-        specifier: ^2.2.2
-        version: 2.2.2(react@19.0.0)
+        specifier: ^2.2.6
+        version: 2.2.6(react@19.0.0)
       '@sanity/sdk':
         specifier: ^1.0.0
         version: 1.0.0(@types/react@19.1.8)(immer@10.1.1)(react@19.0.0)(use-sync-external-store@1.5.0(react@19.0.0))
@@ -1818,8 +1818,8 @@ packages:
       '@sanity/color': ^2.0 || ^3.0 || ^3.0.0-beta
       react: ^18.3 || >=19.0.0-rc
 
-  '@sanity/logos@2.2.2':
-    resolution: {integrity: sha512-KIWFL7nYEOINXIzaTF9aVhd481hFF/ak+SRnpgksYuJXlo2hbY/UoEJBz6KhsEP5dfO/NwqG82QrkwzLvd6izA==}
+  '@sanity/logos@2.2.6':
+    resolution: {integrity: sha512-wTkEcfne18DAYvbGclESNjraUCmbFL1fHMHzpIKH7AgdARvJqMHPEg6QoFsgeKP6tmDmME772uoAIsnwCOTWzg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: ^18.3 || ^19.0.0-0
@@ -7895,7 +7895,7 @@ snapshots:
       '@sanity/color': 3.0.6
       react: 19.0.0
 
-  '@sanity/logos@2.2.2(react@19.0.0)':
+  '@sanity/logos@2.2.6(react@19.0.0)':
     dependencies:
       '@sanity/color': 3.0.9
       react: 19.0.0
