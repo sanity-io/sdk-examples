@@ -27,8 +27,8 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
       react-icons:
-        specifier: ^5.5.0
-        version: 5.5.0(react@19.0.0)
+        specifier: ^5.7.0
+        version: 5.7.0(react@19.0.0)
       sanity:
         specifier: ^3.81.0
         version: 3.88.3(@emotion/is-prop-valid@1.4.0)(@types/node@22.13.13)(@types/react@19.1.8)(immer@10.1.1)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.4.3(css-to-react-native@3.2.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.8.3)(yaml@2.7.0)
@@ -4892,8 +4892,8 @@ packages:
       react-native:
         optional: true
 
-  react-icons@5.5.0:
-    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+  react-icons@5.7.0:
+    resolution: {integrity: sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==}
     peerDependencies:
       react: '*'
 
@@ -11339,7 +11339,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.0.0(react@19.0.0)
 
-  react-icons@5.5.0(react@19.0.0):
+  react-icons@5.7.0(react@19.0.0):
     dependencies:
       react: 19.0.0
 
