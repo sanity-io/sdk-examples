@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@sanity/color": "^3.0.9",
-    "@sanity/icons": "^3.7.4",
+    "@sanity/icons": "^3.8.0",
     "@sanity/logos": "^2.2.6",
     "@sanity/sdk": "^1.0.0",
     "@sanity/sdk-react": "^1.0.0",
