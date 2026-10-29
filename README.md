@@ -5,6 +5,9 @@
   <h1 align="center">Sanity SDK Examples</h1>
 </p>
 
+> [!WARNING]
+> **This repository is deprecated and not actively maintained.** For up-to-date information and examples, see the [App SDK documentation](https://www.sanity.io/docs/app-sdk).
+
 Example implementations of the Sanity React SDK.
 
 ## Apps
