@@ -3,7 +3,7 @@
     {
       "source": "/(.*)",
       "destination": "https://www.sanity.io/docs/app-sdk",
-      "permanent": false
+      "permanent": true
     }
   ],
   "rewrites": [
